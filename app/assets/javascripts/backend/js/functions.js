@@ -65,7 +65,7 @@ $(function () {
 
 $(function () {
 'use strict';
-$('.video_pop').magnificPopup({type:'iframe'});	/* video modal*/
+//$('.video_pop').magnificPopup({type:'iframe'});	/* video modal*/
 /* Gallery images modal*/
 $('.magnific-gallery').each(function() {
     $(this).magnificPopup({

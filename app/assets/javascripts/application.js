@@ -23,13 +23,14 @@
 //= require backend/backend
 
 $(document).ready(function() {
-  $('#layerslider').layerSlider({
-    autoStart: true,
-    responsive: true,
-    responsiveUnder: 1280,
-    layersContainer: 1170,
-    skinsPath: 'layerslider/skins/'
-  });
+// commentented because of error layerSlider is not a function
+//  $('#layerslider').layerSlider({
+//    autoStart: true,
+//    responsive: true,
+//    responsiveUnder: 1280,
+//    layersContainer: 1170,
+//    skinsPath: 'layerslider/skins/'
+//  });
 
   var csrf_token = $('meta[name="csrf-token"]').attr('content');
   $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
