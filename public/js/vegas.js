@@ -14,7 +14,7 @@ $(window).load(function() {
 
         $('#home-part').vegas({
             slides: [
-                { src: 'http://blackhealthmatters.media.clients.ellingtoncms.com/img/photos/2015/09/03/black_men_are_underappreciated_assets.jpg    ' },
+                { src: '' },
                 { src: '' },
                 { src: '' },
             ],
