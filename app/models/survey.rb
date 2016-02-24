@@ -12,8 +12,28 @@ class Survey < ActiveRecord::Base
     }
   end
   
+  def self.find_code(action)
+    case action
+    when "status"
+      self.codes["Status"]
+    when "services"
+      self.codes["Services"]
+    when "behavior"
+      self.codes["Behavior"]
+    when "psychosocial"
+      self.codes["Psycho Social"]
+    when "closing"
+      self.codes["Closing"]
+    end
+  end
+  
   def self.json_url(string)
     "https://api.typeform.com/v0/form/#{Survey.codes[string]}?key=893f6cea38785bbc15d71f06bcd07bf5e15653dd"
+  end
+  
+  def self.src(action, id)
+    first = User.find(id).first_name
+    "https://wildfyre.typeform.com/to/#{self.find_code(action)}?id=#{id}&amp;first=Cordis&amp;embed=full"
   end
   
   def self.data(string)
