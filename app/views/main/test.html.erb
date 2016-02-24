@@ -1,0 +1,25 @@
+<% @services["questions"].each do |question| %>
+<%= question %></br>
+<% end %>
+
+<br><br>
+
+<% @services["responses"].each do |response| %>
+  <% if response["completed"] == "1" %>
+    <%= response %></br></br>
+  <% end %>
+<% end %>
+
+<br><br><br>
+
+<%= @services %>
+
+
+
+
+
+
+
+
+<!-- one survey -->
+<!-- survey will have many questions -->
