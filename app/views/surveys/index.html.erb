@@ -1,0 +1,10 @@
+Welcome <%= current_user.first_name %>, </br>
+
+<!-- <h3><%#= current_user.surveys_completed %>/5 Completed</h3> -->
+
+<%= link_to "Health Status", status_surveys_path %> -- Completed: <%#= current_user.completed_survey?("Status") %> </br>
+<%= link_to "Health Services", services_surveys_path %> -- Completed: <%#= current_user.completed_survey?("Services") %> </br>
+<%= link_to "Health Behavior", behavior_surveys_path %> -- Completed: <%#= current_user.completed_survey?("Behavior") %></br>
+<%= link_to "Psycho-Social Factors", psychosocial_surveys_path %> -- Completed: <%#= current_user.completed_survey?("Psycho Social") %></br>
+<%= link_to "Closing", closing_surveys_path %> -- Completed: <%#= current_user.completed_survey?("Closing") %></br>
+
