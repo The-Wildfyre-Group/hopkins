@@ -17,15 +17,12 @@ class UsersController < ApplicationController
     load_user
   end
 
-  def edit
+  def settings
     load_user
-    build_user
   end
   
   def update
-    load_user
-    build_user
-    save_user or render 'edit'
+    save_user or render 'settings'
   end
   
   def destroy
@@ -55,7 +52,7 @@ class UsersController < ApplicationController
   end
   
   def save_user
-    if @user.save
+    if current_user.update_attributes(user_params)
       redirect_to surveys_path
     end
   end
