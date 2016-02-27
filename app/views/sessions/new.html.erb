@@ -1,13 +1,13 @@
 <h1> Signin </h1> 
 
-<%= form_for(@sign_in, url: sessions_path) do |form| %>
+<%= form_tag sessions_path do %>
   
-  <%= form.label :email %>
-  <%= form.text_field :email %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %></br>
   
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %></br>
 
-  <%= form.submit %> 
+  <%= submit_tag %> 
 
 <% end %>

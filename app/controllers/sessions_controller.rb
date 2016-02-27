@@ -7,12 +7,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if user && user.authenticate(params[:password])
-      set_cookies
-      redirect_to surveys_path
-    else
-      render 'new'
-    end
+    create_session(user, params[:password]) or render 'new'
   end
 
   def destroy
@@ -28,6 +23,13 @@ class SessionsController < ApplicationController
   
   def set_cookies
     cookies.permanent[:authentication_token] = user.authentication_token
+  end
+  
+  def create_session(user, password)
+    if user && user.authenticate(password)
+      set_cookies
+      redirect_to surveys_path
+    end
   end
   
   
