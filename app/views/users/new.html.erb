@@ -8,8 +8,8 @@
   <%= form.label :last_name %>
   <%= form.text_field :last_name %></br>
   
-  <%= form.label :city %>
-  <%= form.text_field :city %></br>
+  <%= form.label :state %>
+  <%= form.select :state, Location.states %></br>
   
   <%= form.label :education %>
   <%= form.select :education, education %></br>
