@@ -1,0 +1,70 @@
+<% regions = ["Northeast", "South", "Midwest", "West"] %>
+<% range = [ [["18-34"],[18,34]], [["35-64"], [35,64]], [["65+"], [65]] ] %>
+
+<table border='1' style='background-color:white;border:1px black;width:30%;border-collapse:collapse;'>
+<CAPTION><EM></EM></CAPTION>
+<tr><th colspan="8">Proportion and Number of Black Males by Age, Education and Region of the United States*
+<tr><th rowspan="2"><th colspan="3"><%= regions[0] %><th rowspan="2"><th colspan="3"><%= regions[1] %>
+    <!-- <tr><th rowspan="2"><th colspan="3">Average -->
+
+
+<tr><% [0,1,2,0,1,2].each do |i| %><th><%= education[i] %><% end %>
+<% %>
+
+<tr><th><%= range[0].first.first %>
+    <td><%= User.display(regions[0], education[0], range[0].last) %>
+    <td><%= User.display(regions[0], education[1], range[0].last) %>
+    <td><%= User.display(regions[0], education[2], range[0].last) %>
+    <td>
+    <td><%= User.display(regions[1], education[0], range[0].last) %>
+    <td><%= User.display(regions[1], education[1], range[0].last) %>
+    <td><%= User.display(regions[1], education[2], range[0].last) %>
+
+<tr><th><%= range[1].first.first %>
+    <td><%= User.display(regions[0], education[0], range[1].last) %>
+    <td><%= User.display(regions[0], education[1], range[1].last) %>
+    <td><%= User.display(regions[0], education[2], range[1].last) %>
+    <td>
+    <td><%= User.display(regions[1], education[0], range[1].last) %>
+    <td><%= User.display(regions[1], education[1], range[1].last) %>
+    <td><%= User.display(regions[1], education[2], range[1].last) %>
+
+<tr><th><%= range[2].first.first %>
+    <td><%= User.display(regions[0], education[0], range[2].last) %>
+    <td><%= User.display(regions[0], education[1], range[2].last) %>
+    <td><%= User.display(regions[0], education[2], range[2].last) %>
+    <td>
+    <td><%= User.display(regions[1], education[0], range[2].last) %>
+    <td><%= User.display(regions[1], education[1], range[2].last) %>
+    <td><%= User.display(regions[1], education[2], range[2].last) %>
+
+<tr rowspan="1"><th colspan="1"><th colspan="3"><%= regions[2] %><th rowspan="1"><th colspan="3"><%= regions[3] %>
+<tr><th><%= range[0].first.first %>
+    <td><%= User.display(regions[2], education[0], range[0].last) %>
+    <td><%= User.display(regions[2], education[1], range[0].last) %>
+    <td><%= User.display(regions[2], education[2], range[0].last) %>
+    <td>
+    <td><%= User.display(regions[3], education[0], range[0].last) %>
+    <td><%= User.display(regions[3], education[1], range[0].last) %>
+    <td><%= User.display(regions[3], education[2], range[0].last) %>
+   
+<tr><th><%= range[1].first.first %>
+    <td><%= User.display(regions[2], education[0], range[1].last) %>
+    <td><%= User.display(regions[2], education[1], range[1].last) %>
+    <td><%= User.display(regions[2], education[2], range[1].last) %>
+    <td>
+    <td><%= User.display(regions[3], education[0], range[1].last) %>
+    <td><%= User.display(regions[3], education[1], range[1].last) %>
+    <td><%= User.display(regions[3], education[2], range[1].last) %>
+        
+<tr><th><%= range[2].first.first %>spacing
+   <td><%= User.display(regions[2], education[0], range[2].last) %>
+   <td><%= User.display(regions[2], education[1], range[2].last) %>
+   <td><%= User.display(regions[2], education[2], range[2].last) %>
+   <td>
+   <td><%= User.display(regions[3], education[0], range[2].last) %>
+   <td><%= User.display(regions[3], education[1], range[2].last) %>
+   <td><%= User.display(regions[3], education[2], range[2].last) %>
+
+</TABLE>
+

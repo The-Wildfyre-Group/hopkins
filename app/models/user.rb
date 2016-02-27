@@ -1,11 +1,18 @@
 class User < ActiveRecord::Base
+  include Census
   include Signup
   include Password
   
   before_save :encrypt_password
+  before_save :set_region
+
   
   def name
     (first_name.present? && last_name.present?) ? [first_name, last_name].join(" ") : email
+  end
+  
+  def set_region
+    self.region = Location.region(state)
   end
   
   def completed_survey(string)
@@ -24,6 +31,16 @@ class User < ActiveRecord::Base
       array << completed_survey?(survey)
     end
     array.count(true)
-  end           
+  end
+  
+  def signup_age
+    now = created_at.in_time_zone("Eastern Time (US & Canada)")
+    now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
+  end
+  
+  def age
+    now = Time.now.in_time_zone("Eastern Time (US & Canada)")
+    now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
+  end       
   
 end

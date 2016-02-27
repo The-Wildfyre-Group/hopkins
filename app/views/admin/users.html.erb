@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Surveys Completed</th>
+        <th>Manage</th>
+    </tr>
+    <% @users.each do |user|%>
+    <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= "2/5" %></td>
+        <td><%= link_to "Edit" %> <%= link_to "Delete" %></td>
+        
+    </tr>
+    <% end %>
+</table>
