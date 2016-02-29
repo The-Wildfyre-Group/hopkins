@@ -1,4 +1,3 @@
-class User
   module Census
     extend ActiveSupport::Concern
   
@@ -52,4 +51,4 @@ class User
     
 
   end
-end
+

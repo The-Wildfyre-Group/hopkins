@@ -1,4 +1,4 @@
-class User
+
   module Signup
     extend ActiveSupport::Concern
   
@@ -25,4 +25,4 @@ class User
     end
   
   end
-end
+

@@ -1,4 +1,4 @@
-class User
+
   module Password
     extend ActiveSupport::Concern
   
@@ -21,4 +21,4 @@ class User
     end
   
   end
-end
+
