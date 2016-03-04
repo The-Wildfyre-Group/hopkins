@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
   
   def new
-    build_user
+    current_user ? redirect_to(surveys_path) : build_user
   end
   
   def create
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
   
   def user_params
     user_params = params[:user]
-    user_params ? user_params.permit(:first_name, :last_name, :email, :city, :state, :education, :terms, :password, :password_confirmation) : {}
+    user_params ? user_params.permit(:first_name, :last_name, :email, :city, :state, :education, :terms, :password, :password_confirmation, :birthdate) : {}
   end
   
   def user_scope
