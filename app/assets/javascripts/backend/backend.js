@@ -10,7 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+//= require ./js/jquery-1.11.2.min
+//= require ./js/common_scripts_min
+//= require ./js/functions
 
-//= require backend/backend
+//= require ./js/jquery.validate
+
+
+
+$("#apply_online").validate();
+
