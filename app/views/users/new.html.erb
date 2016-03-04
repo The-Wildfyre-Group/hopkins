@@ -35,7 +35,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="form-group">
-              <%= form.text_field :password, type: "password", class: "form-control form-white", placeholder:"Password" %>
+              <%= form.password_field :password, type: "password", class: "form-control form-white", placeholder:"Password" %>
             </div>
           </div>
         </div>
@@ -53,6 +53,15 @@
             <div class="form-group">
               <div class="styled-select-contact-home">
                 <%= form.select :education, education, class:"form-control", name:"", id: "" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="form-group">
+              <div class="styled-select-contact-home">
+                <%= form.text_field :birthdate, class: "form-control form-white", placeholder: "Birthday" %>
               </div>
             </div>
           </div>
