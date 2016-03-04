@@ -12,5 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require backend/backend
+//= require backend/layerslider/js/layerslider.kreaturamedia.jquery
+
+$(document).ready(function(){
+  $("#apply_online").validate();
+  $('#layerslider').layerSlider({
+    autoStart: true,
+    responsive: true,
+    responsiveUnder: 1280,
+    layersContainer: 1170,
+    skinsPath: 'layerslider/skins/'
+  });
+});
+

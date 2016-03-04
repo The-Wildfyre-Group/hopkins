@@ -11,7 +11,10 @@
  * file per style scope.
  *
  *= require backend/backend
-
- 
+ *= require backend/css/bootstrap.min
+ *= require backend/css/menu
+ *= require backend/css/responsive
+ *= require backend/css/base
+ *= require backend/css/skins/square/blue
 
  */
