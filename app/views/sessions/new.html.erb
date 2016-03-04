@@ -18,11 +18,16 @@
 								</div>
 								<div class="row">
 									<div class="col-md-12">
-										<div class="form-group">
+										<div class="form-group no_bottom_margin">
 											<%= password_field_tag  :password,"", class: "form-control form-white", placeholder:"Password" %>
 										</div>
 									</div>
 								</div>
+								<h4 class="no-margin">
+			            <%= link_to  participate_path, class: "text-off-white" do %>
+			             Don't have an account? <u>Signup Now</u>
+			            <% end %>
+			          </h4>
                 <%= submit_tag "Login", class: "btn btn-primary button btn-lg" %> 
 						  </form>
 					  </div>

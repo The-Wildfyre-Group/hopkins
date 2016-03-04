@@ -2235,3 +2235,7 @@ footer {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.text-off-white {color: #eee;}
+
+.no_bottom_margin {margin-bottom: 0 !important;}
