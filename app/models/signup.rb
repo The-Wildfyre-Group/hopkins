@@ -11,6 +11,7 @@
     
       %w[first_name last_name state].each { |column| validates column.to_sym, :presence => true, length: {minimum: 2, maximum: 25} }
       validates_presence_of :birthdate
+      validates_presence_of :email
       
     end
   
