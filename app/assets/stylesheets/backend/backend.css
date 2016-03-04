@@ -12,12 +12,12 @@
  *
  *= require_self
 
- *= require ./backend/css/bootstrap.min
- *= require ./backend/css/menu
- *= require ./backend/css/responsive
+ *= require ./css/bootstrap.min
+ *= require ./css/menu
+ *= require ./css/responsive
 
- *= require ./backend/css/base
- *= require ./backend/css/skins/square/blue
+ *= require ./css/base
+ *= require ./css/skins/square/blue
 
  */
 
