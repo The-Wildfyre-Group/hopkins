@@ -1,9 +1,0 @@
-              <%= current_user.first_name %> |
-              <%= link_to "Home", surveys_path %> |
-              <%= link_to "Settings", settings_path %> | 
-              <%= link_to session_path(current_user.id), method: :delete do %>
-                <span class="lh_30 text-black bold">
-                  <i class="material-icons mr5">&#xE837;</i>
-                  Logout
-                </span>
-              <% end %> 

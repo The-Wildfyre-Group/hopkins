@@ -10,6 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+
+ *= require backend/css/bootstrap.min
+ *= require backend/css/menu
+ *= require backend/css/responsive
+
+ *= require backend/css/base
+ *= require backend/css/skins/square/blue
+ "
+
  */

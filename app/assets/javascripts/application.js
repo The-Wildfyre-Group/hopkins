@@ -13,3 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+//= require backend/js/jquery-1.11.2.min
+//= require backend/js/common_scripts_min
+//= require backend/js/functions
+
+//= require backend/js/jquery.validate
+
+
+
+$("#apply_online").validate();
+
