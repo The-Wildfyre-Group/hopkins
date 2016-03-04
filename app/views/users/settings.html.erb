@@ -1,11 +1,28 @@
 <div class="main-wrapper">
-  <div class="sub_header bg_1 hero">
+  <div class="sub_header bg_1 hero" style="background-image: url(<%= image_url("stock/7.jpg")%>);">
     <div class="zindex_wrapper">
     	<div id="intro_txt">
         <div class="row container">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
   			    <h1><strong>Brotherhood</strong> for health.</h1>
             <p>Thank your for joining our community. </p>
+            <br/>
+            <div class="center" style="display: block;">
+              <div class="row">
+                <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                  <%= image_tag("icons/facebook.png", alt: "", class: "img-responsive")%>
+                </span>
+                <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                  <%= image_tag("icons/twitter.png", alt: "", class: "img-responsive")%>
+                </span>
+                <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                  <%= image_tag("icons/instagram.png", alt: "", class: "img-responsive")%>
+                </span>
+                <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                  <%= image_tag("icons/youtube.png", alt: "", class: "img-responsive")%>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -310,11 +327,7 @@
         </div>
         <div class="col-md-6 text-center">
           <h3>Share your stories.</h3>
-          <div id="message-newsletter"></div>
-          <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
-            <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Enter Email" class="form-control">
-            <button id="submit-newsletter" class="button"> Invite</button>
-          </form>
+          
         </div>
       </div>
     </div>
