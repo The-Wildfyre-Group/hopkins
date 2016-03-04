@@ -11,5 +11,33 @@ class ApplicationController < ActionController::Base
     ["Less than High School", "High School/Some College", "Bachelor’s and Higher"]
   end
   
-  helper_method :education, :current_user
+  def years
+    first = Date.today.year - 110
+    last = Date.today.year - 18
+    (first..last).to_a.reverse
+  end
+  
+  def days_for_select
+    first = 1
+    last = 31
+    (first..last).to_a
+  end
+  
+  def months_for_select
+    first = 1
+    last = 12
+    (first..last).to_a
+  end
+  
+  def months
+    
+  end
+  
+  def days
+    
+  end
+  
+  
+  
+  helper_method :education, :current_user, :years, :months_for_select, :days_for_select
 end

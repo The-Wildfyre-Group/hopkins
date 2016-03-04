@@ -58,10 +58,25 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="form-group">
+                <div class="styled-select-contact-home">
+                   <%=  select_tag "[user][birthdate(2i)]", options_for_select(months_for_select) %>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="form-group">
+                <div class="styled-select-contact-home">
+                   <%=  select_tag "[user][birthdate(3i)]", options_for_select(days_for_select) %>
+                </div>
+              </div>
+            </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="form-group">
-                <span class="styled-select-contact-home"><%= form.date_select :birthdate, :order => [:month, :day, :year]%></span>
-              <%= form.text_field :birthdate, class: "form-control form-white", placeholder: "Birthday" %>
+              <div class="styled-select-contact-home">
+                 <%=  select_tag "[user][birthdate(1i)]", options_for_select(years) %>
+              </div>
             </div>
           </div>
         </div>

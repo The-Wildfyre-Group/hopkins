@@ -9,7 +9,9 @@
       validates_presence_of :password, :on => :create
       #validates :terms, acceptance: true
     
-      #%w[first_name last_name].each { |column| validates column.to_sym, :presence => true, length: {minimum: 2, maximum: 25} }
+      %w[first_name last_name state].each { |column| validates column.to_sym, :presence => true, length: {minimum: 2, maximum: 25} }
+      validates_presence_of :birthdate
+      
     end
   
     module ClassMethods;end # end Class Methods
