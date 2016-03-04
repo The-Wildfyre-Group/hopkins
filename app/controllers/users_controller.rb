@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   end
   
   def login_user
-    if @user.save!
+    if @user.save
       cookies.permanent[:authentication_token] = @user.authentication_token
       redirect_to surveys_path
     end
