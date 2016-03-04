@@ -2180,21 +2180,6 @@ footer {
 	margin-right: 0 auto;
 }
 
-html.typeform {
-	margin: 0;
-	height: 100%;
-	overflow: hidden;
-}
-
-iframe.typeform {
-	position: absolute;
-	left:0;
-	right:0;
-	bottom:0;
-	top:0;
-	border:0;
-}
-
 .container_gray_bg {
     background-color: #eee;
 }
