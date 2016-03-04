@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'main#index'
+  root 'users#new'
   resources :surveys do
     collection do 
       get :status, as: :status

@@ -30,6 +30,18 @@ header .main-menu > ul > li.user-info  {
   text-transform: capitalize;
 }
 
+
+header .main-menu > ul > li.login a,
+header .main-menu > ul > li.login a  {
+  color: #fff;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 26px;
+  text-transform: none;
+  white-space: pre;
+}
+
 header .main-menu > ul > li.user-info i {
   font-size: 26px;
   vertical-align: bottom;
