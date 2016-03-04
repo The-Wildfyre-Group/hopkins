@@ -57,25 +57,30 @@
             </div>
           </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="form-group">
+          <p class="text-left no_margin_bottom">
+            <label class="text-small"> What is your birthday?</label>
+          </p>
+          <div class="row">
+            <div class="col-lg-5 col-md-4 col-sm-12">
               <div class="form-group">
                 <div class="styled-select-contact-home">
                    <%=  select_tag "[user][birthdate(2i)]", options_for_select(months_for_select) %>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="col-lg-3 col-md-4 col-sm-12">
               <div class="form-group">
                 <div class="styled-select-contact-home">
                    <%=  select_tag "[user][birthdate(3i)]", options_for_select(days_for_select) %>
                 </div>
               </div>
             </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <div class="form-group">
-              <div class="styled-select-contact-home">
-                 <%=  select_tag "[user][birthdate(1i)]", options_for_select(years) %>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="form-group">
+                <div class="styled-select-contact-home">
+                   <%=  select_tag "[user][birthdate(1i)]", options_for_select(years) %>
+                </div>
               </div>
             </div>
           </div>
