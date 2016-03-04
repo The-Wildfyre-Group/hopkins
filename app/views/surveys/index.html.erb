@@ -3,7 +3,7 @@
     <div id="intro_txt">
       <div class="row container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h1>You are the <strong>example</strong>.</h1>
+          <h1>You are the <strong><u>example</u></strong>.</h1>
           <p>Thank you for participating!</p>
           <br/>
           <div class="center" style="margin-right: 25%; margin-left: 25%; display: block;">
@@ -149,21 +149,28 @@
   <div class=" container_gray_bg" id="newsletter_container">
     <div class="container margin_60">
       <div class="row">
-        <div class="col-md-6 text-center">
-          <h3>Invite a brother.</h3>
-          <div id="message-newsletter"></div>
-          <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
-            <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Enter Email" class="form-control">
-            <button id="submit-newsletter" class="button"> Invite</button>
-          </form>
-        </div>
-        <div class="col-md-6 text-center">
-          <h3>Share your stories.</h3>
-          <div id="message-newsletter"></div>
-          <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
-            <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Enter Email" class="form-control">
-            <button id="submit-newsletter" class="button"> Invite</button>
-          </form>
+        <div class="col-lg-8 col-md-offset-2 col-md-12 col-sm-12 text-center">
+          <div class="main_title">
+            <!-- <h2>Follow Us</h2> -->
+            <p>
+               Follow us on your favorite social platforms.
+            </p>
+          </div>
+            <div class="row">
+              <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                <%= image_tag("icons/facebook.png", alt: "", class: "img-responsive")%>
+              </span>
+              <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                <%= image_tag("icons/twitter.png", alt: "", class: "img-responsive")%>
+              </span>
+              <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                <%= image_tag("icons/instagram.png", alt: "", class: "img-responsive")%>
+              </span>
+              <span class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                <%= image_tag("icons/youtube.png", alt: "", class: "img-responsive")%>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
