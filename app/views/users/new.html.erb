@@ -60,6 +60,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="form-group">
+                <span class="styled-select-contact-home"><%= form.date_select :birthdate, :order => [:month, :day, :year]%></span>
               <%= form.text_field :birthdate, class: "form-control form-white", placeholder: "Birthday" %>
             </div>
           </div>
