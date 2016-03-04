@@ -12,7 +12,7 @@ layout "survey"
   
   def behavior;end
   
-  def phych;end
+  def psychosocial;end
   
   def closing;end
   
