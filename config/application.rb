@@ -22,7 +22,6 @@ module Hopkins
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.serve_static_assets = true
     config.time_zone = 'Eastern Time (US & Canada)'
     config.assets.initialize_on_precompile = false
   end
