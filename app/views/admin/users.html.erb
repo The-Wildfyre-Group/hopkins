@@ -3,15 +3,22 @@
         <th>Name</th>
         <th>Email</th>
         <th>Surveys Completed</th>
+        <th>Age</th>
+        <th>Education</th>
+        <th>State</th>
         <th>Manage</th>
+
     </tr>
     <% @users.each do |user|%>
     <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= "2/5" %></td>
+        <td><%= user.age %></td>
+        <td><%= user.education %></td>
+        <td><%= user.state %></td>
         <td><%= link_to "Edit" %> <%= link_to "Delete" %></td>
-        
+
     </tr>
     <% end %>
 </table>
