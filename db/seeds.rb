@@ -11,9 +11,10 @@ Array(1..200).each do |i|
   education = ["Less than High School", "High School/Some College", "Bachelor’s and Higher"].sample
   birthdate = ((Date.today - 80.years)..(Date.today - 18.years)).to_a.sample
   
-  user = User.create(first_name: first_name, last_name:  last_name, email: email, password: "testtest", education: education, state: state)
+  user = User.create(first_name: first_name, last_name:  last_name, email: email, password: "testtest", education: education, state: state, birthdate: birthdate)
 end
 
 User.first.update_attributes(admin: true)
 User.second.update_attributes(admin: true)
+User.third.update_attributes(first_name: "Jamela", last_name: "Black", email: "jamela.black@gmail.com", admin: true)
 
