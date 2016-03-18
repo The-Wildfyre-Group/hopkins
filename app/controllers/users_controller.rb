@@ -26,8 +26,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    render text: params
-    #delete_user
+    delete_user
   end
 
   private
@@ -70,6 +69,6 @@ class UsersController < ApplicationController
   def delete_user
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
-    redirect_to "admin#users"
+    redirect_to users_admin_index_path
   end
 end
