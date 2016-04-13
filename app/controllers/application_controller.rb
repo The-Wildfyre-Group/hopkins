@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     ["Less than High School", "High School/Some College", "Bachelor’s and Higher"]
   end
   
+  def partners
+    ["The White House My Brother’s Keeper Initiative", "100 Black Men", "National Urban League" , "NAACP" , "Rainbow PUSH Coalition" , "Concerned Black Men", "Ebony Magazine" , "The Root" , "BET" , "Radio One" , "TV One" , "National Medical Association", "Alpha Phi Alpha Fraternity Inc." , "Kappa Alphas Psi Fraternity Inc." , "Omega Psi Phi Fraternity Inc." , "Phi Beta Sigma Fraternity Inc." , "Iota Phi Theta Fraternity Inc." , "National Council of Negro Women" , "Alpha Kappa Alpha", "Delta Sigma Theta", "Zeta Phi Beta", "Sigma Gamma Rho"]
+  end
+  
   def years
     first = Date.today.year - 110
     last = Date.today.year - 18
@@ -37,5 +41,5 @@ class ApplicationController < ActionController::Base
   
   
   
-  helper_method :education, :current_user, :years, :months_for_select, :days_for_select
+  helper_method :education, :current_user, :years, :months_for_select, :days_for_select, :partners
 end
