@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'users#new'
-  resources :surveys do
+  resources :surveys, except: %w[new create show edit update destroy] do
     collection do 
       get :status, as: :status
       get :services, as: :services
@@ -10,9 +10,9 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :users, except: [:edit]
-  resources :sessions
-  resources :admin do
+  resources :users, except: %w[index edit]
+  resources :sessions, except: %w[index edit show update]
+  resources :admin, except: %w[new create show edit update destroy] do
     collection do
       get :users
       get :overview
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   
   
   get "settings" => "users#settings", as: :settings
+  get "share" => "users#share", as: :share
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate 
   
