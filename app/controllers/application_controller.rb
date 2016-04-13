@@ -11,6 +11,14 @@ class ApplicationController < ActionController::Base
     ["Less than High School", "High School/Some College", "Bachelor’s and Higher"]
   end
   
+  def range
+    [ [["18-34"],[18,34]], [["35-64"], [35,64]], [["65+"], [65]] ]
+  end
+  
+  def regions
+    ["Northeast", "South", "Midwest", "West"]
+  end
+  
   def partners
     ["The White House My Brother’s Keeper Initiative", "100 Black Men", "National Urban League" , "NAACP" , "Rainbow PUSH Coalition" , "Concerned Black Men", "Ebony Magazine" , "The Root" , "BET" , "Radio One" , "TV One" , "National Medical Association", "Alpha Phi Alpha Fraternity Inc." , "Kappa Alphas Psi Fraternity Inc." , "Omega Psi Phi Fraternity Inc." , "Phi Beta Sigma Fraternity Inc." , "Iota Phi Theta Fraternity Inc." , "National Council of Negro Women" , "Alpha Kappa Alpha", "Delta Sigma Theta", "Zeta Phi Beta", "Sigma Gamma Rho"]
   end
@@ -41,5 +49,5 @@ class ApplicationController < ActionController::Base
   
   
   
-  helper_method :education, :current_user, :years, :months_for_select, :days_for_select, :partners
+  helper_method :education, :current_user, :years, :months_for_select, :days_for_select, :partners, :range, :regions
 end

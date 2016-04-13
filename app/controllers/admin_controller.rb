@@ -16,4 +16,10 @@ class AdminController < ApplicationController
     
   end
   
+  def census
+    
+  end
+  
+  
+  
 end

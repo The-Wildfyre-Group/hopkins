@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   include Census
+  include Cells
   include Signup
   include Password
 
