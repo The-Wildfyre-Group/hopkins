@@ -20,10 +20,6 @@ class UsersController < ApplicationController
   def settings
     load_user
   end
-  
-  def share
-    load_user
-  end
 
   def update
     save_user or render 'settings'

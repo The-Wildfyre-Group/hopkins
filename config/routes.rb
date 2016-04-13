@@ -18,10 +18,11 @@ Rails.application.routes.draw do
       get :overview
     end
   end
-  
-  
+
+  resources :shares, only: [:create, :show]
+  get "share" => "shares#new"
+
   get "settings" => "users#settings", as: :settings
-  get "share" => "users#share", as: :share
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate 
   

@@ -20,8 +20,11 @@ gem 'active_median', '~> 0.1.0'
 gem 'roo', '~> 2.1.0'
 gem 'remotipart', '~> 1.2'
 gem 'httparty'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'spring'  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'quiet_assets'
+  gem 'pry-rails'
 end

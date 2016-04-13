@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227170950) do
+ActiveRecord::Schema.define(version: 20160413214503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: true do |t|
+    t.integer  "position"
+    t.string   "title"
+    t.text     "challenge"
+    t.string   "purpose"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "questions", force: true do |t|
     t.integer  "survey_id"
@@ -23,6 +32,11 @@ ActiveRecord::Schema.define(version: 20160227170950) do
     t.string   "question"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "shares", force: true do |t|
+    t.string "message"
+    t.string "photo"
   end
 
   create_table "surveys", force: true do |t|
