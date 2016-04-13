@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     collection do
       get :users
       get :overview
+      get :census
     end
   end
   
