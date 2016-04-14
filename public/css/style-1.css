@@ -2326,7 +2326,7 @@ ul.legal-links li a {
 }
 
 ul.legal-links li:after {
-   content: " |";
+   content: "";
    color: #555;
 }
 
