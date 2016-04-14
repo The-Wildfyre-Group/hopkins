@@ -1,21 +1,27 @@
 # encoding: utf-8
 
-class SharePhotoUploader < BaseUploader
+class BaseUploader < CarrierWave::Uploader::Base
 
-  process resize_to_fit: [600, 400]
-  process :add_text
+  # Include RMagick or MiniMagick support:
+  # include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
-  def add_text
-    manipulate! do |image|
-      image.combine_options do |c|
-        c.gravity 'Center'
-        c.pointsize '22'
-        c.draw "text 0,0 '#{model.message}'"
-        c.fill 'black'
-      end
+  # Choose what kind of storage to use for this uploader:
+  storage :fog
 
-      image
-    end
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
+  def filename
+    "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  protected
+
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:

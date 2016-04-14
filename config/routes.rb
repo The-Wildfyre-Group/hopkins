@@ -22,7 +22,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :challenges
+  resources :challenges do
+    collection do
+      post :set_order
+    end
+  end
   resources :shares, only: [:create, :show]
   get "share" => "shares#new"
 
