@@ -4,5 +4,5 @@
       .col-lg-12.text-center
         h3 Invite Friends and Family to participate.
         = form_tag invites_path, id: "newsletter", class: "form-inline", novalidate: "novalidate" do |f|
-          = email_field_tag :emails, "", placeholder: "Enter Email", id: "email_newsletter", class: "form-control", 'data-role' => 'tagsinput'
+          = email_field_tag :recipients, "", placeholder: "Email or Phone", id: "email_newsletter", class: "form-control", 'data-role' => 'tagsinput'
           = submit_tag "Invite", class: "button", id: "submit-newsletter"
