@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#new'
+  root 'main#index'
 
   resources :invites
   resources :surveys, except: %w[new create show edit update destroy] do
