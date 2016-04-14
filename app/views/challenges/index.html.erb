@@ -16,14 +16,14 @@
       </div>
     </div>
   </div>
-</div> <!--End sub_header -->
-
+</div>
+ <!--End sub_header -->
 <div class="row">
-  <div class="col-md-5 col-md-offset-4 sortable">
+  <div id="challenges" class="col-md-5 col-md-offset-4">
     <% if @challenges.any? %>
-        <%= render @challenges %>
+      <%= render @challenges %>
     <% else %>
-    <p>No tasks found <%= link_to "Create Challenge", new_challenge_path %></p>
+      <p>No tasks found <%= link_to "Create Challenge", new_challenge_path %></p>
     <% end %>
   </div>
 </div>

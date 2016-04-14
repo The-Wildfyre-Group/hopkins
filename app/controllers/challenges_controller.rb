@@ -1,8 +1,8 @@
 class ChallengesController < ApplicationController
-  before_action :find_challenge, except: [:index, :new, :create]
+  before_action :find_challenge, only: [:show, :edit, :update, :destroy]
 
   def index
-    @challenges = Challenge.all
+    @challenges = Challenge.order(:position)
   end
 
   def new
@@ -19,11 +19,9 @@ class ChallengesController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
-
   end
 
   def update
@@ -35,7 +33,18 @@ class ChallengesController < ApplicationController
   end
 
   def destroy
+  end
 
+  def set_order
+    order = params[:order]
+    challenges = Challenge.where(id: order).order(:position)
+    new_positions = challenges.map do |challenge|
+      challenges[order.index(challenge.id.to_s)].position
+    end
+    challenges.each_with_index do |challenge, i|
+      challenge.update position: new_positions[i]
+    end
+    render json: {}, status: :ok
   end
 
   protected
