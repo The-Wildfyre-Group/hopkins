@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   before_save :set_region
+  serialize :groups, Array
 
 
   def name
@@ -42,6 +43,22 @@ class User < ActiveRecord::Base
   def age
     now = Time.now.in_time_zone("Eastern Time (US & Canada)")
     now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
+  end
+  
+  def self.unique_groups
+    pluck(:groups).flatten.uniq.reject(&:empty?)
+  end
+  
+  def self.all_groups
+    pluck(:groups).flatten.reject(&:empty?)
+  end
+  
+  def self.group_count
+    hash = Hash.new(0)
+    self.all_groups.each do |group|
+      hash[group] = hash[group] + 1
+    end
+    hash
   end
 
 end

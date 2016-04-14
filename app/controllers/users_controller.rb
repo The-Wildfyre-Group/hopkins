@@ -58,7 +58,7 @@ class UsersController < ApplicationController
 
   def user_params
     user_params = params[:user]
-    user_params ? user_params.permit(:first_name, :last_name, :email, :city, :state, :education, :terms, :password, :password_confirmation, :birthdate) : {}
+    user_params ? user_params.permit(:first_name, :last_name, :email, :city, :state, :education, :terms, :password, :password_confirmation, :birthdate, :groups => [] ) : {}
   end
 
   def user_scope
