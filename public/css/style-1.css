@@ -2234,8 +2234,8 @@ p.lang a.active {
 
 
 .portfolio.home-hero .large-square {
-  background: url(../img/stock/10.jpg);
-   background-size: cover;
+  background: url(../img/stock/9.jpg);
+   background-size: contain;
 }
 
 /* Tabs - TEAM PHOTOS */
