@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'users#new'
+
+  resources :invites
   resources :surveys, except: %w[new create show edit update destroy] do
-    collection do 
+    collection do
       get :status, as: :status
       get :services, as: :services
       get :behavior, as: :behavior
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
       get :closing, as: :closing
     end
   end
-  
+
   resources :users, except: %w[index edit]
   resources :sessions, except: %w[index edit show update]
   resources :admin, except: %w[new create show edit update destroy] do
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
 
   get "settings" => "users#settings", as: :settings
   get "login" => "sessions#new", as: :login
-  get "participate" => "users#new", as: :participate 
-  
+  get "participate" => "users#new", as: :participate
+
   get "test" => "main#test", as: :test
 end

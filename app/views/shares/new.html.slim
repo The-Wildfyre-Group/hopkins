@@ -1,0 +1,141 @@
+.main-wrapper
+  .sub_header.bg_1.hero style=("background-image: url(#{image_url("stock/7.jpg")});")
+    .zindex_wrapper
+      #intro_txt
+        .row.container
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center
+            h1
+              strong Brotherhood
+              | for health.
+            p Thank your for joining our community.
+            br/
+            .center style=("display: block;")
+              .row
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = image_tag("icons/facebook.png", alt: "", class: "img-responsive")
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = image_tag("icons/twitter.png", alt: "", class: "img-responsive")
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = image_tag("icons/instagram.png", alt: "", class: "img-responsive")
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = image_tag("icons/youtube.png", alt: "", class: "img-responsive")
+    /! End sub_header
+.container_gray_bg
+  .container.margin_60
+    .row
+      .col-md-9
+        #share_box.box_style_1
+          = form_for Share.new, remote: true do |f|
+            .form-group
+              label I am
+              = f.text_field :i_am
+            .form-group
+              label And
+              = f.text_field :and
+            = f.submit
+      .col-md-3
+        h4
+          strong Contact Us
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum.
+        .box_side
+          h5 By Phone
+          i.icon-phone
+          p
+            | + 1 555 5555
+            br/
+            small Monday to Friday 9.00am - 6.00pm
+        .box_side
+          h5 Consent Policy
+          i.icon_pencil-edit
+          p
+            a href="#0"
+              strong Download the application form
+            | ,
+            br/
+            | HIPAA Complianct
+            br/
+            br/
+        hr.styled/
+        .box_side
+          h4 Share your Story
+          i.icon_pencil-edit
+          p Per eu esse deleniti scripserit, sed ut nihil inimicus sadipscing. Eu iusto ignota officiis sit, nullam ullamcorper eam ut.
+          a.button.small href="#0"  Share Now
+    /! End row
+  /! End container
+/! End container_gray_bg
+.container.margin_60
+  .main_title
+    h2 Frequently Asked Questions
+    p We appreciate your participation. Have questions? Learn more below.
+  .row
+    .col-md-4
+      .box_style_2
+        h4 How is my personal information used?
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum ne mundi vulputate. Ne his sint graeco detraxit, posse exerci volutpat has in.
+    .col-md-4
+      .box_style_2
+        h4 Will I be contact by third-parties?
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum ne mundi vulputate. Ne his sint graeco detraxit, posse exerci volutpat has in.
+    .col-md-4
+      .box_style_2
+        h4 Are my survey results private?
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum ne mundi vulputate. Ne his sint graeco detraxit, posse exerci volutpat has in.
+  /! End row
+  .row
+    .col-md-4
+      .box_style_2
+        h4 Why are you asking for more information?
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum ne mundi vulputate. Ne his sint graeco detraxit, posse exerci volutpat has in.
+    .col-md-4
+      .box_style_2
+        h4 What is the long-term goal of the survey?
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum ne mundi vulputate. Ne his sint graeco detraxit, posse exerci volutpat has in.
+    .col-md-4
+      .box_style_2
+        h4 How is this study creating impact?
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum ne mundi vulputate. Ne his sint graeco detraxit, posse exerci volutpat has in.
+  /! End row
+/! End container
+.grid
+  ul.magnific-gallery
+    li
+      figure
+        = image_tag("stock/9.jpg", atl: "")
+        figcaption
+          .caption-content
+            a href="img/gallery/large/pic_8.jpg" title=("Photo title")
+              i.pe-7s-albums
+              p Your caption
+    li
+      figure
+        = image_tag("stock/11.jpg", atl: "")
+        figcaption
+          .caption-content
+            a href="img/gallery/large/pic_9.jpg" title=("Photo title")
+              i.pe-7s-albums
+              p Your caption
+    li
+      figure
+        = image_tag("stock/17.jpg", atl: "")
+        figcaption
+          .caption-content
+            a href="img/gallery/large/pic_10.jpg" title=("Photo title")
+              i.pe-7s-albums
+              p Your caption
+    li
+      figure
+        = image_tag("stock/16.jpg", atl: "")
+        figcaption
+          .caption-content
+            a href="img/gallery/large/pic_1.jpg" title=("Photo title")
+              i.pe-7s-albums
+              p Your caption
+#newsletter_container.container_gray_bg
+  .container.margin_60
+    .row
+      .col-lg-12.text-center
+        h3 Invite Friends and Family to participate.
+        = form_tag invites_path, id: "newsletter", class: "form-inline" do |f|
+          = email_field_tag :email, "", id: "email_newsletter", placeholder: "Enter Email", class: "form-control"
+          = submit_tag "Invite", class: "button"

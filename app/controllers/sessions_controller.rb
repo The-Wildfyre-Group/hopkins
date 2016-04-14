@@ -14,23 +14,21 @@ class SessionsController < ApplicationController
     cookies.delete(:authentication_token)
     redirect_to root_url
   end
-  
+
   private
-  
+
   def user
     user = User.where(email: params[:email]).first
   end
-  
+
   def set_cookies
     cookies.permanent[:authentication_token] = user.authentication_token
   end
-  
+
   def create_session(user, password)
     if user && user.authenticate(password)
       set_cookies
       redirect_to surveys_path
     end
   end
-  
-  
 end

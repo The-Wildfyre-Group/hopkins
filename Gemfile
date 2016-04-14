@@ -22,9 +22,11 @@ gem 'remotipart', '~> 1.2'
 gem 'httparty'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "slim-rails"
 
 group :development do
   gem 'spring'  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'quiet_assets'
+  gem 'letter_opener'
   gem 'pry-rails'
 end
