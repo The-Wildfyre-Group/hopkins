@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require_self
+ *= require bootstrap-tagsinput
  *= require backend/backend
  *= require validator
+ *= require invites
  */

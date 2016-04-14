@@ -1,10 +1,10 @@
 /*
-Theme Name: ATENA 
+Theme Name: ATENA
 Theme URI: http://www.ansonika.com/atena/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.1 Typography
@@ -26,8 +26,8 @@ Author URI: http://themeforest.net/user/Ansonika/
 3.4 Login/Register modals
 3.5 Spacing
 3.6  Newsletter footer
-3.7 Pagination 
-3.8 Search modal 
+3.7 Pagination
+3.8 Search modal
 3.9 List styles
 3.10 Misc
 3.11 Tooltips
@@ -61,7 +61,7 @@ footer h4{color:#fff; font-size:14px; text-transform:uppercase; font-family: 'pr
 .main_title h2{ font-size:34px; letter-spacing:-1px; margin-top:0;}
 .main_title p{ font-size:22px; font-family: "proxima_novalight", Arial, Helvetica, sans-serif; color:#777; line-height:1.2;}
 
-/** Layes slider typography **/   
+/** Layes slider typography **/
 h3.slide_typo {font-family: "proxima_novalight", Arial, Helvetica, sans-serif;letter-spacing:-2px; font-size: 60px; white-space:nowrap; color:#fff !important; font-weight:normal;}
 h3 .slide_typo strong {font-family: "proxima_nova_rgbold", Arial, Helvetica, sans-serif; font-weight:normal;}
 .slide_typo_2{color:#fff; font-size:18px; white-space:nowrap}
@@ -123,16 +123,16 @@ a.button, .button{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif; 
+	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif;
 	cursor:pointer;
 	border:0;
 	font-size:14px;
 	outline:none;
 	margin-bottom:20px;
 	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease; 
+	transition: all 0.2s ease;
   }
-  
+
 a.button.small, .button.small{
 	padding:7px 15px;
 	font-size:13px;
@@ -157,7 +157,7 @@ a.button_outline, .button_outline{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif; 
+	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif;
 	cursor:pointer;
 	font-size:14px;
 	outline:none;
@@ -245,10 +245,10 @@ position: fixed;
   width: 100%;
   z-index: 9;
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; 
+  transition: all 0.4s ease;
 }
-header.sticky, header.sticky#contacts{ 
-	background-color:#283842; 
+header.sticky, header.sticky#contacts{
+	background-color:#283842;
 	opacity:1;
 }
 header#contacts{
@@ -331,7 +331,7 @@ header#contacts{
 }
 
 /* Footer  */
-footer{ 
+footer{
 	background-color:#283842;
 	color:#fff;
 	padding:50px 0 10px 0;
@@ -529,7 +529,7 @@ video {
 }
 .teaser-video {
   width: 100%;
-  height: auto; 
+  height: auto;
 }
 .header-video--media {
   width: 100%;
@@ -580,7 +580,7 @@ video {
   content: normal;
 }
 .item blockquote {
-    border-left: none; 
+    border-left: none;
     margin: 0;
 	text-align:center;
 	font-family: 'Georgia', cursive;
@@ -661,8 +661,8 @@ video {
 /*-------- 2.2 Accademics/single course page--------*/
 .box_style_1, a.box_style_1{
 	background-color:#fff;
-	/*-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; 
-	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4; 
+	/*-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
 	box-shadow: 0px 3px 0px 0px #f0f2f4;
 	*/
 	box-shadow: 1px 1px 1px #aaa;
@@ -675,19 +675,19 @@ video {
 	display:block;
 	padding:30px 30px 10px 30px;
 	color:#444;
-	transition: all 500ms ease-in-out; 
-	-webkit-transition: all 500ms ease-in-out; 
-	-moz-transition: all 500ms ease-in-out; 
-	-o-transition: all 500ms ease-in-out; 
+	transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
 }
 a.box_style_1{cursor:pointer;}
 a.box_style_1:hover{
-	transform: translate(0, -10px); 
-	 -webkit-transform: translate(0, -10px); 
-	 -ms-transform: translate(0, -10px); 
-	 -webkit-box-shadow: 0px 3px 0px 0px #ebedef; 
-	 -moz-box-shadow: 0px 3px 0px 0px #ebedef; 
-	 box-shadow: 0px 3px 0px 0px #ebedef; 
+	transform: translate(0, -10px);
+	 -webkit-transform: translate(0, -10px);
+	 -ms-transform: translate(0, -10px);
+	 -webkit-box-shadow: 0px 3px 0px 0px #ebedef;
+	 -moz-box-shadow: 0px 3px 0px 0px #ebedef;
+	 box-shadow: 0px 3px 0px 0px #ebedef;
 }
 .box_style_2{
 	border-left: 1px solid #ededed;
@@ -866,8 +866,8 @@ ul.list_teachers li h5{
 	margin-bottom:30px;
 	background-color:#fff;
 	color:#777;
-	-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; 
-	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4; 
+	-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
 	box-shadow: 0px 3px 0px 0px #f0f2f4;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -923,7 +923,7 @@ ul.list_teachers li h5{
 	text-transform:uppercase;
 }
 .course_list_desc h3 strong{
-	font-family: 'proxima_nova_rgbold', Arial, Helvetica, sans-serif; 
+	font-family: 'proxima_nova_rgbold', Arial, Helvetica, sans-serif;
 }
 .details_list_col{
 	display:table;
@@ -985,12 +985,12 @@ a.box_feat, .box_feat{
 	background:#fff;
 	padding:40px 30px 30px 30px;
 	display:block;
-	transition: all 500ms ease-in-out; 
-	-webkit-transition: all 500ms ease-in-out; 
-	-moz-transition: all 500ms ease-in-out; 
-	-o-transition: all 500ms ease-in-out; 
-	/*-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; 
-	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4; 
+	transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	/*-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
 	box-shadow: 0px 3px 0px 0px #f0f2f4;
 	*/
 	box-shadow: 1px 1px 1px #aaa;
@@ -1004,12 +1004,12 @@ a.box_feat, .box_feat{
 	overflow:hidden;
 }
 a.box_feat:hover{
-	 transform: translate(0, -10px); 
-	 -webkit-transform: translate(0, -10px); 
-	 -ms-transform: translate(0, -10px); 
-	 -webkit-box-shadow: 0px 3px 0px 0px #ebedef; 
-	 -moz-box-shadow: 0px 3px 0px 0px #ebedef; 
-	 box-shadow: 0px 3px 0px 0px #ebedef; 
+	 transform: translate(0, -10px);
+	 -webkit-transform: translate(0, -10px);
+	 -ms-transform: translate(0, -10px);
+	 -webkit-box-shadow: 0px 3px 0px 0px #ebedef;
+	 -moz-box-shadow: 0px 3px 0px 0px #ebedef;
+	 box-shadow: 0px 3px 0px 0px #ebedef;
 }
 a.box_feat i{
 	font-size:70px;
@@ -1289,12 +1289,12 @@ ul.contacts_info li{
 	width:100%;
 	height:100%;
 	bottom:0;
-	background-color:#fff; 
+	background-color:#fff;
 	z-index:99999999;
 }
 .pulse {
   position:absolute;
-  left:50%; 
+  left:50%;
   top:50%;
   margin:-40px 0 0 -40px;
   text-align:center;
@@ -1418,7 +1418,7 @@ span.error{
 	color:#fff;
 	font-weight:normal;
 	padding:0 6px;
-   } 
+   }
 span.error:after {
 	content: '';
 	position: absolute;
@@ -1430,17 +1430,17 @@ span.error:after {
 	z-index: 1;
 	bottom: -6px;
 	left: 20%;
-} 
+}
 .iradio_square-blue span.error, .icheckbox_square-blue span.error{
 	top:-35px;
 	right:-30px;
-} 
+}
 .loader { margin-left:5px; position:absolute;}
 .sub_header_contact_home .loader {font-size:14px;}
 .error_message{color:#F33; font-weight:600; margin-bottom:4px; font-size:14px;}
 input#website {display:none;}
 
-/* Forms */   
+/* Forms */
 .form-control.styled {
 	border-radius: 0;
 	height:40px;
@@ -1472,7 +1472,7 @@ input#website {display:none;}
 	height:40px;
 	border:1px solid #ccc;
 	margin-bottom:25px;
-} 
+}
 .styled-select-contact-home select {
    background: transparent;
    width:110%;
@@ -1496,16 +1496,16 @@ input#website {display:none;}
 	height:48px;
 	border:2px solid #fff;
 	margin-bottom:25px;
-} 
+}
 .styled-select select::-ms-expand, .styled-select-contact-home select::-ms-expand {display: none;}
 
 .form-group{
 	margin-bottom:25px;
- } 
+ }
 .radio_inline{
 	padding-top:10px;
 	position:relative;
- } 
+ }
 #highlight {
 	color:#fff;
 	font-size:15px;
@@ -1531,11 +1531,11 @@ input#website {display:none;}
    display: table;
    width:100%;
    height:500px;
-   background: url(../img/bg_content.jpg) no-repeat center center; 
+   background: url(../img/bg_content.jpg) no-repeat center center;
    background-size:cover;
 }
 .bg_content.testimonials{
-   background: url(../img/testimonials.jpg) repeat center center; 
+   background: url(../img/testimonials.jpg) repeat center center;
 	  height:470px;
 }
 .bg_content > div{
@@ -1735,7 +1735,7 @@ s.checkbox-holder {
 	margin:0 0 20px 0;
 }
 input.form-control#email_newsletter {
-margin-bottom:0; 
+margin-bottom:0;
 background-color: #fff;
 border:none;
 border:2px solid #ededed;
@@ -1775,7 +1775,7 @@ input.form-control#email_newsletter:focus {
 .pagination > li > span:focus {
   color:#333 !important;
   background-color: #f9f9f9;
-  
+
 }
 .pagination > .active > a,
 .pagination > .active > span,
@@ -1813,7 +1813,7 @@ input.form-control#email_newsletter:focus {
     -moz-transform: translate(0px, 0px) scale(1, 1);
 	-o-transform: translate(0px, 0px) scale(1, 1);
 	-ms-transform: translate(0px, 0px) scale(1, 1);
-	transform: translate(0px, 0px) scale(1, 1); 
+	transform: translate(0px, 0px) scale(1, 1);
     opacity: 1;
 }
 #search input[type="search"] {
@@ -1907,7 +1907,7 @@ ul.list_3 li:before {
 .banner h3{
 	text-transform:uppercase;
 	font-size:18px;
-	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif; 
+	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif;
 	color:#fff;
 }
 a.banner_bt {
@@ -1917,7 +1917,7 @@ a.banner_bt {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif; 
+	font-family: "proxima_novasemibold", Arial, Helvetica, sans-serif;
 	cursor:pointer;
 	border:0;
 	padding:7px 15px;
@@ -1925,7 +1925,7 @@ a.banner_bt {
 	outline:none;
 	margin-bottom:20px;
 	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease; 
+	transition: all 0.2s ease;
 }
 a.banner_bt:hover {
 	background-color:#283842;
@@ -1982,7 +1982,7 @@ a.banner_bt:hover {
 #position ul li:last-child:after{
 	content:'';
 }
-/** Collapse **/   
+/** Collapse **/
 #accordion .panel {
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -1999,12 +1999,12 @@ a.banner_bt:hover {
 #accordion .panel-group .panel {
   border-radius: 0;
 }
-/** tabs **/   
+/** tabs **/
 .tab-content{
-	padding:30px; 
-	background-color:#fff; 
-	border:1px solid #ddd; 
-	border-top:none; 
+	padding:30px;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-top:none;
 	margin-bottom:25px;
 	-webkit-border-bottom-right-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
@@ -2013,7 +2013,7 @@ a.banner_bt:hover {
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
 }
-/** Tables **/   
+/** Tables **/
 .table{
 	border-bottom:1px solid #ddd;
 }
@@ -2028,26 +2028,26 @@ a.banner_bt:hover {
  .list_courses_apply  h4{
 	 color:#777;
 	 margin-bottom:20px;
- } 
+ }
 .list_courses_apply  ul{
 	 list-style:none;
 	 margin:0 0 20px 0;
 	 padding:0;
- } 
+ }
 .list_courses_apply ul li{
 	 padding:5px 0;
-} 
-.img-circle.styled { 
+}
+.img-circle.styled {
 	background-color:#ededed;
-	-moz-box-shadow: 0px 0px 0px 5px #ededed; 
-	-webkit-box-shadow: 0px 0px 0px 5px #ededed; 
+	-moz-box-shadow: 0px 0px 0px 5px #ededed;
+	-webkit-box-shadow: 0px 0px 0px 5px #ededed;
 	box-shadow: 0px 0px 0px 5px #ededed;
 	margin:auto;
 }
- .img-circle.styled_2 { 
+ .img-circle.styled_2 {
 	background-color:#fff;
-	-moz-box-shadow: 0px 0px 0px 5px #fff; 
-	-webkit-box-shadow: 0px 0px 0px 5px #fff; 
+	-moz-box-shadow: 0px 0px 0px 5px #fff;
+	-webkit-box-shadow: 0px 0px 0px 5px #fff;
 	box-shadow: 0px 0px 0px 5px #fff;
 	margin:auto;
 }
@@ -2219,9 +2219,9 @@ footer {
 
 
 .circle-bg {
-	background: rgba(255, 255, 255, .25); 
-	border-radius: 50%; height: 190px; 
-	width: 200px; 
+	background: rgba(255, 255, 255, .25);
+	border-radius: 50%; height: 190px;
+	width: 200px;
 	border: 1px solid #bbb;
 }
 

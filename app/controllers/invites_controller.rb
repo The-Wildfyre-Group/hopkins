@@ -1,10 +1,16 @@
 class InvitesController < ApplicationController
   def create
-    if User.find_by_email(params[:email])
-      redirect_to :back, alert: "User already registered"
+    emails = params[:emails].split(/,\s?/)
+    emails.select! do |email|
+      unless User.find_by_email(email)
+        UserMailer.invite(email, current_user).deliver
+        true
+      end
+    end
+    if emails.any?
+      redirect_to :back, notice: "#{'Invite'.pluralize(emails.length)} sent"
     else
-      UserMailer.invite(params[:email], current_user).deliver
-      redirect_to :back, notice: "Ivite sent"
+      redirect_to :back, alert: "No invites where sent"
     end
   end
 end
