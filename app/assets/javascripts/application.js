@@ -12,12 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-tagsinput
 //= require backend/backend
+//= require bootstrap-tagsinput
+//= require jquery-ui
 //= require backend/layerslider/js/layerslider.kreaturamedia.jquery
 //= require validator
+//= require challenges
 
-$(document).ready(function(){
+$(document).ready(function() {
   $("#apply_online").validate();
   $('#layerslider').layerSlider({
     autoStart: true,
@@ -26,5 +28,13 @@ $(document).ready(function(){
     layersContainer: 1170,
     skinsPath: 'layerslider/skins/'
   });
-});
 
+  var csrf_token = $('meta[name="csrf-token"]').attr('content');
+  $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+    if (options.type.toLowerCase() === "post") {
+      options.data = options.data || "";
+      options.data += options.data ? "&" : "";
+      options.data += "authenticity_token=" + encodeURIComponent(csrf_token);
+    }
+  });
+});
