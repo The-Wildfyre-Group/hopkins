@@ -303,7 +303,7 @@ sup {
 .item-title {
   position: absolute;
   z-index: 0;
-  left: 0;
+  left: -400px;
   padding: 0;
   top: 50vh;
   width: 100%;
@@ -850,15 +850,17 @@ p.lang a.active {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
+  /*-webkit-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
   -moz-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
   -ms-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
   -o-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
-  transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);*/
 }
 
 .brand-logo {
   max-width: 200px;
+
+
   display: block;
   margin: auto;
   margin-bottom: 10px;
@@ -1076,7 +1078,7 @@ p.lang a.active {
   }
 }
 .right-home {
-  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  /*-webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   -moz-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   -ms-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1085,7 +1087,7 @@ p.lang a.active {
   -moz-transform: translateX(-20vw);
   -ms-transform: translateX(-20vw);
   -o-transform: translateX(-20vw);
-  transform: translateX(-20vw);
+  transform: translateX(-20vw);*/
 }
 
 /* ------------------------------------- */

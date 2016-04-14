@@ -35,7 +35,7 @@ $(window).load(function() {
 
     var defaults = {
         slide:              0,
-        delay:              5000,
+        delay:              500,
         preload:            false,
         preloadImage:       false,
         preloadVideo:       false,
@@ -45,10 +45,10 @@ $(window).load(function() {
         shuffle:            false,
         cover:              true,
         color:              null,
-        align:              'center',
-        valign:             'center',
+        align:              'left',
+        valign:             'left',
         transition:         'fade',
-        transitionDuration: 1000,
+        transitionDuration: 250,
         transitionRegister: [],
         animation:          null,
         animationDuration:  'auto',
