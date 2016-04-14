@@ -74,6 +74,7 @@ Rails.application.configure do
 
   Rails.application.routes.default_url_options[:host] = "http://example.com"
   Rails.application.routes.default_url_options[:port] = "80"
+  config.action_mailer.default_url_options = { host: 'http://example.com', port: 80 }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
