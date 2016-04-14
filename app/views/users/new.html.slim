@@ -1,0 +1,71 @@
+.sub_header_contact_home.hero style=("background-image: url(#{image_url("stock/6.jpg")});")
+  .zindex_wrapper
+    #intro_txt
+      .container
+        h1 Join the Movement
+        p Sign up below to get started.
+        br/
+        .row
+          .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-6.col-sm-12.col-xs-12
+            = form_for @user, data: { toggle: 'validator', disable: false } do |f|
+              #message-contact-home
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    = f.text_field :first_name, class: "form-control form-white", placeholder:"First Name", required: true
+                    .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    = f.text_field :last_name, class: "form-control form-white", placeholder:"Last Name", required: true
+                    .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    = f.email_field :email, class: "form-control form-white", placeholder:"Email", required: true
+                    .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    = f.password_field :password, type: "password", class: "form-control form-white", placeholder:"Password", required: true
+                    .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    .styled-select-contact-home
+                      = f.select :state, Location.states, class:"form-control", required: true
+                    .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    .styled-select-contact-home
+                      = f.select :education, education, class:"form-control", required: true
+                    .help-block.with-errors
+              .form-group
+                p.text-left.no_margin_bottom
+                  label.text-small What is your birthday?
+                .row
+                  .col-lg-5.col-md-4.col-sm-12
+                    .form-group
+                      .styled-select-contact-home
+                        = select_tag "[user][birthdate(2i)]", options_for_select(months_for_select)
+                  .col-lg-3.col-md-4.col-sm-12
+                    .form-group
+                      .styled-select-contact-home
+                        = select_tag "[user][birthdate(3i)]", options_for_select(days_for_select)
+                  .col-lg-4.col-md-4.col-sm-12
+                    .form-group
+                      .styled-select-contact-home
+                        = select_tag "[user][birthdate(1i)]", options_for_select(years)
+              .form-group
+                p.text-left.no_margin_bottom
+                  label.text-small Do you belong to a partner organization?
+                .row
+                  .col-lg-12.col-md-12.col-sm-12
+                    .form-group
+                      .styled-select-contact-home
+                        = f.select :education, partners, class:"form-control", name:""
+              .row
+                .col-md-12
+                  .form-group.text-center
+                    = f.submit "Participate", type: "submit", class: "btn btn-primary button btn-lg", id: "submit-contact-home"
