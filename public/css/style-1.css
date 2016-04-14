@@ -2234,13 +2234,19 @@ p.lang a.active {
 
 
 .portfolio.home-hero .large-square {
+  background: url(../img/stock/1.jpg);
+   background-size: contain;
+}
+
+
+#team .portfolio.home-hero .large-square {
   background: url(../img/stock/9.jpg);
    background-size: contain;
 }
 
 /* Tabs - TEAM PHOTOS */
 .portfolio.team .large-square {
-  background: url(../img/team/6.jpg);
+  background: url(../img/team/1.jpg);
   background-size: cover;
 }
 .portfolio.team .small-square {
