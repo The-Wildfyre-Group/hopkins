@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require backend/backend
 //= require backend/layerslider/js/layerslider.kreaturamedia.jquery
+//= require validator
 
 $(document).ready(function(){
   $("#apply_online").validate();
