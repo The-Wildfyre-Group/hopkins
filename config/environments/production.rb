@@ -72,9 +72,9 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  Rails.application.routes.default_url_options[:host] = "http://example.com"
+  Rails.application.routes.default_url_options[:host] = "https://hopkins.herokuapp.com"
   Rails.application.routes.default_url_options[:port] = "80"
-  config.action_mailer.default_url_options = { host: 'http://example.com', port: 80 }
+  config.action_mailer.default_url_options = { host: 'https://hopkins.herokuapp.com', port: 80 }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new

@@ -26,7 +26,7 @@ module Messanger
   end
 
   def twillio_phone_number
-    "2027590519"
+    ENV['TWILLIO_NUMBER']
   end
 
   def twillio_client
