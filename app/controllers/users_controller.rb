@@ -29,6 +29,10 @@ class UsersController < ApplicationController
     delete_user
   end
 
+  def completed_survey
+    render json: { completed: current_user.completed_survey?(params[:module]) }
+  end
+
   private
 
   def load_users

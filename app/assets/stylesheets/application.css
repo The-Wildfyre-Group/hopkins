@@ -17,3 +17,8 @@
  *= require validator
  *= require invites
  */
+
+
+a.disabled {
+  pointer-events: none;
+}

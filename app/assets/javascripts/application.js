@@ -18,6 +18,7 @@
 //= require backend/layerslider/js/layerslider.kreaturamedia.jquery
 //= require validator
 //= require challenges
+//= require surveys
 
 $(document).ready(function() {
   $("#apply_online").validate();

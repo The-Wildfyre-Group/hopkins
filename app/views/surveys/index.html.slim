@@ -1,0 +1,159 @@
+.sub_header.bg_2.hero style=("background-image: url(#{image_url("stock/4.jpg")});")
+  .zindex_wrapper
+    #intro_txt
+      .row.container style=("padding-left: 23%;")
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          h1
+            | You are the
+            strong
+              u example
+          p Thank you for participating!
+          br/
+          .center style=("margin-left: 25%; display: block;")
+            .circle-bg
+              h1
+                strong 5
+              h4 Surveys Remaining
+/! End sub_header
+.container_gray_bg
+  #surveys.container.margin_60
+    .main_title
+      h2 5 Survey Sections
+      p Each section must be completed in one sitting.
+    .row
+      .col-md-4.col-sm-4
+        = link_to status_surveys_path, class: "box_feat disabled status"
+          i.pe-7s-diamond
+          h3 Health Status
+          p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
+      .col-md-4.col-sm-4
+        = link_to "javascript: void(0)", class: "box_feat disabled services"
+          i.pe-7s-display2
+          h3 Health Services
+          p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
+      .col-md-4.col-sm-4
+        = link_to "javascript: void(0)", class: "box_feat disabled behavior"
+          i.pe-7s-science
+          h3 Health Behavior
+          p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
+    /! End row
+    .row
+      .col-md-4.col-sm-4
+        = link_to "javascript: void(0)", class: "box_feat disabled psycho-social"
+          i.pe-7s-rocket
+          h3 Psycho-Social Factors
+          p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
+      .col-md-4.col-sm-4
+        = link_to "javascript: void(0)", class: "box_feat disabled closing"
+          i.pe-7s-target
+          h3 Closing
+          p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
+    /! End row
+    br/
+  /! End container
+/! End bg_gray_container
+.container.margin_60
+  .main_title
+    h2 Help us make this survey count!
+    p
+      | Survey overview and guidelines.
+  .row
+    .col-md-8.col-sm-8
+      h3 Why a Black Men's Health Study?
+      p
+        | His nonumes maluisset delicatissimi ut,
+        strong no ius odio putent vocibus
+        | . Oratio quidam essent his ei, at animal argumentum nam. Sale inani sapientem sit at. Quo an vocent mediocritatem, eu natum argumentum pri. Deleniti invenire his ei, ut mei liber ancillae, pri et fugit interpretaris. Quod unum democritum per no, nam nostrud conclusionemque ad.
+      p
+        | His nonumes maluisset delicatissimi ut, no ius odio putent vocibus. Oratio quidam essent his ei, at animal argumentum nam. Sale inani sapientem sit at. Quo an vocent mediocritatem, eu natum argumentum pri. Deleniti invenire his ei, ut mei liber ancillae, pri et fugit interpretaris. Quod unum democritum per no, nam nostrud conclusionemque ad.
+      .row
+        .col-md-5
+          ul.list_4
+            li Putent vocibus
+            li Inani sapientem sit
+            li Nonumes maluisset delicatissimi
+        .col-md-5
+          ul.list_4
+            li Putent vocibus
+            li Inani sapientem sit
+            li Nonumes maluisset delicatissimi
+      /! end row
+      h3 Founders and Directors
+      p
+        | His nonumes maluisset delicatissimi ut, no ius odio putent vocibus. Oratio quidam essent his ei, at animal argumentum nam. Sale inani sapientem sit at. Quo an vocent mediocritatem, eu natum argumentum pri. Deleniti invenire his ei, ut mei liber ancillae, pri et fugit interpretaris.
+      ul.list_staff
+        li
+          figure
+            = image_tag("http://www.mmc.edu/assets/images/rwjf_img/mugs/nat_schol/rwjf_laveist.jpg", class: "img-circle")
+          h5 Dr. LaViest
+          p Co-Founder
+        li
+          figure
+            = image_tag("http://www.purdue.edu/aging/images/alumni-thorpe.jpg", class: "img-circle")
+          h5 Dr. Thorpe
+          p Co-Founder
+    .col-md-4.col-sm-4
+      .box_style_4
+        h4 Mission
+        p
+          | Sale inani sapientem sit at. Quo an vocent mediocritatem, eu natum argumentum pri. Deleniti invenire his ei, ut mei liber ancillae, pri et fugit interpretaris.
+        ul.list_order
+          li
+            span 1
+            | At errem clita officiis sed
+          li
+            span 2
+            | Sale inani sapientem sit at
+          li
+            span 3
+            | Deleniti invenire his ei
+          li
+            span 4
+            | Quod unum democritum per no
+          li
+            span 5
+            | Oportere efficiendi eu vim
+  /! End row
+#newsletter_container.container_gray_bg
+  .container.margin_60
+    .row
+      .col-lg-8.col-md-offset-2.col-md-12.col-sm-12.text-center
+        .main_title
+          /! <h2>Follow Us</h2
+          p
+            | Follow us on your favorite social platforms.
+        .row
+          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+            = image_tag("icons/facebook.png", alt: "", class: "img-responsive")
+          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+            = image_tag("icons/twitter.png", alt: "", class: "img-responsive")
+          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+            = image_tag("icons/instagram.png", alt: "", class: "img-responsive")
+          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+            = image_tag("icons/youtube.png", alt: "", class: "img-responsive")
+/! End newsletter_container
+.container.margin_60
+  .main_title
+    h2 Read Stories
+    p
+      | Hear brothers share their experiences in health.
+  .grid
+    .row
+      .col-md-4.col-sm-4
+        p
+          = image_tag("stock/9.jpg", class: "img-responsive", alt: "")
+        h4 Creating a New Legacy
+        p
+          | Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
+      .col-md-4.col-sm-4
+        p
+          = image_tag("stories/1.jpg", class: "img-responsive", alt: "")
+        h4 Take Better Care of Myself
+        p Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
+      .col-md-4.col-sm-4
+        p
+          = image_tag("stock/16.jpg", class: "img-responsive", alt: "")
+        h4 Rediscovering My Inner-Athlete
+        p Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
+    /! End row
+  /! End container
