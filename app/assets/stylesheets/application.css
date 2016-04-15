@@ -22,3 +22,8 @@
 a.disabled {
   pointer-events: none;
 }
+
+.has-error.has-danger .styled-select {
+  margin-bottom: 0;
+  border-color: #a94442;
+}

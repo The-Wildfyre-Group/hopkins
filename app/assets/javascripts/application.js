@@ -21,7 +21,6 @@
 //= require surveys
 
 $(document).ready(function() {
-  $("#apply_online").validate();
   $('#layerslider').layerSlider({
     autoStart: true,
     responsive: true,

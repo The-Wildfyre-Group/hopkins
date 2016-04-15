@@ -25,102 +25,109 @@
     .row
       .col-md-9
         .box_style_1
-          form#apply_online action="apply_online.php" method="POST"
+          .indent_title_in
+            i.pe-7s-id
+            h1.no-margin
+              strong
+                = "#{current_user.first_name} #{current_user.last_name}"
+            p Tell us about yourself.
+          hr.styled_2.no-margin
             .indent_title_in
-              i.pe-7s-id
-              h1.no-margin
-                strong
-                  = "#{current_user.first_name} #{current_user.last_name}"
-              p Tell us about yourself.
-            hr.styled_2.no-margin
-              .indent_title_in
-                i.pe-7s-user
-                h3 Name and Contact information
-                p Please verify your personal information.
-              = form_for current_user do |f|
+              i.pe-7s-user
+              h3 Name and Contact information
+              p Please verify your personal information.
+            = form_for current_user, data: { toggle: "validator", disable: false } do |f|
+              .wrapper_indent
+                .row
+                  .col-md-6
+                    .form-group
+                      label First name
+                      = f.text_field :first_name, class: "form-control styled", required: true
+                      .help-block.with-errors
+                  .col-md-6
+                    .form-group
+                      label Last name
+                      = f.text_field :last_name, class: "form-control styled", required: true
+                      .help-block.with-errors
+                .row
+                  .col-md-6
+                    .form-group
+                      label Email
+                      = f.text_field :email, class: "form-control styled", required: true
+                      .help-block.with-errors
+                  .col-md-6
+                    .form-group
+                      label Phone number
+                      = f.text_field :email, class: "form-control styled", required: true
+                      .help-block.with-errors
+              hr.styled_2
+                .indent_title_in
+                  i.pe-7s-network
+                  h3 Demographic Information
+                  p Tell us about yourself.
                 .wrapper_indent
                   .row
                     .col-md-6
                       .form-group
-                        label First name
-                        = f.text_field :first_name, class: "form-control styled required"
-                    .col-md-6
-                      .form-group
-                        label Last name
-                        = f.text_field :last_name, class: "form-control styled required"
-                  .row
-                    .col-md-6
-                      .form-group
-                        label Email
-                        = f.text_field :email, class: "form-control styled required"
-                    .col-md-6
-                      .form-group
-                        label Phone number
-                        = f.text_field :email, class: "form-control styled required"
+                        label Education
+                        .styled-select
+                          = f.select :education, education, { selected: current_user.education }, class: "form-control"
                 hr.styled_2
                   .indent_title_in
-                    i.pe-7s-network
-                    h3 Demographic Information
-                    p Tell us about yourself.
+                    i.pe-7s-map-marker
+                    h3 Date of Birth
+                    p How old are you?
                   .wrapper_indent
+                    p.text-left.no_margin_bottom
+                      label.fs-16 What is your birthday?
                     .row
-                      .col-md-6
+                      .col-lg-3.col-md-6.col-sm-12
+                        .styled-select
+                          = select_tag "[user][birthdate(2i)]", options_for_select(months_for_select), class: "form-control"
+                      .col-lg-2.col-md-2.col-sm-12
                         .form-group
-                          label Education
                           .styled-select
-                            = f.select :education, education, {:selected=> current_user.education}, class: "form-control"
+                            = select_tag "[user][birthdate(3i)]", options_for_select(days_for_select), class: "form-control"
+                      .col-lg-2.col-md-4.col-sm-12
+                        .form-group
+                          .styled-select
+                            = select_tag "[user][birthdate(1i)]", options_for_select(years), class: "form-control"
                   hr.styled_2
                     .indent_title_in
                       i.pe-7s-map-marker
-                      h3 Date of Birth
-                      p How old are you?
+                      h3 Location & Address
+                      p Where are you?
                     .wrapper_indent
-                      p.text-left.no_margin_bottom
-                        label.fs-16 What is your birthday?
                       .row
-                        .col-lg-3.col-md-6.col-sm-12
+                        .col-md-6
+                          label State
                           .styled-select
-                            = select_tag "[user][birthdate(2i)]", options_for_select(months_for_select), class: "form-control"
-                        .col-lg-2.col-md-2.col-sm-12
+                            = f.select :state, Location.states, { selected: current_user.state }, class: "form-control"
+                        .col-md-6
                           .form-group
-                            .styled-select
-                              = select_tag "[user][birthdate(3i)]", options_for_select(days_for_select), class: "form-control"
-                        .col-lg-2.col-md-4.col-sm-12
+                            label City
+                            input#town_apply.form-control.styled name="town_apply" placeholder="Town" type="text" required="required"
+                            .help-block.with-errors
+                      .row
+                        .col-md-6
                           .form-group
-                            .styled-select
-                              = select_tag "[user][birthdate(1i)]", options_for_select(years), class: "form-control"
-                    hr.styled_2
-                      .indent_title_in
-                        i.pe-7s-map-marker
-                        h3 Location & Address
-                        p Where are you?
-                      .wrapper_indent
-                        .row
-                          .col-md-6
-                            label State
-                            .styled-select
-                              = f.select :state, Location.states, { selected: current_user.state }, class: "form-control"
-                          .col-md-6
-                            .form-group
-                              label City
-                              input#town_apply.form-control.styled.required name="town_apply" placeholder="Town" type="text"
-                        .row
-                          .col-md-6
                             label Country
                             .styled-select
-                              select#country_apply.form-control.required name="country_apply"
+                              select#country_apply.form-control name="country_apply" required="required"
                                 option value="" Select your country
                                 option value="Europe" Europe
                                 option value="Asia" Asia
                                 option value=("North America") North America
                                 option value=("South America") South America
-                          .col-md-3
-                            .form-group
-                              label Postal Code
-                              input#postal_code_apply.form-control.styled.required name="postal_code_apply" placeholder="001238" type="text"
-                      hr.styled_2
-                      p.text-center
-                        = f.submit class: "button_outline large"
+                            .help-block.with-errors
+                        .col-md-3
+                          .form-group
+                            label Postal Code
+                            input#postal_code_apply.form-control.styled name="postal_code_apply" placeholder="001238" type="text" required="required"
+                            .help-block.with-errors
+                    hr.styled_2
+                    p.text-center
+                      = f.submit class: "button_outline large"
       .col-md-3
         h4
           strong Contact Us

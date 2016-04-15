@@ -16,5 +16,3 @@
 //= require ./js/jquery.validate
 
 
-$("#apply_online").validate();
-
