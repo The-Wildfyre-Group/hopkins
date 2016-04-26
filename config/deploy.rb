@@ -23,7 +23,7 @@ set :branch, 'master'
 # They will be linked in the 'deploy:link_shared_paths' step.
 set :shared_paths, ['config/application.yml', 'config/database.yml', 'config/secrets.yml', 'log']
 
-set :rvm_path, "/home/ubuntu/.rvm/bin/rvm"
+set :rvm_path, "/home/ubuntu/.rvm/scripts/rvm"
 
 # Optional settings:
   set :user, 'ubuntu'    # Username in the server to SSH to.
@@ -35,7 +35,7 @@ set :rvm_path, "/home/ubuntu/.rvm/bin/rvm"
 task :environment do
   queue %{
     source "#{ rvm_path }"
-    rvm use ruby-2.2.2-p95 || exit 1
+    rvm use ruby-2.2.2 || exit 1
   }
 end
 
