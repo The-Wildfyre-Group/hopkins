@@ -23,6 +23,8 @@ set :branch, 'master'
 # They will be linked in the 'deploy:link_shared_paths' step.
 set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'log']
 
+set :rvm_path, "/home/ubuntu/.rvm/bin/rvm"
+
 # Optional settings:
   set :user, 'ubuntu'    # Username in the server to SSH to.
   set :port, '3022'     # SSH port number.
@@ -31,12 +33,10 @@ set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'log']
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
 task :environment do
-  # If you're using rbenv, use this to load the rbenv environment.
-  # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-  # invoke :'rbenv:load'
-
-  # For those using RVM, use this to load an RVM version@gemset.
-  invoke :'rvm:use[ruby-2.2.2-p95@default]'
+  queue %{
+    source "#{ rvm_path }"
+    rvm use ruby-2.2.2-p95 || exit 1
+  }
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
