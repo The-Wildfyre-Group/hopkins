@@ -2133,11 +2133,19 @@ ul.main-tabs li.active a {
     display: inline-block;
 }
 
+
+#navigation ul li a.active {
+    color: #08c;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
 #navigation ul {
     height: 100%;
     overflow-y: auto;
     position: absolute;
-     width: 300px; 
+     width: 325px; 
     display: block;
     -webkit-overflow-scrolling: touch;
 }
@@ -2146,10 +2154,12 @@ ul.main-tabs li.active a {
      display: inline-block; 
      position: relative; 
      padding: 0; 
+     margin: 0 2px;
 
      font-family: 'Oswald';
+     border-bottom: 1px solid transparent;
 
-     font-size: .8rem; 
+     font-size: .95rem; 
      letter-spacing: 1px; 
      text-align: left; 
      color: rgba(255, 255, 255, 0.8); 
