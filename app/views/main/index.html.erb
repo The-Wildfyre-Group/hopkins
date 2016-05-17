@@ -86,8 +86,8 @@
 			    	</a>
 			    </li>
 			    <li role="presentation">
-			    	<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
-			    		Contact
+			    	<a href="#share" aria-controls="share" role="tab" data-toggle="tab">
+			    		Share
 			    	</a>
 			    </li>
 			  </ul>
@@ -96,7 +96,7 @@
 			  <br/>
 			  <br/>
 			  <!-- <a class="btn nav-link-close btn-color btn-sm">CLOSE DEMO</a> -->
-			  <a class="btn open-content btn-light btn-sm about-content">Take the Survey</a>
+			  <a href="/surveys" class="btn open-content btn-light btn-sm about-content">Take the Survey</a>
 			  <br/>
 			  
 			  <br/>
@@ -125,6 +125,9 @@
 
 
 			  <div class="legal-text">
+			  	<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+		    		Contact Us
+		    	</a>
 			  	<p>Privacy Policy and Terms of Use</p>
 			  	<p>Copyright Compliance Policy</p>
 			  	<p>User Content Submission Agreement</p>
@@ -208,14 +211,7 @@
 			<div class="tab-content">
 
 				<div id="home" class="tab-pane fade active in">
-					<script type="text/javascript">
-					    var feed = new Instafeed({
-					        get: 'tagged',
-					        tagName: 'awesome',
-					        clientId: '86609593a68f4876a09cdf24c133be51'
-					    });
-					    feed.run();
-					</script>
+					
 					<%= render "main/home" %>
 				</div>
 
@@ -235,60 +231,15 @@
 					<%= render "main/contact" %>
 				</div>
 
+				<div id="share" class="tab-pane fade">
+					<%= render "main/share" %>
+				</div>
+
 			</div>
 
 		</section> <!-- CLOSE #content-part -->
 
-		<section id="newsletter-part" class="opacity-0 newsletter-touch">
-
-			<div class="item-title text-center animated-quick">
-				
-				<h1 class="newsletter-title">Newsletter</h1>
-
-				<p>Enter your mail to Get notified</p>
-
-				<!-- OPEN - Newsletter part -->
-				<div id="subscribe">
-
-	                <!-- OPEN - Newsletter form -->
-	                <form action="php/notify-me.php" id="notifyMe" method="POST">
-
-	                    <div class="form-group">
-
-	                        <div class="controls">
-	                            
-	                        	<!-- Field  -->
-	                        	<input type="text" id="mail-sub" name="email" placeholder="Write your email here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write your email here'" class="form-control email srequiredField" />
-
-	                        	<i class="fa fa-spinner opacity-0"></i>
-
-	                            <!-- Button  -->
-	                            <button class="btn btn-lg submit">Notify Me</button>
-
-	                            <div class="clear"></div>
-
-	                        </div>
-
-	                    </div>
-
-	                </form> <!-- CLOSE - Newsletter form -->
-
-					<!-- OPEN - Newsletter message -->
-					<div class="block-message">
-
-						<div class="message">
-
-							<p class="notify-valid"></p>
-
-						</div>
-
-					</div> <!-- CLOSE - Newsletter message -->
-
-        		</div> <!-- CLOSE - Newsletter part -->
-
-			</div>
-
-		</section> <!-- CLOSE #newsletter-part -->
+		
 
 		<!-- Language selection -->
 		
