@@ -2151,7 +2151,7 @@ ul.main-tabs li.active a {
 #navigation ul {
     height: 100%;
     overflow-y: auto;
-    position: absolute;
+    position: static;
      width: 325px; 
     display: block;
     -webkit-overflow-scrolling: touch;
@@ -2366,3 +2366,12 @@ hr {
 }
 
 .title-small {font-size: 40%; color: #fff;}
+
+#navigation ul {
+    height: 100%;
+    overflow-y: auto;
+    position: static !important;
+    width: 325px;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
