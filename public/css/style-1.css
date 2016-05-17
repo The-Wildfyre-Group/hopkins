@@ -303,7 +303,7 @@ sup {
 .item-title {
   position: absolute;
   z-index: 0;
-  left: -400px;
+  left: 0;
   padding: 0;
   top: 50vh;
   width: 100%;
@@ -318,7 +318,7 @@ sup {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  text-align: left;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   opacity: 1;
@@ -401,23 +401,23 @@ p.lang a.active {
 }
 
 .darky-overlay {
-  background: rgba(0,0,0, 0.90);
+  background: rgba(10, 26, 36, 0.7);
 }
 
 .btn {
-  font-family: 'Oswald', "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px;
-  border: 1px solid;
+  font-family: Montserrat, "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 400;
   height: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 46px;
   padding: 0 40px;
   margin-top: 20px;
@@ -430,8 +430,8 @@ p.lang a.active {
 }
 
 .btn-color {
-  background: rgba(56, 213, 214, 0.8);
-  border-color: rgba(56, 213, 214, 1);
+  background: rgba(0, 200, 170, 0.5);
+  border-color: rgba(0, 200, 170, 0.7);
 }
 .btn-color:hover, .btn-color:active, .btn-color:focus {
   background: #00c8aa;
@@ -850,17 +850,15 @@ p.lang a.active {
   position: fixed;
   top: 0;
   left: 0;
-  /*-webkit-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
   -moz-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
   -ms-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
   -o-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
-  transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);*/
+  transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .brand-logo {
   max-width: 200px;
-
-
   display: block;
   margin: auto;
   margin-bottom: 10px;
@@ -1078,7 +1076,7 @@ p.lang a.active {
   }
 }
 .right-home {
-  /*-webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   -moz-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   -ms-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1087,7 +1085,7 @@ p.lang a.active {
   -moz-transform: translateX(-20vw);
   -ms-transform: translateX(-20vw);
   -o-transform: translateX(-20vw);
-  transform: translateX(-20vw);*/
+  transform: translateX(-20vw);
 }
 
 /* ------------------------------------- */
@@ -1175,7 +1173,7 @@ p.lang a.active {
 #main-about {
   height: 400px;
   width: 100%;
-  background: url(http://blackhealthmatters.media.clients.ellingtoncms.com/img/photos/2015/09/03/black_men_are_underappreciated_assets.jpg) center;
+  background: url(../img/stock/1.jpg) center;
   background-size: cover;
   position: relative;
 }
@@ -1276,8 +1274,6 @@ p.lang a.active {
   -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
-
 .large-square:before {
   display: block;
   content: " ";
@@ -1290,15 +1286,14 @@ p.lang a.active {
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
-
 .large-square:hover .hover-info {
   opacity: 1;
   bottom: 0;
-  /*-webkit-transform: scale(0.85);
+  -webkit-transform: scale(0.85);
   -moz-transform: scale(0.85);
   -ms-transform: scale(0.85);
   -o-transform: scale(0.85);
-  transform: scale(0.85);*/
+  transform: scale(0.85);
 }
 
 .small-square {
@@ -1337,11 +1332,11 @@ p.lang a.active {
 .small-square:hover .hover-info {
   opacity: 1;
   bottom: 0;
-  /*-webkit-transform: scale(0.85);
+  -webkit-transform: scale(0.85);
   -moz-transform: scale(0.85);
   -ms-transform: scale(0.85);
   -o-transform: scale(0.85);
-  transform: scale(0.85);*/
+  transform: scale(0.85);
 }
 .small-square.second {
   background-image: url(../img/small-square-2.jpg);
@@ -1350,7 +1345,7 @@ p.lang a.active {
   background-image: url(../img/small-square-3.jpg);
 }
 .small-square.fourth {
-  background-image: url(http://insightbulletin.com/wp-content/uploads/2014/05/black-guy-texting1.jpg);
+  background-image: url(../img/small-square-4.jpg);
 }
 
 .large-square .hover-info, .small-square .hover-info {
@@ -1360,10 +1355,10 @@ p.lang a.active {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0, 0.65);
+  background-color: rgba(43, 45, 53, 0.8);
   color: #FCFCFC;
   padding: 0;
-  opacity: .85;
+  opacity: 0;
   text-align: center;
   -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   -moz-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -2232,192 +2227,4 @@ p.lang a.active {
   #answer {
     min-height: 40px;
   }
-}
-
-
-.portfolio.home-hero .large-square {
-  background: url(../img/stock/1.jpg);
-   background-size: contain;
-}
-
-
-#team .portfolio.home-hero .large-square {
-  background: url(../img/stock/9.jpg);
-   background-size: contain;
-}
-
-/* Tabs - TEAM PHOTOS */
-.portfolio.team .large-square {
-  background: url(../img/team/1.jpg);
-  background-size: cover;
-}
-.portfolio.team .small-square {
-  background-image: url(../img/team/5.jpg);
-}
-.portfolio.team .small-square.second {
-  background-image: url(../img/team/1.jpg);
-}
-.portfolio.team .small-square.third {
-  background-image: url(../img/team/2.jpg);
-}
-.portfolio.team .small-square.fourth {
-  background-image: url(../img/team/3.jpg);
-}
-
-
-/* Tabs - STORIES PHOTOS */
-
-.portfolio.stories .large-square {
-  background: url(../img/stories/3.jpg);
-  background-size: cover;
-}
-.portfolio.stories .small-square {
-  background-image: url(../img/stories/4.jpg);
-}
-.portfolio.stories .small-square.second {
-  background-image: url(../img/stories/1.jpg);
-}
-.portfolio.stories .small-square.third {
-  background-image: url(../img/stories/2.jpg);
-}
-.portfolio.stories .small-square.fourth {
-  background-image: url(../img/stories/5.jpg);
-}
-
-/*stories section-two*/
-
-.portfolio.stories.section-two .large-square {
-  background: url(../img/stories/11.jpg);
-  background-size: cover;
-}
-.portfolio.stories.section-two .small-square {
-  background-image: url(../img/stories/10.jpg);
-}
-.portfolio.stories.section-two .small-square.second {
-  background-image: url(../img/stories/9.jpg);
-}
-.portfolio.stories.section-two .small-square.third {
-  background-image: url(../img/stories/8.jpg);
-}
-.portfolio.stories.section-two .small-square.fourth {
-  background-image: url(../img/stories/7.jpg);
-}
-
-
-.portfolio.stories.section-three .large-square {
-  background: url(../img/stories/16.jpg);
-  background-size: cover;
-}
-.portfolio.stories.section-three .small-square {
-  background-image: url(../img/stories/12.jpg);
-}
-.portfolio.stories.section-three .small-square.second {
-  background-image: url(../img/stories/13.jpg);
-}
-.portfolio.stories.section-three .small-square.third {
-  background-image: url(../img/stories/14.jpg);
-}
-.portfolio.stories.section-three .small-square.fourth {
-  background-image: url(../img/stories/15.jpg);
-}
-
-ul.legal-links li a {
-   color: #888 !important;
-   font-size: 12px; 
-   font-weight: 400;
-}
-
-ul.legal-links li:after {
-   content: "";
-   color: #555;
-}
-
-ul.legal-links li:last-child:after {
-   content: "";
-   color: #555;
-}
-
-ul.main-tabs li a { 
-   color: #888;
-   font-weight: 400;
-   letter-spacing: 1px;
-   font-size: 14px;
-   margin-right: 10px;
-}
-
-ul.main-tabs li { 
-   border-bottom: 3px solid transparent;
-   padding-bottom: 3px;
-}
-
-ul.main-tabs li.active a { 
-   border-bottom: 3px solid #08c;
-}
-
-
-img.headshot-circle { 
-  border: 5px solid #ddd;
-}
-
-#content-part p {
-    color: #333;
-}
-
-.text-success {
-  color: #38d5d6;
-}
-
-.text-primary{
-  color: #3886d6
-}
- 
-hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #ddd;
-}
-
-/*text colors and backgrounds*/
-.bgcolor-white {background: #fff; }
-.text-white {color: #fff;}
-.text-muted {color: #666;}
-
-/*Google Fonts*/
-.gf_oswald {font-family:'Oswald';}
-.no-padding {padding: 0;} 
-.no-margin {margin: 0;}
-.upper {text-transform: uppercase;}
-
-/*lists*/ 
-ul.inline li {display: inline-block;}
-ul.inline li:first-child {margin-left: 0;}
-
-/*headline*/
-.cd-words-wrapper {font-size: 100px; line-height: 120px; font-weight: bold;}
-.cd-headline.letters.rotate-2 {font-size: 60px; font-weight: 100; line-height: 60px;}
-.text-news {font-size: 50px; font-weight: bold; color: rgba(255, 255, 255, .75); text-align: center;}
-.text-news {font-family: 'Montserrat';}
-
-/*general*/
-h1, h2, h3, h4, h5 {font-family: 'Oswald'; font-weight: 400;}
-p {font-family: 'Quattrocento'; font-size: 16px; line-height: 24px;}
-.ls1 {letter-spacing: 1px;}
-
-
-
-.btn.btn-hero {
-    font-family: 'Oswald', "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
-    font-size: .9em;
-    height: 40px;
-    letter-spacing: 2px;
-    line-height: 40px;
-    padding: 0 15px;
-    margin-top: 20px;
-}
-
-
-ul.list-style-disc li {
-  list-style: disc;
-  margin-left: 40px;
 }
