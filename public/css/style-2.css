@@ -2123,8 +2123,49 @@ ul.main-tabs li.active a {
    border-bottom: 3px solid #08c;
 }
 
+#navigation ul li {
+    width: auto;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    display: inline-block;
+}
+
+#navigation ul {
+    height: 100%;
+    overflow-y: auto;
+    position: absolute;
+     width: 300px; 
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
+
+#navigation ul li a {
+     display: inline-block; 
+     position: relative; 
+     padding: 0; 
+
+     font-family: 'Oswald';
+
+     font-size: .8rem; 
+     letter-spacing: 1px; 
+     text-align: left; 
+     color: rgba(255, 255, 255, 0.8); 
+     border-bottom: none; 
+     font-weight: 400; 
+     overflow: hidden; 
+    text-transform: uppercase;
+     -webkit-transition: none; 
+    -moz-transition: none; 
+    -ms-transition: none; 
+    -o-transition: none; 
+    transition: none; 
+}
 
 
+.item-title .legal-text p {letter-spacing: 0; font-size: 12px; line-height: 16px; margin: 0; text-transform: capitalize; color: #888;}
 
 
 
