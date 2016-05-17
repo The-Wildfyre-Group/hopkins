@@ -2090,6 +2090,38 @@ h6 {line-height: 20px;}
 
 
 
+ul.legal-links li a {
+   color: #888 !important;
+   font-size: 12px; 
+   font-weight: 400;
+}
+
+ul.legal-links li:after {
+   content: "";
+   color: #555;
+}
+
+ul.legal-links li:last-child:after {
+   content: "";
+   color: #555;
+}
+
+ul.main-tabs li a { 
+   color: #888;
+   font-weight: 400;
+   letter-spacing: 1px;
+   font-size: 14px;
+   margin-right: 10px;
+}
+
+ul.main-tabs li { 
+   border-bottom: 3px solid transparent;
+   padding-bottom: 3px;
+}
+
+ul.main-tabs li.active a { 
+   border-bottom: 3px solid #08c;
+}
 
 
 
