@@ -934,7 +934,7 @@ p.lang {
   top: 0;
   left: 100vw;
   width: 60vw;
-  padding: 20px;
+  padding: 0px;
   z-index: 10;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1974,6 +1974,8 @@ p.lang {
 }
 
 p.lead {
+  font-size: 18px;
+  color: #888;
   font-weight: 500;
   line-height: 30px;
   text-shadow: none;
@@ -2182,7 +2184,7 @@ ul.main-tabs li.active a {
 
 .item-title .legal-text p {letter-spacing: 0; font-size: 12px; line-height: 16px; margin: 0; text-transform: capitalize; color: #888;}
 
-
+.tab-content {padding : 0;}
 
 
 
