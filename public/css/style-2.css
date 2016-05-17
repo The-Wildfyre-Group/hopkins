@@ -2070,6 +2070,52 @@ h6 {line-height: 20px;}
 
 
 
+#navigation {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    width: 40%;
+    background: transparent;
+    -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -moz-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -ms-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
