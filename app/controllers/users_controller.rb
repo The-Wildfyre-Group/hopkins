@@ -29,8 +29,14 @@ class UsersController < ApplicationController
     delete_user
   end
 
-  def completed_survey
-    render json: { completed: current_user.completed_survey?(params[:module]) }
+  def completed_surveys
+    data = { surveys: [], left_surveys: 0 }
+    ["Status", "Services", "Behavior", "Psycho Social", "Closing"].map do |survey_module|
+      completed = current_user.completed_survey?(survey_module)
+      data[:surveys] << { name: survey_module, completed: completed }
+      data[:left_surveys] += 1 unless completed
+    end
+    render json: { data: data }
   end
 
   private

@@ -1,9 +1,9 @@
 $ ->
   if $("#surveys").length
     setTimeout ->
-      ["Status", "Services", "Behavior", "Psycho Social", "Closing"].forEach (module)->
-        $.get "users/completed_survey?module=#{module}", (response)->
-          class_name = module.toLowerCase().replace(" ", "-")
-          unless response.completed
-            $("#surveys .#{class_name}").removeClass "disabled"
+      $.get "users/completed_surveys", (response)->
+        response.data.surveys.forEach (surveyData)->
+          class_name = surveyData.name.toLowerCase().replace(" ", "-")
+          $("#surveys .#{class_name}").removeClass "disabled" unless surveyData.completed
+        $('.survey-remaining').html(response.data.left_surveys)
     , 100

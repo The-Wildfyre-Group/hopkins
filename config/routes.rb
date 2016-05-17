@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, except: %w[index edit] do
-    get :completed_survey, on: :collection
+    get :completed_surveys, on: :collection
   end
   resources :sessions, except: %w[index edit show update]
   resources :admin, except: %w[new create show edit update destroy] do
