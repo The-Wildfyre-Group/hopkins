@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414135849) do
+ActiveRecord::Schema.define(version: 20160608042324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(version: 20160414135849) do
     t.string   "title"
     t.text     "challenge"
     t.string   "purpose"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.string   "video_attachment"
+    t.string   "video_link"
+    t.string   "photo_attachment"
+    t.string   "photo_link"
+    t.text     "description"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

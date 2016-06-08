@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get :closing, as: :closing
     end
   end
+  
+  resources :posts
 
   resources :users, except: %w[index edit] do
     get :completed_surveys, on: :collection
