@@ -15,12 +15,12 @@
         <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-retina-ipad.png">
         <!-- Retina iPhone Touch Icon-->
         <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-retina-iphone.png">
-        <!-- Standard iPad Touch Icon--> 
+        <!-- Standard iPad Touch Icon-->
         <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-standard-ipad.png">
-        <!-- Standard iPhone Touch Icon--> 
+        <!-- Standard iPhone Touch Icon-->
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicon-standard-iphone.png">
 
-        
+
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700,300' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,900italic,700italic,300' rel='stylesheet' type='text/css'>
@@ -35,7 +35,7 @@
 		<!-- Modernizr runs quickly on page load to detect features -->
 		<script src="js/modernizr.js"></script>
 	</head>
-	
+
 	<body>
 
 		<div class="loading-part animated-quick">
@@ -56,7 +56,7 @@
 
 		<div id="navigation" class="">
 
-			
+
 			<div class="item-title hidden-xs hidden-sm">
 
 				<img src="img/logo-dark.png" height="250" class="img-rounded"/>
@@ -95,17 +95,20 @@
 			  <!-- <a class="btn nav-link-close btn-color btn-sm">CLOSE DEMO</a> -->
 			  <a href="/surveys" class="btn open-content btn-light btn-sm about-content">Take the Survey</a>
 			  <br/>
-			  
+
 			  <br/>
 			  <br/>
 
 			  <ul class="gf_oswald upper inline" role="tablist">
-			    <li>
-			    	<img src="img/icons/twitter.png" style="height: 50px; margin-right: 10px;">
-			    </li>
-			    <li>
-			    	<img src="img/icons/facebook.png" style="height: 50px; margin-right: 10px;">
-			    </li>
+          <li>
+            <%= link_to main_share_twitter_link do %>
+              <img src="img/icons/twitter.png" style="height: 50px; margin-right: 10px;">
+            <% end %>
+          </li>
+          <li>
+            <%= link_to main_share_fb_link do %>
+              <img src="img/icons/facebook.png" style="height: 50px; margin-right: 10px;">
+            <% end %>
 			    <li>
 			    	<img src="img/icons/youtube.png" style="height: 50px; margin-right: 10px;">
 			    </li>
@@ -172,7 +175,7 @@
 				</li>
 			</ul> <!-- CLOSE Main nav -->
 
-			
+
 
 		</div> <!-- CLOSE #navigation -->
 
@@ -180,7 +183,7 @@
 
 			<div class="overlay"></div>
 
-			
+
 		</section> <!-- CLOSE #home-part -->
 
 		<section id="content-part" class="right-content">
@@ -188,7 +191,7 @@
 			<div class="tab-content">
 
 				<div id="home" class="tab-pane fade active in">
-					
+
 					<%= render "main/home" %>
 				</div>
 
@@ -216,18 +219,18 @@
 
 		</section> <!-- CLOSE #content-part -->
 
-		
+
 
 		<!-- Language selection -->
-		
+
 		<!-- Copyright -->
-		
+
 
 
 	<!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
     <!-- ********** Resources jQuery ********** -->
     <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
-	
+
 	<!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easings.min.js"></script>
@@ -264,7 +267,7 @@
 	<script src="js/main.js"></script>
 
 	<script type="text/javascript" src="js/instafeed.min.js"></script>
-	
+
 	<!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
 
 	</body>

@@ -67,4 +67,12 @@ module ApplicationHelper
       "65+"
     end
   end
+
+  def main_share_fb_link
+    "http://www.facebook.com/sharer/sharer.php?u=#{root_url}&summary=join hopkins"
+  end
+
+  def main_share_twitter_link
+    "https://twitter.com/intent/tweet?status=join @hopkins at #{root_url}"
+  end
 end
