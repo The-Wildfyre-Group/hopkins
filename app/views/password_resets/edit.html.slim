@@ -1,0 +1,23 @@
+.sub_header_contact_home.hero style=("background-image: url(#{image_url("stock/9.jpg")});")
+  .zindex_wrapper
+    #intro_txt
+      .container
+        h1 Change password
+        p Fill in your new password
+        br/
+        .row
+          = form_tag password_reset_path(id: @user.reset_password_token), method: :put, 'data-toggle' => 'validator', 'data-disable' => false do
+            .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-6.col-sm-12.col-xs-12
+              .row
+                .col-md-12
+                  .form-group.no_bottom_margin
+                    = password_field_tag 'user[password]',"", class: "form-control form-white", placeholder:"Password", 'data-minlength' => 6, id: 'password', required: 'true'
+                    .help-block.with-errors
+              br
+              .row
+                .col-md-12
+                  .form-group.no_bottom_margin
+                    = password_field_tag  'user[password_confirmation]',"", class: "form-control form-white", placeholder:"Confirm password", 'data-match'=>"#password", 'data-match-error'=>"Whoops, these don't match", required: 'true'
+                    .help-block.with-errors
+              br
+              = submit_tag "Change password", class: "btn btn-primary button btn-lg"

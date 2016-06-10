@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'main#index'
 
   resources :invites
+  resources :password_resets
+
   resources :surveys, except: %w[new create show edit update destroy] do
     collection do
       get :status, as: :status
