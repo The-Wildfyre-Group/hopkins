@@ -8,7 +8,7 @@
               strong Brotherhood
               | for health.
             p Thank your for joining our community.
-            br/
+            br
             .center style=("display: block;")
               .row
                 span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
@@ -19,25 +19,5 @@
                   = image_tag("icons/instagram.png", alt: "", class: "img-responsive")
                 span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
                   = image_tag("icons/youtube.png", alt: "", class: "img-responsive")
-    /! End sub_header
-.container_gray_bg
-  .container.margin_60
-    .row
-      .col-md-9
-        #share_box.box_style_1
-          = form_for Share.new, remote: true do |f|
-            .form-group
-              label I am
-              = f.text_field :i_am
-            .form-group
-              label And
-              = f.text_field :and
-            = f.submit
-
-    /! End row
-  /! End container
-/! End container_gray_bg
-
-/! End container
 
 = render "shared/invite_form"

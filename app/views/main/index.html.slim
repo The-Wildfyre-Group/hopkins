@@ -1,0 +1,90 @@
+.loading-part.animated-quick
+  .loader-part.opacity-0.animated-quick
+    .loader-circle
+    .loader-text Black Men's Health Study
+button.open-menu-mobile
+  i.icon.ion-navicon-round.opening-menu
+  i.icon.ion-close-round.closing-menu.display-none
+#navigation
+  .item-title.hidden-xs.hidden-sm
+    img.img-rounded height="250" src="img/logo-dark.png" /
+    br
+    br
+    ul.inline.gf_oswald.upper role="tablist"
+      li.active role="presentation"
+        a aria-controls="home" data-toggle="tab" href="#home" role="tab"
+          | Home
+      li role="presentation"
+        a aria-controls="team" data-toggle="tab" href="#about" role="tab"
+          | About
+      li role="presentation"
+        a aria-controls="stories" data-toggle="tab" href="#stories" role="tab"
+          | Stories
+      li role="presentation"
+        a aria-controls="contact" data-toggle="tab" href="#partners" role="tab"
+          | Partners
+      li role="presentation"
+        a aria-controls="share" data-toggle="tab" href="#share" role="tab"
+          | Share
+    a.btn.open-content.btn-light.btn-sm.about-content href="/surveys"  Take the Survey
+    br
+    br
+    br
+    ul.gf_oswald.upper.inline role="tablist"
+      li
+        = link_to main_share_twitter_link do
+          img src="img/icons/twitter.png" style=("height: 50px; margin-right: 10px;")
+      li
+        = link_to main_share_fb_link do
+          img src="img/icons/facebook.png" style=("height: 50px; margin-right: 10px;")
+      li
+        img src="img/icons/youtube.png" style=("height: 50px; margin-right: 10px;")
+      li
+        img src="img/icons/instagram.png" style=("height: 50px;")
+    br
+    br
+    br
+    .legal-text
+      a aria-controls="contact" data-toggle="tab" href="#contact" role="tab"
+        | Contact Us
+      p Privacy Policy and Terms of Use
+      p Copyright Compliance Policy
+      p User Content Submission Agreement
+      p Contact
+  ul.hidden-lg.main-navigation
+    li
+      a.nav-link data-toggle="tab" href="#home"
+        i.icon.ion-ios-home-outline
+        | Home
+    li
+      a.nav-link data-toggle="tab" href="#about"
+        i.icon.ion-ios-people-outline
+        | About
+    li
+      a.nav-link data-toggle="tab" href="#stories"
+        i.icon.ion-ios-world-outline
+        | Stories
+    li
+      a.nav-link data-toggle="tab" href="#partners"
+        i.icon.ion-ios-chatbubble-outline
+        | Partners
+    li
+      a.nav-link data-toggle="tab" href="#contact"
+        i.icon.ion-ios-chatbubble-outline
+        | Contact
+section#home-part.vegas-container.right-home
+  .overlay
+section#content-part.right-content
+  .tab-content
+    #home.tab-pane.fade.active.in
+      = render "main/home"
+    #about.tab-pane.fade
+      = render "main/about"
+    #stories.tab-pane.fade
+      = render "main/stories"
+    #partners.tab-pane.fade
+      = render "main/partners"
+    #contact.tab-pane.fade
+      = render "main/contact"
+    #share.tab-pane.fade
+      = render "main/share"

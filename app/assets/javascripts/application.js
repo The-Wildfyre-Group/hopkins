@@ -12,13 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require backend/backend
 //= require bootstrap-tagsinput
 //= require jquery-ui
+//= require jquery.remotipart
 //= require backend/layerslider/js/layerslider.kreaturamedia.jquery
 //= require validator
 //= require challenges
 //= require surveys
+//= require share
+//= require backend/backend
 
 $(document).ready(function() {
   $('#layerslider').layerSlider({
