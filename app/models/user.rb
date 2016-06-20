@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   include Cells
   include Signup
   include Password
+  include Partners
 
   before_save :encrypt_password
   before_save :set_region
@@ -58,7 +59,7 @@ class User < ActiveRecord::Base
     self.all_groups.each do |group|
       hash[group] = hash[group] + 1
     end
-    hash
+    hash.sort_by { |k,v| v }.reverse
   end
 
 end

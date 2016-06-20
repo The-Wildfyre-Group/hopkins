@@ -23,55 +23,35 @@
 	<br/>
 
 	<div class="row">
+        <% User.group_count.first(2).each do |partner| %>
 		<div class="col-xs-12 col-sm-12 col-lg-6 text-center m-b-20">
 			<div class="center">
-				<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-circle img-responsive" />
+				<img src="<%= User.partner_photo[partner.first] %>" class="img-circle img-responsive" />
 			</div>
-			<h1>159</h1>
+			<h1><%= partner.last %></h1>
 			<p class="m-b-20">
-				Completed Surveys
+				Participants 
 			</p>
 			<br/>
 			<br/>
 		</div>
-
-		<div class="col-xs-12 col-sm-12 col-lg-6 text-center m-b-20">
-			<div class="center">
-				<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-circle img-responsive" />
-			</div>
-			<h1>132</h1>
-			<p class="m-b-20">
-				Completed Surveys
-			</p>
-			<br/>
-			<br/>
-		</div>
+        <% end %>
 	</div>
 
 	<div class="row">
+        <% User.group_count.drop(2).first(2).each do |partner| %>
 		<div class="col-xs-12 col-sm-12 col-lg-6 text-center m-b-20">
 			<div class="center">
-				<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-circle img-responsive" />
+				<img src="<%= User.partner_photo[partner.first] %>" class="img-circle img-responsive" />
 			</div>
-			<h1>99</h1>
+			<h1><%= partner.last %></h1>
 			<p class="m-b-20">
-				Completed Surveys
+				Participants
 			</p>
 			<br/>
 			<br/>
 		</div> 
-		<div class="col-xs-12 col-sm-12 col-lg-6 text-center m-b-20">
-			<div class="center">
-				<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&
-				w=300&h=300&fm=png" class="img-circle img-responsive" />
-			</div>
-			<h1>98</h1>
-			<p class="m-b-20">
-				Completed Surveys
-			</p>
-			<br/>
-			<br/>
-		</div>
+        <% end %>
 	</div>
 </div>
 
@@ -88,42 +68,14 @@
 	<br/><br/>
 
 	<div class="row">
+        <% User.group_count.each do |partner| %>
 		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
+			<img src="<%= User.partner_photo[partner.first] %>" class="img-thumbnail img-responsive">
 		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
-		<div class="col-md-3 col-sm-6">
-			<img src="https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png" class="img-thumbnail img-responsive">
-		</div>
+        <% if false %>
+          <h3><%= partner.last %></h3> <!-- use this for counts -->
+        <% end %>
+        <% end %>
 	</div>
 
 </div>
