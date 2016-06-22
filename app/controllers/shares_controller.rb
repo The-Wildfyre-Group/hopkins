@@ -1,4 +1,6 @@
 class SharesController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+
   def create
     @share = Share.create(share_params)
   end
@@ -11,6 +13,6 @@ class SharesController < ApplicationController
   private
 
   def share_params
-    params.require(:share).permit(:i_am, :and)
+    params.require(:share).permit(:message, :photo)
   end
 end
