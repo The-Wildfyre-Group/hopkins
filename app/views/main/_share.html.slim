@@ -1,0 +1,151 @@
+#main-about style=("background: url(img/stock/17.jpg); background-size: cover;") 
+  .item-title style=("padding: 23%;")
+    h1.cd-headline.letters style=("font-size: 110px; line-height: 110px;")
+      | WE RISE IN HEALTH
+    .hidden-xs style=("font-size: 18px; whitespace: wrap; margin-top: 20px; line-height: 26px; font-weight: normal; text-align: center !important; color: white; text-shadow: 1px -1px 0 #555;")
+      br
+#services-content.inner-content.p-b-0
+  h2.bold.text-primary.text-center Tell us who you rise for
+  .row.share
+    = form_for Share.new, remote: true, html: { class: 'share-form' } do |f|
+      = f.submit style: 'display:none', id: 'share-form-submitter'
+      .col-md-4
+        #contact-form
+          .row
+            .col-xs-12.col-sm-6.col-lg-12
+              h3.text-center.text-white I RISE FOR
+              .form-group
+                = f.text_field :message, class: 'form.form-control', 'data-name'=>"Name", onblur: "this.placeholder = 'Your Name'", onfocus: "this.placeholder = ''", placeholder: "Enter Name", required: true
+        h6 1. FILL IN YOUR INFO
+      .col-md-4
+        #contact-form
+          .row
+            .col-xs-12.col-sm-6.col-lg-12
+              = f.file_field :photo, style: 'display:none', id: 'share-photo-file'
+              .form-group
+                #photo-upload-btn.button.btn.btn-sm.btn-color UPLOAD PHOTO
+        h6 2. UPLOAD YOUR IMAGE
+      .col-md-4#share-preview
+        #contact-form
+          .row
+            .col-xs-12.col-sm-6.col-lg-12
+              h5.text-center.text-white
+                | Complete
+                br
+                | Preview
+        h6 3. SHARE AND CHALLENGE YOUR FRIENDS TO PARTICIPATE
+
+.portfolio.stories
+  br
+  br
+  br
+  br
+  h2.text-center.text-primary
+    | \#RISETOTHECHALLENGE COMMUNITY
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/stock/9.jpg" title=("My Caption 1")
+        .large-square
+          .hover-info
+            h4 exploring mental health
+    .col-xs-12.col-sm-6.col-lg-6
+      .col-xs-12.col-sm-6.col-lg-6
+        a.swipebox href="img/gallery-2.jpg" title=("My Caption 2")
+          .small-square
+            .hover-info
+              h4 BEATING CANCER
+      .col-xs-12.col-sm-6.col-lg-6
+        a.swipebox href="img/gallery-3.jpg" title=("My Caption 3")
+          .small-square.second
+            .hover-info
+              h4 EMBRACING VULNERABILITY
+      .col-xs-12.col-sm-6.col-lg-6
+        a.swipebox href="img/gallery-4.jpg" title=("My Caption 4")
+          .small-square.third
+            .hover-info
+              h4 GOING VEGAN
+      .col-xs-12.col-sm-6.col-lg-6
+        a.swipebox href="img/gallery-5.jpg" title=("My Caption 5")
+          .small-square.fourth
+            .hover-info
+              h4 sleeping more
+.portfolio.stories.section-two
+  .col-xs-12.col-sm-6.col-lg-6
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-2.jpg" title=("My Caption 2")
+        .small-square
+          .hover-info
+            h4 leading in all ways
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-3.jpg" title=("My Caption 3")
+        .small-square.second
+          .hover-info
+            h4 Knowing MY risks
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-4.jpg" title=("My Caption 4")
+        .small-square.third
+          .hover-info
+            h4 the road to recovery
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-5.jpg" title=("My Caption 5")
+        .small-square.fourth
+          .hover-info
+            h4 deciding to thrive
+  .col-xs-12.col-sm-6.col-lg-6
+    a.swipebox href="img/gallery-1.jpg" title=("My Caption 1")
+      .large-square
+        .hover-info
+          h4 creating a new legacy
+.portfolio.stories.section-three
+  .col-xs-12.col-sm-6.col-lg-6
+    a.swipebox href="img/gallery-1.jpg" title=("My Caption 1")
+      .large-square
+        .hover-info
+          h4 creating a new legacy
+  .col-xs-12.col-sm-6.col-lg-6
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-2.jpg" title=("My Caption 2")
+        .small-square
+          .hover-info
+            h4 BEATING CANCER
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-3.jpg" title=("My Caption 3")
+        .small-square.second
+          .hover-info
+            h4 getting tested
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-4.jpg" title=("My Caption 4")
+        .small-square.third
+          .hover-info
+            h4 staying std free
+    .col-xs-12.col-sm-6.col-lg-6
+      a.swipebox href="img/gallery-5.jpg" title=("My Caption 5")
+        .small-square.fourth
+          .hover-info
+            h4 for my daughters
+#contact-content.inner-content
+  br
+  h2 Share your story.
+  h5.text-muted style=("line-height: 28px;")
+    | Want to share your journey to accountability with us?
+    br
+    | Submit your story here and we may feature you!
+  .separator
+  .row
+    .col-xs-12.col-sm-12.col-lg-12
+      form#contact-form data-name=("Contact Form") method="POST" name="contact-form"
+        .row
+          .col-xs-12.col-sm-12.col-lg-8
+            form#contact-form data-name=("Contact Form") method="POST" name="contact-form"
+              .row
+                .col-xs-12.col-sm-6.col-lg-6
+                  .form-group
+                    input#name.form.form-control data-name="Name" name="name" onblur=("this.placeholder = 'Your Name'") onfocus=("this.placeholder = ''") placeholder=("Your Name") required="" type="text" /
+              .row
+                .col-xs-12.col-sm-6.col-lg-6
+                  .form-group
+                    input#email.form.form-control data-name=("Email Address") name="email-address" onblur=("this.placeholder = 'Your Email'") onfocus=("this.placeholder = ''") placeholder=("Your Email") required="" type="email" /
+              .row
+                .col-xs-12.col-sm-12.col-lg-12
+                  .form-group
+                    textarea#text-area.form.textarea.form-control data-name=("Text Area") name="message" onblur=("this.placeholder = 'Your message here... 20 characters Min.'") onfocus=("this.placeholder = ''") placeholder=("Your message here... 20 characters Min.") required=""
+              button#valid-form.btn.btn-color type="submit"  Share Your Story

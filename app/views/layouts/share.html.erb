@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta content = '<%= @share.full_message %>' property= "og:title" />
     <meta content = '<%= share_url(@share) %>' property= "og:url" />
     <meta content = '<%= @share.message %>' property= "og:description" />
     <meta content = '<%= @share.photo.url %>' property= "og:image" />
-    <meta content = '600' property= "og:image:width" />
-    <meta content = '400' property= "og:image:height" />
+    <meta content = '<%= @share.width %>' property= "og:image:width" />
+    <meta content = '<%= @share.height %>' property= "og:image:height" />
 	</head>
 </html>
 <body>
-  <img src='<%=@share.photo.url%>' width="600" height="400"/>
+  <img src='<%=@share.photo.url%>' width="<%= @share.width %>" height="<%= @share.height %>"/>
 </body>
