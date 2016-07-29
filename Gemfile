@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
 
+ruby '2.3.1',
 gem 'rails', '4.1.8'
 gem 'pg' # Use postgresql as the database for Active Record
 gem 'rails_12factor', group: :production # Heroku requirement
