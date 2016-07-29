@@ -16,7 +16,7 @@ class MainController < ApplicationController
   def contact
   end
 
-  def share
+  def share_your_story
   end
 
   def test

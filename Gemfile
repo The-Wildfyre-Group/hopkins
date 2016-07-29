@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.3.1'
 
 gem 'rails', '4.1.8'
 gem 'pg' # Use postgresql as the database for Active Record
@@ -18,7 +19,6 @@ gem "chartkick"
 gem 'groupdate', '~> 2.1.1'
 gem 'active_median', '~> 0.1.0'
 gem 'roo', '~> 2.1.0'
-gem 'remotipart', '~> 1.2'
 gem 'httparty'
 gem 'carrierwave'
 gem 'mini_magick'
