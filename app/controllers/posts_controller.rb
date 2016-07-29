@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, except: %w[index new create]
-  layout false
+  layout "survey"
   
   def index
     @posts = Post.all

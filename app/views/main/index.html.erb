@@ -60,7 +60,7 @@
 			<div class="overlay overlay-dark"></div>
 			<div class="item-title hidden-xs hidden-sm">
 
-				<img src="img/logo-dark.png" height="250" class="img-rounded"/>
+				<img src="img/logos/white/Black-Men's-Health-Survey-White-Text.png" height="250" class="img-rounded"/>
 				<br/>
 				<br/>
 
@@ -101,20 +101,29 @@
 			  <br/>
 
 			  <ul class="gf_oswald upper inline" role="tablist">
+          
           <li>
             <%= link_to main_share_twitter_link do %>
               <img src="img/icons/twitter.png" style="height: 50px; margin-right: 10px;">
             <% end %>
           </li>
+
           <li>
             <%= link_to main_share_fb_link do %>
               <img src="img/icons/facebook.png" style="height: 50px; margin-right: 10px;">
             <% end %>
+          </li>
+			    
 			    <li>
-			    	<img src="img/icons/youtube.png" style="height: 50px; margin-right: 10px;">
+			    	<a href="https://www.youtube.com/channel/UCzeUzAe9h-wZoo37rEtk2oA">
+			    		<img src="img/icons/youtube.png" style="height: 50px; margin-right: 10px;">
+			    	</a>
 			    </li>
+
 			    <li>
-			    	<img src="img/icons/instagram.png" style="height: 50px;">
+			    	<a href="https://www.instagram.com/bmhealthsurvey/">
+			    		<img src="img/icons/instagram.png" style="height: 50px;">
+			    	</a>
 			    </li>
 			  </ul>
 			  <!-- Tab panes -->
@@ -141,14 +150,14 @@
 			<ul class="hidden-lg main-navigation">
 
 				<li>
-					<a href="#home" data-toggle="tab" class="nav-link">
+					<a href="#" data-target="#home" data-toggle="tab" class="nav-link">
 						<i class="icon ion-ios-home-outline"></i>
 						Home
 					</a>
 				</li>
 
 				<li>
-					<a href="#about" data-toggle="tab" class="nav-link">
+					<a href="#" data-target="#about" data-toggle="tab" class="nav-link">
 						<i class="icon ion-ios-people-outline"></i>
 						About
 					</a>
@@ -211,7 +220,7 @@
 					<%= render "main/contact" %>
 				</div>
 
-				<div id="share" class="tab-pane fade">
+				<div id="share"class="tab-pane fade">
 					<%= render "main/share" %>
 				</div>
 
