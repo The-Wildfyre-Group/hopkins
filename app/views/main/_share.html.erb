@@ -1,3 +1,5 @@
+
+
 <div class="inner-content no-padding header-hero">
 	<div style="position: relative;">
 		<div class="overlay overlay-dark"></div>
@@ -33,20 +35,26 @@
 			      	</ol>
 			    </div>
 			</div>
+			<!-- Button modal fullscreen -->
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 share">
 				<h2 style="font-size: 16px; color: #fff; padding: 10px 20px; background: #08c; display: inline-block; letter-spacing: 1px;">
 					share your story
 				</h2>
 				<!-- Contact form -->
-	  		<form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
+	  		<!-- Contact form -->
+	  		<form id="contact-form" name="contact-form" method="POST" data-name="Contact Form" style="background-image: url(<%= image_url("rise-layout.png")%>); background-size: cover; border-radius: 4px; background-color: rgba(0,0,0, .75);">
         	<h4 class="text-center text-white">TELL US WHO YOU RISE FOR:</h4>
+        	<br/>
+        	<br/>
+        	<br/>
+        	<br/>
         	<div class="form-group">
-          	<input type="text" id="name" class="form form-control" placeholder="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" name="name" data-name="Name" required>
+          	<input type="text" id="name" class="form form-control" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" name="name" data-name="Name" required style="font-size: 30px; color: #fff; border-bottom: 1p solid #fff; background: transparent; text-align: center;">
           </div>
           <div class="clearfix"></div>
-          <p>
-          	<a href="#" class="btn btn-primary btn-large">UPLOAD YOUR IMAGE</a>
-          </p>
+          <!-- <h6 class="text-white"><span class="text-primary">#RisetoTHEChallenge</span> and create your own <br/>image at werisetoday.com</h6> -->
+          <br/>
+          <br/>
       	</form>
 			</div>
 		</div>
