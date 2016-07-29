@@ -171,7 +171,7 @@ h1 {
 
 h2 {
   font-size: 35px;
-  line-height: 2em;
+  line-height: 1.2em;
   font-weight: 700;
   color: #323a45;
   margin-bottom: 25px; }
@@ -2537,7 +2537,7 @@ h3 { line-height: 34px;}
 .light { font-weight: 100;}
 
 
-.img-circle {border: 5px solid #eee; box-shadow: 1px 1px 1px #ccc; margin-bottom: 20px;}
+.img-circle {border: 5px solid #eee; border-top-color: #08c;  box-shadow: 1px 1px 1px #777; margin-bottom: 20px;}
 
 ol li {
   padding-left: 5px;
@@ -2652,3 +2652,24 @@ h5.section-label {
   color: #6bc5ea;
   text-transform: uppercase;
 }
+
+img.250px {
+  height: 250px;
+  width: 250px;
+  max-height: 250px;
+  max-width: 250px;
+}
+
+
+hr {
+  border-color: #ccc;
+}
+
+hr.thick {
+  border-color: #ccc; border-width: 5px;
+}
+
+
+.p-l-20 {padding-left: 20px;}
+.p-l-30 {padding-left: 30px;}
+.p-l-40 {padding-left: 40px;}
