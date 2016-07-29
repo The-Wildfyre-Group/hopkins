@@ -40,5 +40,12 @@ Rails.application.routes.draw do
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate
 
+  # main
+  get "stories" => "main#stories", as: :stories
+  get "about" => "main#about", as: :about
+  get "partners" => "main#partners", as: :partners
+  get "share-with-us" => "main#share_with_us", as: :share_with_us
+  get "contact" => "main#contact", as: :contact
+
   get "test" => "main#test", as: :test
 end
