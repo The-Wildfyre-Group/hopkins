@@ -1,12 +1,8 @@
 <div class="loading-part animated-quick">
-
 	<div class="loader-part opacity-0 animated-quick">
-
 		<div class="loader-circle"></div>
 		<div class="loader-text">Black Men's Health Study</div>
-
 	</div>
-
 </div>
 
 <button class="open-menu-mobile">
@@ -25,29 +21,19 @@
 		<!-- Nav tabs -->
 	  <ul class="inline gf_oswald upper" role="tablist">
 	    <li role="presentation" class="active">
-	    	<a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-	    		Home
-	    	</a>
+	    	<%= link_to "Home", root_path %>
 	    </li>
 	    <li role="presentation">
-	    	<a href="#about" aria-controls="team" role="tab" data-toggle="tab">
-	    		About
-	    	</a>
+	    	<%= link_to "About", about_path %>
 	    </li>
 	    <li role="presentation">
-	    	<a href="#stories" aria-controls="stories" role="tab" data-toggle="tab">
-	    		Stories
-	    	</a>
+	    	<%= link_to "Stories", stories_path %>
 	    </li>
 	    <li role="presentation">
-	    	<a href="#partners" aria-controls="contact" role="tab" data-toggle="tab">
-	    		Partners
-	    	</a>
+	    	<%= link_to "Partners", partners_path %>
 	    </li>
 	    <li role="presentation">
-	    	<a href="#share" aria-controls="share" role="tab" data-toggle="tab">
-	    		Share
-	    	</a>
+	    	<%= link_to "Share", share_with_us_path %>
 	    </li>
 	  </ul>
 	  <!-- Tab panes -->
@@ -107,39 +93,40 @@
 	<ul class="hidden-lg main-navigation">
 
 		<li>
-			<a href="#" data-target="#home" data-toggle="tab" class="nav-link">
+			<%= link_to root_path do %>
 				<i class="icon ion-ios-home-outline"></i>
 				Home
-			</a>
+			<% end %>
 		</li>
 
 		<li>
-			<a href="#" data-target="#about" data-toggle="tab" class="nav-link">
+			<%= link_to about_path do %>
 				<i class="icon ion-ios-people-outline"></i>
 				About
-			</a>
+			<% end %>
 		</li>
 
 		<li>
-			<a href="#stories" data-toggle="tab" class="nav-link">
+			<%= link_to stories_path do %>
 				<i class="icon ion-ios-world-outline"></i>
 				Stories
-			</a>
+			<% end %>
 		</li>
 
 		<li>
-			<a href="#partners" data-toggle="tab" class="nav-link">
+			<%= link_to partners_path do %>
 				<i class="icon ion-ios-chatbubble-outline"></i>
 				Partners
-			</a>
+			<% end %>
 		</li>
 
 		<li>
-			<a href="#contact" data-toggle="tab" class="nav-link">
+			<%= link_to contact_path do %>
 				<i class="icon ion-ios-chatbubble-outline"></i>
 				Contact
-			</a>
+			<% end %>
 		</li>
+
 	</ul> <!-- CLOSE Main nav -->
 
 

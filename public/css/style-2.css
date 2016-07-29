@@ -185,6 +185,7 @@ h4 {
   font-size: 25px;
   font-weight: 700;
   color: #323a45;
+  line-height: 1.4em;
   margin-bottom: 25px; }
 
 h5 {
@@ -2546,12 +2547,9 @@ ol li {
 }
 
 table.leaderboard img {
-  width: 70%;
   display: table;
   margin-left: auto;
   margin-right: auto;
-  max-height: 100px;
-  max-width: 200px;
   width: auto;
 }
 
@@ -2596,20 +2594,27 @@ table.leaderboard img {
   }
 
   .history {
-    height: 1100px !important;
+    height: 1200px !important;
   }
 
-  h2 {
-      font-size: 16px !important;
-      line-height: 20px;
-      text-align: left;
+  h5.section-label {
+    font-size: 16px; 
+    color: #fff; 
+    padding: 10px 20px; 
+    background: #08c; 
+    display: inline-block; 
+    letter-spacing: 1px;
   }
 
-  .home-hero-mobile {
+  #content-part .home-hero {
     height: 850px;
   }
 
 }
+
+#content-part .home-hero {
+    height: 725px;
+  }
 
 .inner-content.history {
   height: 720px;
@@ -2617,4 +2622,32 @@ table.leaderboard img {
 
 .m-b-40 {
   margin-bottom: 40px;
+}
+
+
+h5.section-label {
+  font-size: 16px; 
+  color: #fff; 
+  padding: 10px 20px; 
+  background: #08c; 
+  display: inline-block; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+
+#content-part .header-hero h4, 
+.story h4  {
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 2.5vh;
+  color: #fff;
+}
+
+
+#content-part .header-hero h5 {
+  font-size: 16px; 
+  color: #6bc5ea;
+  text-transform: uppercase;
 }
