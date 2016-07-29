@@ -2,7 +2,21 @@ class MainController < ApplicationController
   layout 'main'
 
   def index
+  end
 
+  def about
+  end
+
+  def stories
+  end
+
+  def partners
+  end
+
+  def contact
+  end
+
+  def share
   end
 
   def test
