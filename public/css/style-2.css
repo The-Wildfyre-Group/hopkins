@@ -2847,6 +2847,10 @@ table.leaderboard h3 {
   font-size: 16px; 
   color: #6bc5ea;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  border-bottom: 1px solid #6bc5ea;
+  padding-bottom: 5px;
 }
 
 
