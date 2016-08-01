@@ -3,7 +3,7 @@ module Signup
 
   included do
     has_secure_password
-    before_create { generate_token(:authentication_token) }
+    before_create { GenerateToken.call(self, :authentication_token) }
     after_create :send_welcome_email
     validates_presence_of :password, :on => :create
     #validates :terms, acceptance: true
@@ -14,12 +14,6 @@ module Signup
   end
 
   module ClassMethods;end # end Class Methods
-
-  def generate_token(column)
-    begin
-      self[column] = SecureRandom.urlsafe_base64
-    end while User.exists?(column => self[column])
-  end
 
   def send_welcome_email
     #Mailer.welcome(user).deliver
