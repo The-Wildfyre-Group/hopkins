@@ -9,45 +9,67 @@
 
 
 
-<div class="inner-content border-top">
-	<div style="position: relative;">
-		<div class="center">
-			<h5 class="section-label">
-				rise up today
-			</h5>
-		</div>
-
-		<%= render "main/partials/home/introduction" %>
-		
+<div class="inner-content border-top relative">
+	<div class="center">
+		<h5 class="section-label">
+			rise up today
+		</h5>
 	</div>
+	<!-- introduction -->
+
+	<br/><hr/>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+			<h2 class="no-margin bold">Why is this study so important?</h2>
+		</div>
+		<!-- introduction -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+			<p class="lead m-t-10">The collective health of Black men in America has never before been a priority in the medical community. Let’s be honest, far too often it hasn’t been.</p>
+		</div>
+	</div>
+	<hr class="thick">
 </div>
 
-
-<div class="header-hero border-top">
-	<div style="position: relative;">
-		<div class="overlay overlay-dark"></div>
-
-
-		<div style="background: url(img/stock/7.jpg); background-size: cover;">
-			<div class="center">
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-						<div class="caption">
-							<br/>
-							<br/>
-							<h1 class="text-white">our stories</h1>
-							<p>From breaking the cycle of fearing doctors’ to catching life threatening illnesses early, Black men of all ages around the nation are embracing personal responsibility by taking ownership of their health.</p>
-						</div>
-					</div>
+<div class="header-hero border-top relative">
+	<div class="overlay overlay-dark"></div>
+	<div style="background: url(img/stock/16.jpg); background-size: cover;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="left">
+					<h5 class="section-label no-margin text-white">
+						let's get started
+					</h5>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-5"></div>
+				<div class="inner-content">
+					<%= render "main/partials/home/introduction" %>
+				</div>
 			</div>
 		</div>
-
-
 	</div>
 </div>
 
+
+
+<div class="inner-content border-top relative">
+	<div class="center">
+		<h5 class="section-label">
+			rise up today
+		</h5>
+	</div>
+	<!-- introduction -->
+
+	<br/><hr/>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+			<h1>our stories</h1>
+		</div>
+		<!-- introduction -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+			<p class="">From breaking the cycle of fearing doctors’ to catching life threatening illnesses early, Black men of all ages around the nation are embracing personal responsibility by taking ownership of their health.</p>
+		</div>
+	</div>
+	<hr class="thick">
+</div>
 
 <div class="inner-content no-padding bgcolor-light-grey">
 	<%= render "main/partials/home/stories" %>
@@ -63,32 +85,16 @@
 			<br/><br/>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
-					<h2 style="font-size: 30px; font-weight: lighter;">
-						Share Your Personal Story
-						of <span class="text-primary" style="font-weight: bold;"><u>Rising Up!</u></span>
-					</h2>
+					<h1>	Share Your Personal Story Rising Up!</h1>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-					<h5>Social media will play a major role in our effort to spread word of the Black Men’s Health Study, so we are encouraging Black men across the nation to share your personal stories of embracing healthy lifestyles via Facebook, Twitter and Instagram. </h5>
+					<p>Social media will play a major role in our effort to spread word of the Black Men’s Health Study, so we are encouraging Black men across the nation to share your personal stories of embracing healthy lifestyles via Facebook, Twitter and Instagram. </p>
+
+					<p>Take a minute to tell your story using our I Rise For… social generator and tell the world about the people, community or movement that you live for.</p>
 				</div>
 			</div>
-			<hr/>
-			<br/>
-			
-			<div class="row">
-				<div class="col-sm-6">
-					<br/><br/><br/>
-					<h5>Take a minute to tell your story using our I Rise For… social generator and tell the world about the people, community or movement that you live for.</h5>
-				</div>
-				<div class="col-sm-offset-1 col-sm-4">
-					<a href="/share">
-						<%= image_tag("share.png", class: "img-responsive img-thumbnail") %>
-					</a>
-				</div>
-			</div>
-			<hr class="thick"/>
-			<br/>
-			<br/>
 		</div>
 	</div>
 </div>
+
+<%= render "main/partials/share/share_your_story" %>
