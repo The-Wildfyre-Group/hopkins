@@ -1,16 +1,24 @@
 <h5 class="section-label">share your story</h5>
-	<form id="contact-form" name="contact-form" method="POST" data-name="Contact Form" style="background-image: url(<%= image_url("rise-layout.png")%>); background-size: cover; border-radius: 4px; background-color: rgba(0,0,0, .05); box-shadow: 1px 1px 1px #333; border-top: 1px solid #444; border: 1px solid #444; height: 450px; width: 450px;">
-  	<h4 class="text-center text-white">TELL US WHO YOU RISE FOR:</h4>
-  	<br/>
-  	<br/>
-  	<br/>
-  	<br/>
-  	<a href="#" data-toggle="modal" data-target="#modal-fullscreen">
-    	<div class="form-group">
-    		<input type="text" id="name" class="form form-control" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" name="name" data-name="Name" required style="font-size: 30px; color: #fff; border-bottom: 1p solid #fff; background: transparent; text-align: center;">
-    	</div>
+<div id="share-preview" >
+  <%= form_for Share.new, remote: true, html: {id: 'contact-form', name: "contact-form", multipart: true, style: "background-image: url(#{image_url('rise-layout.png')}); background-size: cover; border-radius: 4px; background-color: rgba(0,0,0, .05); box-shadow: 1px 1px 1px #333; border-top: 1px solid #444; border: 1px solid #444; height: 450px; width: 450px;"} do |f| %>
+    <h4 class="text-center text-white">TELL US WHO YOU RISE FOR:</h4>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <a href="#" data-toggle="modal" data-target="#modal-fullscreen">
+      <div class="form-group">
+        <%= f.text_field :message, class: "form form-control", placeholder: "Enter Name", onfocus: "this.placeholder=''", onblur: "this.placeholder='Enter Name'", 'data-name' => "Name" ,required: true, style: "font-size: 30px; color: #fff; border-bottom: 1p solid #fff; background: transparent; text-align: center;" %>
+      </div>
     </a>
+    <div class="form-group">
+      <%= f.file_field :photo %>
+    </div>
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
     <div class="clearfix"></div>
     <br/>
     <br/>
-	</form>
+  <% end %>
+</div>
