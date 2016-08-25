@@ -7,64 +7,106 @@
 <% @status["responses"].each do |response| %>
   <% if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s %>
     
+    <% Information.conditions.each do |condition| %>
     
-    Hypertension:<%= response["answers"][Variable::HYPERTENSION] %></br></br>
-    
-    
-    <%= Information.find_data_point(Information::HYPERTENSION, @user.region, @user.education, @user.age_range) %>
-    
-    Coronary Heart Disease:<%= response["answers"][Variable::CORONARY_HEART_DISEASE] %></br></br>
-    
-    <%= Information.find_data_point(Information::CORONARY_HEART_DISEASE.flatten, @user.region, @user.education, @user.age_range) %>
-    
-    
-    Angina:<%= response["answers"][Variable::ANGINA] %></br></br>
-    
-    <%= Information.find_data_point(Information::ANGINA, @user.region, @user.education, @user.age_range) %>
+    <b><%= condition %></b><br/>
+    Like You: <%= Information.find_data_point(Information.data[condition][:census_data], @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information.data[condition][:black_men] %><br/>
+    All Men: <%= Information.data[condition][:all_men] %><br/>
+    <% end %>
+
     
     
-    Heart Attack:<%= response["answers"][Variable::HEART_ATTACK] %></br></br>
-    <%= Information.find_data_point(Information::HEART_ATTACK, @user.region, @user.education, @user.age_range) %>
+    
+<% if false %>
+    <b>Coronary Heart Disease:<%= response["answers"][Variable::CORONARY_HEART_DISEASE] %></b></br>
+    Like You: <%= Information.find_data_point(Information::CORONARY_HEART_DISEASE.flatten, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_CORONARY_HEART_DISEASE %><br/>
+    All Men: <%= Information::BLACK_CORONARY_HEART_DISEASE %><br/>
+    
+    <br/><br/>
+    <b>Angina:<%= response["answers"][Variable::ANGINA] %></b></br>
+    Like You: <%= Information.find_data_point(Information::ANGINA, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_ANGINA %><br/>
+    All Men: <%= Information::BLACK_ANGINA %><br/>
+    
+    <br/><br/>
+    <b>Heart Attack: <%= response["answers"][Variable::HEART_ATTACK] %></b></br>
+    Like You: <%= Information.find_data_point(Information::HEART_ATTACK, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_HEART_ATTACK %><br/>
+    All Men: <%= Information::BLACK_HEART_ATTACK %><br/>
+    
+    <br/><br/>
+    <b>Heart Condition: <%= response["answers"][Variable::HEART_CONDITION] %></b></br>
+    Like You: <%= Information.find_data_point(Information::HEART_CONDITION, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_HEART_CONDITION %><br/>
+    All Men: <%= Information::BLACK_HEART_CONDITION %><br/>
     
     
-    Heart Condition:<%= response["answers"][Variable::HEART_CONDITION] %></br></br>
-    <%= Information.find_data_point(Information::HEART_CONDITION, @user.region, @user.education, @user.age_range) %>
+    <br/><br/>
+    <b>Stroke: <%= response["answers"][Variable::STROKE] %></b></br>
+    Like You: <%= Information.find_data_point(Information::STROKE, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_STROKE %><br/>
+    All Men: <%= Information::BLACK_STROKE %><br/>
     
+    <br/><br/>
+    <b>Emphysema: <%= response["answers"][Variable::EMPHYSEMA] %></b></br>
+    Like You: <%= Information.find_data_point(Information::EMPHYSEMA, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_EMPHYSEMA %><br/>
+    All Men: <%= Information::BLACK_EMPHYSEMA %><br/>
     
-    Stroke:<%= response["answers"][Variable::STROKE] %></br></br>
-    <%= Information.find_data_point(Information::STROKE, @user.region, @user.education, @user.age_range) %>
+    <br/><br/>
+    <b>Asthma: <%= response["answers"][Variable::ASTHMA] %></b></br>
+    Like You: <%= Information.find_data_point(Information::ASTHMA, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_ASTHMA %><br/>
+    All Men: <%= Information::BLACK_ASTHMA %><br/>
     
+    <br/><br/>
+    <b>High Cholesterol: <%= response["answers"][Variable::HIGH_CHOLESTEROL] %></b></br>
+    Like You: <%= Information.find_data_point(Information::HIGH_CHOLESTEROL, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_HIGH_CHOLESTEROL %><br/>
+    All Men: <%= Information::BLACK_HIGH_CHOLESTEROL %><br/>
     
-    EMPHYSEMA:<%= response["answers"][Variable::EMPHYSEMA] %></br></br>
-    <%= Information.find_data_point(Information::EMPHYSEMA, @user.region, @user.education, @user.age_range) %>
+    <br/><br/>
+    <b>Cancer: <%= response["answers"][Variable::CANCER] %></b></br>
+    Like You: <%= Information.find_data_point(Information::CANCER, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_CANCER %><br/>
+    All Men: <%= Information::BLACK_CANCER %><br/>
     
+    <br/><br/>
+    <b>Diabetes: <%= response["answers"][Variable::DIABETES] %></b></br>
+    Like You: <%= Information.find_data_point(Information::DIABETES, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_DIABETES %><br/>
+    All Men: <%= Information::BLACK_DIABETES %><br/>
     
-    ASTHMA:<%= response["answers"][Variable::ASTHMA] %></br></br>
-    <%= Information.find_data_point(Information::ASTHMA, @user.region, @user.education, @user.age_range) %>
+    <br/><br/>
+    <b>Chronic Chronchitis: <%= response["answers"][Variable::CHRONIC_BRONCHITIS] %></b></br>
+    Like You: <%= Information.find_data_point(Information::CHRONIC_BRONCHITIS, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_CHRONIC_BRONCHITIS %><br/>
+    All Men: <%= Information::BLACK_CHRONIC_BRONCHITIS %><br/>
     
-    HIGH_CHOLESTEROL:<%= response["answers"][Variable::HIGH_CHOLESTEROL] %></br></br>
-    <%= Information.find_data_point(Information::HIGH_CHOLESTEROL, @user.region, @user.education, @user.age_range) %>
+    <br/><br/>
+    <b>Arthritis: <%= response["answers"][Variable::ARTHRITIS] %></b></br>
+    Like You: <%= Information.find_data_point(Information::ARTHRITIS, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_ARTHRITIS %><br/>
+    All Men: <%= Information::BLACK_ARTHRITIS %><br/>
     
-    CANCER:<%= response["answers"][Variable::CANCER] %></br></br>
-    <%= Information.find_data_point(Information::CANCER, @user.region, @user.education, @user.age_range) %>
+    <br/><br/>
+    <b>Ulcer: <%= response["answers"][Variable::ULCERS] %></b></br>
+    Like You: <%= Information.find_data_point(Information::ULCERS, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_ULCERS %><br/>
+    All Men: <%= Information::BLACK_ULCERS %><br/>
     
-    DIABETES:<%= response["answers"][Variable::DIABETES] %></br></br>
-    <%= Information.find_data_point(Information::DIABETES, @user.region, @user.education, @user.age_range) %>
+    <b>Seizures: <%= response["answers"][Variable::SEIZURES] %></b></br>
+    Like You: <%= Information.find_data_point(Information::SEIZURES, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_SEIZURES %><br/>
+    All Men: <%= Information::BLACK_SEIZURES %><br/>
     
-    CHRONIC_BRONCHITIS:<%= response["answers"][Variable::CHRONIC_BRONCHITIS] %></br></br>
-    <%= Information.find_data_point(Information::CHRONIC_BRONCHITIS, @user.region, @user.education, @user.age_range) %>
-    
-    ARTHRITIS:<%= response["answers"][Variable::ARTHRITIS] %></br></br>
-    <%= Information.find_data_point(Information::ARTHRITIS, @user.region, @user.education, @user.age_range) %>
-    
-    ULCER:<%= response["answers"][Variable::ULCERS] %></br></br>
-    <%= Information.find_data_point(Information::ULCERS, @user.region, @user.education, @user.age_range) %>
-    
-    SEIZURES:<%= response["answers"][Variable::SEIZURES] %></br></br>
-    <%= Information.find_data_point(Information::SEIZURES, @user.region, @user.education, @user.age_range) %>
-    
-    OBESITY:<%= response["answers"][Variable::OBESITY] %></br></br>
-    <%= Information.find_data_point(Information::OBESITY, @user.region, @user.education, @user.age_range) %>
+    <b>Obesity: <%= response["answers"][Variable::OBESITY] %></b></br>
+    Like You: <%= Information.find_data_point(Information::OBESITY, @user.region, @user.education, @user.age_range) %><br/>
+    All Black: <%= Information::ALL_OBESITY %><br/>
+    All Men: <%= Information::BLACK_OBESITY %><br/>
+<% end%>
     
     <%= response["answers"] %></br></br>
     
