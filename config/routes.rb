@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get "settings" => "users#settings", as: :settings
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate
+  get "results" => "users#results", as: :results
 
   # main
   get "stories" => "main#stories", as: :stories
