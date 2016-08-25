@@ -1,0 +1,82 @@
+<%= @user.region %> <br/>
+<%= @user.education %> <br/>
+<%= @user.age %> <br/>
+
+
+
+<% @status["responses"].each do |response| %>
+  <% if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s %>
+    
+    
+    Hypertension:<%= response["answers"][Variable::HYPERTENSION] %></br></br>
+    
+    
+    <%= Information.find_data_point(Information::HYPERTENSION, @user.region, @user.education, @user.age_range) %>
+    
+    Coronary Heart Disease:<%= response["answers"][Variable::CORONARY_HEART_DISEASE] %></br></br>
+    
+    <%= Information.find_data_point(Information::CORONARY_HEART_DISEASE.flatten, @user.region, @user.education, @user.age_range) %>
+    
+    
+    Angina:<%= response["answers"][Variable::ANGINA] %></br></br>
+    
+    <%= Information.find_data_point(Information::ANGINA, @user.region, @user.education, @user.age_range) %>
+    
+    
+    Heart Attack:<%= response["answers"][Variable::HEART_ATTACK] %></br></br>
+    <%= Information.find_data_point(Information::HEART_ATTACK, @user.region, @user.education, @user.age_range) %>
+    
+    
+    Heart Condition:<%= response["answers"][Variable::HEART_CONDITION] %></br></br>
+    <%= Information.find_data_point(Information::HEART_CONDITION, @user.region, @user.education, @user.age_range) %>
+    
+    
+    Stroke:<%= response["answers"][Variable::STROKE] %></br></br>
+    <%= Information.find_data_point(Information::STROKE, @user.region, @user.education, @user.age_range) %>
+    
+    
+    EMPHYSEMA:<%= response["answers"][Variable::EMPHYSEMA] %></br></br>
+    <%= Information.find_data_point(Information::EMPHYSEMA, @user.region, @user.education, @user.age_range) %>
+    
+    
+    ASTHMA:<%= response["answers"][Variable::ASTHMA] %></br></br>
+    <%= Information.find_data_point(Information::ASTHMA, @user.region, @user.education, @user.age_range) %>
+    
+    HIGH_CHOLESTEROL:<%= response["answers"][Variable::HIGH_CHOLESTEROL] %></br></br>
+    <%= Information.find_data_point(Information::HIGH_CHOLESTEROL, @user.region, @user.education, @user.age_range) %>
+    
+    CANCER:<%= response["answers"][Variable::CANCER] %></br></br>
+    <%= Information.find_data_point(Information::CANCER, @user.region, @user.education, @user.age_range) %>
+    
+    DIABETES:<%= response["answers"][Variable::DIABETES] %></br></br>
+    <%= Information.find_data_point(Information::DIABETES, @user.region, @user.education, @user.age_range) %>
+    
+    CHRONIC_BRONCHITIS:<%= response["answers"][Variable::CHRONIC_BRONCHITIS] %></br></br>
+    <%= Information.find_data_point(Information::CHRONIC_BRONCHITIS, @user.region, @user.education, @user.age_range) %>
+    
+    ARTHRITIS:<%= response["answers"][Variable::ARTHRITIS] %></br></br>
+    <%= Information.find_data_point(Information::ARTHRITIS, @user.region, @user.education, @user.age_range) %>
+    
+    ULCER:<%= response["answers"][Variable::ULCERS] %></br></br>
+    <%= Information.find_data_point(Information::ULCERS, @user.region, @user.education, @user.age_range) %>
+    
+    SEIZURES:<%= response["answers"][Variable::SEIZURES] %></br></br>
+    <%= Information.find_data_point(Information::SEIZURES, @user.region, @user.education, @user.age_range) %>
+    
+    OBESITY:<%= response["answers"][Variable::OBESITY] %></br></br>
+    <%= Information.find_data_point(Information::OBESITY, @user.region, @user.education, @user.age_range) %>
+    
+    <%= response["answers"] %></br></br>
+    
+    <%#= response %></br></br>
+    
+    
+    <%#= response %></br></br>
+    
+    <%#= response %></br></br>
+  <% end %>
+<% end %>
+
+Hypertension 30.1 33.0
+
+{"id"=>"list_17806457_choice", "question"=>"Hypertension, also called high blood pressure", "field_id"=>17806457, "group"=>"group_17806448"}

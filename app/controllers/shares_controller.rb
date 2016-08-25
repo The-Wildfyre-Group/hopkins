@@ -3,6 +3,8 @@ class SharesController < ApplicationController
 
   def create
     @share = Share.create(share_params)
+    p @share.errors.full_messages
+    redirect_to :back
   end
 
   def show

@@ -20,6 +20,10 @@ class UsersController < ApplicationController
   def settings
     load_user
   end
+  
+  def consent
+    load_user
+  end
 
   def update
     save_user or render 'settings'
@@ -37,6 +41,11 @@ class UsersController < ApplicationController
       data[:left_surveys] += 1 unless completed
     end
     render json: { data: data }
+  end
+  
+  def results
+    @user = current_user
+    @status = HTTParty.get('https://api.typeform.com/v0/form/X7Gqv9?key=893f6cea38785bbc15d71f06bcd07bf5e15653dd')
   end
 
   private

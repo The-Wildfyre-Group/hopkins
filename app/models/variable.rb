@@ -13,7 +13,7 @@ class Variable
   DIABETES = "list_17806468_choice"
   CHRONIC_BRONCHITIS = "list_17806469_choice"
   ARTHRITIS = "list_17806470_choice"
-  ULCER = "list_17806471_choice"
+  ULCERS = "list_17806471_choice"
   SEIZURES = "list_17806474_choice"
   OBESITY = "list_17806477_choice"
     

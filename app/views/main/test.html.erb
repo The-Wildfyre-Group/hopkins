@@ -1,10 +1,10 @@
-<% @services["questions"].each do |question| %>
+<% @status["questions"].each do |question| %>
 <%= question %></br>
 <% end %>
 
 <br><br>
 
-<% @services["responses"].each do |response| %>
+<% @status["responses"].each do |response| %>
   <% if response["completed"] == "1" %>
     <%= response %></br></br>
   <% end %>
@@ -12,7 +12,7 @@
 
 <br><br><br>
 
-<%= @services %>
+<%#= @services %>
 
 
 
