@@ -27,8 +27,98 @@ class Information
   FORMER_SMOKERS = [ [0.0], [4.6], [18.5], [0.0], [4.7], [3.9], [22.3], [12.3], [15.4], [26.1], [21.0], [10.3], [59.5], [36.6], [30.2], [49.6], [51.1], [46.6], [0.0], [4.2], [0.0], [23.9], [0.0], [0.0], [23.2], [14.0], [14.5], [22.3], [14.7], [7.8], [53.8], [41.5], [33.2], [43.2], [53.2], [52.5], ]
   NONE_SMOKERS = [ [78.8], [85.1], [77.3], [67.4], [68.1], [89.5], [52.4], [50.8], [75.1], [38.1], [52.4], [76.6], [21.5], [36.1], [69.7], [31.6], [33.7], [53.0], [73.1], [79.5], [95.1], [68.7], [94.4], [1.0], [35.0], [58.4], [82.9], [15.9], [59.9], [76.4], [22.7], [38.8], [62.1], [44.2], [46.7], [47.4], ]
   
+  
+  ALL_HYPERTENSION = 30.1 
+  BLACK_HYPERTENSION = 33.0
+  
+  ALL_CORONARY_HEART_DISEASE = 6.0
+  BLACK_CORONARY_HEART_DISEASE = 4.7
+  
+  ALL_ANGINA = 2.3
+  BLACK_ANGINA = 1.6
+  
+  ALL_HEART_ATTACK = 4.2
+  BLACK_HEART_ATTACK = 3.0
+  
+  ALL_HEART_CONDITION = 7.1
+  BLACK_HEART_CONDITION = 4.7
+  
+  ALL_STROKE = 2.7
+  BLACK_STROKE = 3.0
+  
+  ALL_EMPHYSEMA = 1.8
+  BLACK_EMPHYSEMA = 1.6
+  
+  ALL_ASTHMA = 10.2
+  BLACK_ASTHMA = 12.4
+  
+  ALL_HIGH_CHOLESTEROL = 21.9
+  BLACK_HIGH_CHOLESTEROL = 18.9
+  
+  ALL_CANCER = 7.6
+  BLACK_CANCER = 5.5
+  
+  ALL_DIABETES = 9.8
+  BLACK_DIABETES = 11.5
+   
+  ALL_CHRONIC_BRONCHITIS = 2.5
+  BLACK_CHRONIC_BRONCHITIS = 3.1
+  
+  ALL_ARTHRITIS = 18.8
+  BLACK_ARTHRITIS = 16.6
+  
+  ALL_ULCERS = 5.9
+  BLACK_ULCERS = 5.7
+  
+  ALL_SEIZURES = 1.4
+  BLACK_SEIZURES = 1.8
+  
+  ALL_OBESITY = 30.4
+  BLACK_OBESITY = 31.5  
+  
   def self.find_data_point(data, region, education, range)
     data[FindCell.call(region, education, range).first]
+  end
+  
+  def self.conditions
+    ["Hypertension", 
+      "Coronary Heart Disease", 
+      "Angina",
+      "Heart Attack", 
+      "Heart Condition", 
+      "Stroke", 
+      "Emphysema", 
+      "Asthma", 
+      "High Cholesterol", 
+      "Cancer", 
+      "Diabetes", 
+      "Chronic Bronchitis", 
+      "Arthritis", 
+      "Ulcers",
+      "Seizures",
+      "Obesity",] 
+
+  end
+  
+  
+  def self.data
+    {"Hypertension" => { answer: Variable::HYPERTENSION, census_data: Information::HYPERTENSION, all_men:  Information::ALL_HYPERTENSION, black_men: Information::BLACK_HYPERTENSION },
+      "Coronary Heart Disease" => { answer: Variable::CORONARY_HEART_DISEASE, census_data: Information::CORONARY_HEART_DISEASE.flatten, all_men:  Information::ALL_CORONARY_HEART_DISEASE, black_men: Information::BLACK_CORONARY_HEART_DISEASE },
+      "Angina" => { answer: Variable::ANGINA, census_data: Information::ANGINA, all_men:  Information::ALL_ANGINA, black_men: Information::BLACK_ANGINA },
+      "Heart Attack" => { answer: Variable::HEART_ATTACK, census_data: Information::HEART_ATTACK, all_men:  Information::ALL_HEART_ATTACK, black_men: Information::BLACK_HEART_ATTACK },
+      "Heart Condition" => { answer: Variable::HEART_CONDITION, census_data: Information::HEART_CONDITION, all_men:  Information::ALL_HEART_CONDITION, black_men: Information::BLACK_HEART_CONDITION },
+      "Stroke" => { answer: Variable::STROKE, census_data: Information::STROKE, all_men:  Information::ALL_STROKE, black_men: Information::BLACK_STROKE },
+      "Emphysema" => { answer: Variable::EMPHYSEMA, census_data: Information::EMPHYSEMA, all_men:  Information::ALL_EMPHYSEMA, black_men: Information::BLACK_EMPHYSEMA },
+      "Asthma" => { answer: Variable::ASTHMA, census_data: Information::ASTHMA, all_men:  Information::ALL_ASTHMA, black_men: Information::BLACK_ASTHMA },
+      "High Cholesterol" => { answer: Variable::HIGH_CHOLESTEROL, census_data: Information::HIGH_CHOLESTEROL, all_men:  Information::ALL_HIGH_CHOLESTEROL, black_men: Information::BLACK_HIGH_CHOLESTEROL },
+      "Cancer" => { answer: Variable::CANCER, census_data: Information::CANCER, all_men:  Information::ALL_CANCER, black_men: Information::BLACK_CANCER },
+      "Diabetes" => { answer: Variable::DIABETES, census_data: Information::DIABETES, all_men:  Information::ALL_DIABETES, black_men: Information::BLACK_DIABETES },
+      "Chronic Bronchitis" => { answer: Variable::CHRONIC_BRONCHITIS, census_data: Information::CHRONIC_BRONCHITIS, all_men:  Information::ALL_CHRONIC_BRONCHITIS, black_men: Information::BLACK_CHRONIC_BRONCHITIS },
+      "Arthritis" => { answer: Variable::ARTHRITIS, census_data: Information::ARTHRITIS, all_men:  Information::ALL_ARTHRITIS, black_men: Information::BLACK_ARTHRITIS },
+      "Ulcers" => { answer: Variable::ULCERS, census_data: Information::ULCERS, all_men:  Information::ALL_ULCERS, black_men: Information::BLACK_ULCERS },
+      "Seizures" => { answer: Variable::SEIZURES, census_data: Information::SEIZURES, all_men:  Information::ALL_SEIZURES, black_men: Information::BLACK_SEIZURES },
+      "Obesity" => { answer: Variable::OBESITY, census_data: Information::OBESITY, all_men:  Information::ALL_OBESITY, black_men: Information::BLACK_OBESITY },
+    }
   end  
  
   
