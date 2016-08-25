@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get "share" => "shares#new"
 
   get "settings" => "users#settings", as: :settings
+  get "results" => "users#results", as: :results
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate
   get "results" => "users#results", as: :results
