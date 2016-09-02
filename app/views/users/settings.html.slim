@@ -95,7 +95,7 @@
                   hr.styled_2
                     .indent_title_in
                       i.pe-7s-map-marker
-                      h3 Location & Address
+                      h3 State of Residence
                       p Where are you?
                     .wrapper_indent
                       .row
@@ -103,28 +103,7 @@
                           label State
                           .styled-select
                             = f.select :state, Location.states, { selected: current_user.state }, class: "form-control"
-                        .col-md-6
-                          .form-group
-                            label City
-                            input#town_apply.form-control.styled name="town_apply" placeholder="Town" type="text" required="required"
-                            .help-block.with-errors
-                      .row
-                        .col-md-6
-                          .form-group
-                            label Country
-                            .styled-select
-                              select#country_apply.form-control name="country_apply" required="required"
-                                option value="" Select your country
-                                option value="Europe" Europe
-                                option value="Asia" Asia
-                                option value=("North America") North America
-                                option value=("South America") South America
-                            .help-block.with-errors
-                        .col-md-3
-                          .form-group
-                            label Postal Code
-                            input#postal_code_apply.form-control.styled name="postal_code_apply" placeholder="001238" type="text" required="required"
-                            .help-block.with-errors
+                        
                     hr.styled_2
                     p.text-center
                       = f.submit class: "button_outline large"
