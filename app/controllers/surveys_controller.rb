@@ -1,4 +1,5 @@
 class SurveysController < ApplicationController
+  before_action :authenticate_user!
   layout "survey"
 
   def index

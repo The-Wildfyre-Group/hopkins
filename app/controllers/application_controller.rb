@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by_authentication_token(cookies[:authentication_token]) if cookies[:authentication_token]
   end
+  
+  def authenticate_user!
+    redirect_to login_path if current_user.nil?
+  end
 
   def education
     ["Less than High School", "High School/Some College", "Bachelor’s and Higher"]

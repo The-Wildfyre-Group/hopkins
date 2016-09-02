@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, except: [:new, :create]
 
   def index
     load_users
@@ -46,6 +47,7 @@ class UsersController < ApplicationController
   def results
     @user = current_user
     @status = HTTParty.get('https://api.typeform.com/v0/form/X7Gqv9?key=893f6cea38785bbc15d71f06bcd07bf5e15653dd')
+    @behavior = HTTParty.get('https://api.typeform.com/v0/form/n2QJzM?key=893f6cea38785bbc15d71f06bcd07bf5e15653dd')
   end
 
   private
