@@ -1726,9 +1726,6 @@ ul.main-tabs li.active a {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
 
-   
-
-
   .loading-part .loader-part .loader-circle {
     top: calc(50% - 50px); }
   .loading-part .loader-text {
@@ -2646,7 +2643,7 @@ table.leaderboard img {
 }
 
 #content-part .home-hero {
-    height: 650px;
+    min-height: 650px;
   }
 
 .inner-content.history {
