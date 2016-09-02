@@ -2645,7 +2645,7 @@ table.leaderboard img {
 }
 
 #content-part .home-hero {
-    height: 755px;
+    height: 650px;
   }
 
 .inner-content.history {
@@ -2856,3 +2856,5 @@ table.leaderboard h3 {
 
 .ml10 {margin-left: 10px;}
 .m-t-10  {margin-top: 10px;}
+.uppercase {text-transform: uppercase;}
+.ls_4 {letter-spacing: 4px;}
