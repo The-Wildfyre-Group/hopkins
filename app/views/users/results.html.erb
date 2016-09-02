@@ -1,0 +1,32 @@
+<%= @user.region %> <br/>
+<%= @user.education %> <br/>
+<%= @user.age %> <br/>
+
+
+
+<% @status["responses"].each do |response| %>
+    <% if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s %>
+        <% Information.status_conditions.each do |condition| %>
+            <%# if response["answers"][Information.status_data[condition][:answer]] == "Yes" %>
+                <b><%= condition %></b><br/>
+                    Like You: <%= Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range) %><br/>
+                    All Black: <%= Information.status_data[condition][:black_men] %><br/>
+                    All Men: <%= Information.status_data[condition][:all_men] %><br/>
+            <%# end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+<% @behavior["responses"].each do |response| %>
+    <% if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s %>
+      <% Information.behavior_conditions.each do |condition| %>
+          <%# if response["answers"][Information.behavior_data[condition][:answer]] == "Yes" %>
+              <b><%= condition %></b><br/>
+                  Like You: <%= Information.find_data_point(Information.behavior_data[condition][:census_data], @user.region, @user.education, @user.age_range) %><br/>
+                  All Black: <%= Information.behavior_data[condition][:black_men] %><br/>
+                  All Men: <%= Information.behavior_data[condition][:all_men] %><br/>
+          <%# end %>
+      <% end %>
+    <% end %>
+<% end %>
+

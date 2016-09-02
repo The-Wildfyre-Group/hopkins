@@ -1,0 +1,19 @@
+<h5 class="section-label">share your story</h5>
+
+  <%= form_for Share.new, remote: true, html: { class: 'share-form', style: "background-image: url(#{image_url('rise-layout.png')}); background-size: cover; border-radius: 4px; background-color: rgba(0,0,0, .05); box-shadow: 1px 1px 1px #333; border-top: 1px solid #444; border: 1px solid #444; height: 450px; width: 450px;"} do |f|%>
+  	<h4 class="text-center text-white">TELL US WHO YOU RISE FOR:</h4>
+  	<br/>
+  	<br/>
+  	<br/>
+  	<br/>
+  	<a href="#" data-toggle="modal" data-target="#modal-fullscreen">
+    	<div class="form-group">
+    		<input type="text" id="name" class="form form-control" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'" name="name" data-name="Name" required style="font-size: 30px; color: #fff; border-bottom: 1p solid #fff; background: transparent; text-align: center;">
+    	</div>
+    </a>
+    <button photo-upload-btn.button.btn.btn-sm.btn-color> UPLOAD PHOTO
+    <%= f.file_field :photo, style: 'display:none', id: 'share-photo-file'%>
+    <div class="clearfix"></div>
+    <br/>
+    <br/>
+	<% end %>

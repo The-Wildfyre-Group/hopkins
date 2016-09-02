@@ -45,6 +45,12 @@ class User < ActiveRecord::Base
     now = Time.now.in_time_zone("Eastern Time (US & Canada)")
     now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
   end
+  
+  def age_range
+    return [18,34] if (18..34).to_a.include? age
+    return [35,64] if (35..64).to_a.include? age
+    return [65] if age > 64
+  end
 
   def self.unique_groups
     pluck(:groups).flatten.uniq.reject(&:empty?)

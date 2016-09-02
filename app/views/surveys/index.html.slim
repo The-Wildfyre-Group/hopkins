@@ -27,24 +27,24 @@
           h3 Health Status
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
       .col-md-4.col-sm-4
-        = link_to "javascript: void(0)", class: "box_feat disabled services"
+        = link_to next_survey_if_previous_completed(current_user, "Status"), class: "box_feat services"
           i.pe-7s-display2
           h3 Health Services
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
       .col-md-4.col-sm-4
-        = link_to "javascript: void(0)", class: "box_feat disabled behavior"
+        = link_to next_survey_if_previous_completed(current_user, "Services"), class: "box_feat behavior"
           i.pe-7s-science
           h3 Health Behavior
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
     /! End row
     .row
       .col-md-4.col-sm-4
-        = link_to "javascript: void(0)", class: "box_feat disabled psycho-social"
+        = link_to next_survey_if_previous_completed(current_user, "Behavior"), class: "box_feat psycho-social"
           i.pe-7s-rocket
           h3 Psycho-Social Factors
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
       .col-md-4.col-sm-4
-        = link_to "javascript: void(0)", class: "box_feat disabled closing"
+        = link_to next_survey_if_previous_completed(current_user, "Psycho Social"), class: "box_feat closing"
           i.pe-7s-target
           h3 Closing
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
