@@ -1726,9 +1726,6 @@ ul.main-tabs li.active a {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
 
-   
-
-
   .loading-part .loader-part .loader-circle {
     top: calc(50% - 50px); }
   .loading-part .loader-text {
@@ -2112,8 +2109,9 @@ ul.main-tabs li.active a {
     font-family: 'Neuton', serif;
     font-size: 22px;
     font-weight: 300;
-    line-height: 1.30;
+    line-height: 1.40;
     letter-spacing: 0 !important; 
+    margin-top: 20px;
 }
 
 #content-part h4 {
@@ -2645,7 +2643,7 @@ table.leaderboard img {
 }
 
 #content-part .home-hero {
-    height: 755px;
+    min-height: 650px;
   }
 
 .inner-content.history {
@@ -2856,3 +2854,5 @@ table.leaderboard h3 {
 
 .ml10 {margin-left: 10px;}
 .m-t-10  {margin-top: 10px;}
+.uppercase {text-transform: uppercase;}
+.ls_4 {letter-spacing: 4px;}

@@ -20,19 +20,19 @@
 
 		<!-- Nav tabs -->
 	  <ul class="inline gf_oswald upper" role="tablist">
-	    <li role="presentation" class="active">
+	    <li role="presentation" class="<%= current_page?(root_path) ? "active" : "" %>">
 	    	<%= link_to "Home", root_path %>
 	    </li>
-	    <li role="presentation">
+	    <li role="presentation" class="<%= current_page?(about_path) ? "active" : "" %>">
 	    	<%= link_to "About", about_path %>
 	    </li>
-	    <li role="presentation">
+	    <li role="presentation" class="<%= current_page?(stories_path) ? "active" : "" %>">
 	    	<%= link_to "Stories", stories_path %>
 	    </li>
-	    <li role="presentation">
+	    <li role="presentation" class="<%= current_page?(partners_path) ? "active" : "" %>">
 	    	<%= link_to "Partners", partners_path %>
 	    </li>
-	    <li role="presentation">
+	    <li role="presentation" class="<%= current_page?(share_your_story_path) ? "active" : "" %>">
 	    	<%= link_to "Share", share_your_story_path %>
 	    </li>
 	  </ul>
@@ -82,11 +82,11 @@
 	  <br/>
 
 
-	  <div class="legal-links">
+	  <!-- <div class="legal-links">
 	  	<p class="">Privacy Policy and Terms of Use</p>
 	  	<p class="">Copyright Compliance Policy</p>
 	  	<p class="">User Content Submission Agreement</p>
-	  	<p class="">Contact</p>
+	  	<p class="">Contact</p> -->
 	  <!-- Tab panes -->
 	</div>
 
