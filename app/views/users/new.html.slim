@@ -2,11 +2,11 @@
   .zindex_wrapper
     #intro_txt
       .container
-        h1 Join the Movement
+        h1.text-center Join the Movement
         p Sign up below to get started.
         br/
         .row
-          .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-6.col-sm-12.col-xs-12
+          .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
             = form_for @user, data: { toggle: 'validator', disable: false } do |f|
               #message-contact-home
               .row
@@ -68,4 +68,4 @@
               .row
                 .col-md-12
                   .form-group.text-center
-                    = f.submit "Participate", type: "submit", class: "btn btn-primary button btn-lg", id: "submit-contact-home"
+                    = f.submit "Participate", type: "submit", class: "btn btn-primary button btn-block btn-lg", id: "submit-contact-home"
