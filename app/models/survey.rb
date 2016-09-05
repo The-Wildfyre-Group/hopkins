@@ -9,6 +9,7 @@ class Survey < ActiveRecord::Base
      "Behavior" => "n2QJzM",
      "Psycho Social" => "wVvdrY",
      "Closing" => "vQ03Un",
+     "Consent" => "Wq58eg",
      }
   end
 
@@ -24,6 +25,8 @@ class Survey < ActiveRecord::Base
       self.codes["Psycho Social"]
     when "closing"
       self.codes["Closing"]
+    when "consent"
+      self.codes["Consent"]
     end
   end
 
