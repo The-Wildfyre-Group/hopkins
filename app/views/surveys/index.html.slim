@@ -20,41 +20,36 @@
       p Each section must be completed in one sitting.
     .row
       .col-md-4.col-sm-4
-        = link_to status_surveys_path, class: "box_feat status"
+        = link_to '#', class: "box_feat status"
           i.pe-7s-diamond
           h3 Health Status
-          - if current_user.completed_survey?("Status")
-            | Completed
+          span.completed
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
       .col-md-4.col-sm-4
-        = link_to next_survey_if_previous_completed(current_user, "Status"), class: "box_feat services"
+        = link_to "#", class: "box_feat services"
           i.pe-7s-display2
           h3 Health Services
-          - if current_user.completed_survey?("Services")
-            | Completed
+          span.completed
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
       .col-md-4.col-sm-4
-        = link_to next_survey_if_previous_completed(current_user, "Services"), class: "box_feat behavior"
+        = link_to "#", class: "box_feat behavior"
           i.pe-7s-science
           h3 Health Behavior
-          - if current_user.completed_survey?("Behavior")
-            | Completed
+          span.completed
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
     /! End row
     .row
       .col-md-4.col-sm-4
-        = link_to next_survey_if_previous_completed(current_user, "Behavior"), class: "box_feat psycho-social"
+        = link_to '#', class: "box_feat psycho-social"
           i.pe-7s-rocket
           h3 Psycho-Social Factors
-          - if current_user.completed_survey?("Psycho Social")
-            | Completed
+          span.completed
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
       .col-md-4.col-sm-4
-        = link_to next_survey_if_previous_completed(current_user, "Psycho Social"), class: "box_feat closing"
+        = link_to '#', class: "box_feat closing"
           i.pe-7s-target
           h3 Closing
-          - if current_user.completed_survey?("Closing")
-            | Completed
+          span.completed
           p Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii option.
     /! End row
   /! End container
