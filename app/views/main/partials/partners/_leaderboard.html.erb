@@ -31,55 +31,25 @@
               </th> 
             </tr> 
           </thead> 
-          <tbody> 
-            <tr> 
+          <tbody>
+            <% User.group_count.each do |partner| %> 
+            <tr>  
               <td>
                 <div class="row">
                   <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                    <img src="img/logos/partner/JHSPH.png" class="img-responsive">
+                    <img src="<%= User.partner_photo[partner.first] %>" class="img-responsive">
                     <br/>
                   </div>
                   <div class="col-lg-9 col-md-7 col-sm-7 col-xs-11 mobile-text-center">
-                    <h3>Johns Hopkins</h3>
+                    <h3><%= partner.first %></h3>
                   </div>
                   <div class="col-xs-1">
-                    <h2 class="text-primary lighter">3</h2>
+                    <h2 class="text-primary lighter"><%= partner.last %></h2>
                   </div>
                 </div>
               </td> 
             </tr>
-            <tr> 
-              <td>
-                <div class="row">
-                  <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                    <img src="img/logos/partner/gwu.png" class="img-responsive">
-                    <br/>
-                  </div>
-                  <div class="col-lg-9 col-md-7 col-sm-7 col-xs-11 mobile-text-center">
-                    <h3>George Washington University</h3>
-                  </div>
-                  <div class="col-xs-1">
-                    <h2 class="text-primary lighter">3</h3>
-                  </div>
-                </div>
-              </td> 
-            </tr>
-            <tr> 
-              <td>
-                <div class="row">
-                  <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-                    <img src="img/logos/partner/gwu-seal.png" class="img-responsive">
-                    <br/>
-                  </div>
-                  <div class="col-lg-9 col-md-7 col-sm-7 col-xs-11 mobile-text-center">
-                    <h3>George Washington University</h3>
-                  </div>
-                  <div class="col-xs-1">
-                    <h2 class="text-primary lighter">3</h3>
-                  </div>
-                </div>
-              </td> 
-            </tr>
+          <% end %>
           </tbody> 
         </table>
       </div>
