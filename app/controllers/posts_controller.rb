@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  layout "main"
   before_action :find_post, except: %w[index new create]
 
   
