@@ -2856,3 +2856,23 @@ table.leaderboard h3 {
 .m-t-10  {margin-top: 10px;}
 .uppercase {text-transform: uppercase;}
 .ls_4 {letter-spacing: 4px;}
+
+
+
+#content-part .steps h1 {
+    text-align: right !important;
+}
+
+
+#content-part .steps h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 15px;
+    font-weight: 100;
+    text-align: left;
+    margin-left: 5px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+}
