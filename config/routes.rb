@@ -40,6 +40,8 @@ Rails.application.routes.draw do
   get "results" => "users#results", as: :results
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate
+  get "consent" => "consent#consent", as: :consent
+  get "consent/status" => "consent#status", as: :consent_status
 
   # main
   get "stories" => "main#stories", as: :stories
