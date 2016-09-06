@@ -2807,7 +2807,7 @@ table.leaderboard h3 {
     outline: medium none;
     height: 60px;
     color: #FFFFFF;
-    font-size: 22px;
+    font-size:18px;
     -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
     -moz-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
     -ms-transition: all 0.3s cubic-bezier(0, 0, 0.58, 1);
