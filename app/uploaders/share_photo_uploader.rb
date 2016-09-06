@@ -2,9 +2,9 @@
 
 class SharePhotoUploader < BaseUploader
 
-  #process resize_to_fit: [600, 400]
-  #process :store_dimensions
-  #process :add_text
+  process resize_to_fit: [600, 400]
+  process :store_dimensions
+  process :add_text
 
   def add_text
     second_image = MiniMagick::Image.open(Rails.root.join('app','assets','images','rise-layout.png'))
@@ -23,6 +23,7 @@ class SharePhotoUploader < BaseUploader
         c.compose "Over"
         c.gravity "Center"
       end
+
       result
     end
   end

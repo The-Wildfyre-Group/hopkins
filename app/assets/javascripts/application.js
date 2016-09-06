@@ -21,6 +21,9 @@
 //= require surveys
 //= require share
 //= require backend/backend
+//= require bootstrap-notify
+//= require notify
+
 
 $(document).ready(function() {
 // commentented because of error layerSlider is not a function

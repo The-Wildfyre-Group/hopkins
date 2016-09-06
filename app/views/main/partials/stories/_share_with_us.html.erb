@@ -12,13 +12,14 @@
 
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-lg-12">
-            <%= form_for Post.new, html: {id: "contact-form", remote: true} do |form| %>
+            <%= form_for Post.new, html: {id: "contact-form", 'data-toggle' => :validator, 'data-disable' => false }, remote: true do |form| %>
 
               <div class="row">
                 <!-- Full name -->
                 <div class="col-xs-12">
                   <div class="form-group">
-                    <%= form.text_field :name, class: "form form-control", placeholder: "Your Name" %>
+                    <%= form.text_field :name, class: "form form-control", placeholder: "Your Name", required: true %>
+                    <div class='help-block with-errors'></div>
                   </div>
                 </div>
               </div>
@@ -27,7 +28,8 @@
                 <!-- E-mail -->
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <%= form.text_field :email, class: "form form-control", placeholder: "Your Email" %>
+                        <%= form.email_field :email, class: "form form-control", placeholder: "Your Email", required: true %>
+                        <div class='help-block with-errors'></div>
                     </div>
                 </div>
               </div>
@@ -44,7 +46,8 @@
                   <!-- Message -->
                   <div class="col-xs-12">
                     <div class="form-group">
-                      <%= form.text_area :title, class: "form textarea form-control" %>
+                      <%= form.text_area :title, class: "form textarea form-control", placeholder: 'Title', required: true %>
+                      <div class='help-block with-errors'></div>
                     </div>
                   </div>
                 </div>
@@ -53,7 +56,8 @@
                   <!-- Message -->
                   <div class="col-xs-12">
                     <div class="form-group">
-                      <%= form.text_area :snippet, class: "form textarea form-control" %>
+                      <%= form.text_area :snippet, class: "form textarea form-control", placeholder: 'Snippet', required: true %>
+                      <div class='help-block with-errors'></div>
                     </div>
                   </div>
                 </div>  
@@ -62,11 +66,12 @@
                   <!-- Message -->
                   <div class="col-xs-12 col-sm-12 col-lg-12">
                     <div class="form-group">
-                        <%= form.text_area :description, class: "form textarea form-control" %>
+                        <%= form.text_area :description, class: "form textarea form-control", placeholder: 'Description', required: true, 'data-minlength' => 10 %>
+                      <div class='help-block with-errors'></div>
                     </div>
                   </div>
                 </div>
-                <%= form.submit "Share Your Story", class: "btn btn-primary btn-block" %>
+                <%= form.submit "Share Your Story", class: "btn btn-primary" %>
               <% end %>
             </form>
           </div>
@@ -74,4 +79,3 @@
       </div>
     </div>
   </div>
-</div>

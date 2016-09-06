@@ -29,6 +29,7 @@ gem 'jquery-ui-rails'
 gem 'mina'
 gem 'remotipart', '~> 1.2'
 gem 'active_type'
+gem 'bootstrap-growl-rails'
 
 group :development do
   gem 'spring'  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

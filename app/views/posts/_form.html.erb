@@ -1,9 +1,9 @@
 <%= form_for @post do |f| %>
 
-Title<%= f.text_field :title %><br/>
-Description<%= f.text_area :description %><br/>
-Video File <%= f.file_field :video_attachment %> or Video Link<%= f.text_field :video_link %><br/>
-Photo File<%= f.file_field :photo_attachment %> or Photo Link<%= f.text_field :photo_link %><br/>
+<h2>	Title<%= f.text_field :title %><br/>
+	Description<%= f.text_area :description %><br/>
+	Video File <%= f.file_field :video_attachment %> or Video Link<%= f.text_field :video_link %><br/>
+	Photo File<%= f.file_field :photo_attachment %> or Photo Link<%= f.text_field :photo_link %><br/>
 <br/>
 <%= f.submit %>
 
