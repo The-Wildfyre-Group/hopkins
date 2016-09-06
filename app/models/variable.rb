@@ -16,7 +16,15 @@ class Variable
   ULCERS = "list_17806471_choice"
   SEIZURES = "list_17806474_choice"
   OBESITY = "list_17806477_choice"
-    
+  # CURRENT_DRINKERS =
+  CURRENT_SMOKERS = "list_20648967_choice"
+  
+  SMOKED_100_CIGARETTES = "list_20648878_choice" #
+  AGE_STARTED_SMOKING = "list_20648933_choice"
+  
+  TWELVE_DRINKS_IN_LIFE = "list_20648784_choice"
+  TWELVE_DRINKS_IN_ANY_YEAR = "list_20648824_choice"
+  HOW_OFTEN_DRINK_IN_LAST_YEAR = "list_23888371_choice"
 end
 
 #
