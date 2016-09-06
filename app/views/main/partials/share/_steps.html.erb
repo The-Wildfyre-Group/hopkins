@@ -6,43 +6,55 @@
   </div>
 </div>
 <hr class="thick">
-<div class="row steps">
-	<div class="col-sm-4">
-    <div class="row">
-      <div class="col-md-3">
-        <h1 class="no-margin text-right text-primary">1</h1>
-      </div>
-      <div class="col-md-9">
-        <h4>
-      		Complete the form<br/>
-        </h4>
+<br/>
+<div class="steps">
+  <div class="row">
+    <div class="col-md-1">
+      <h1 class="no-margin text-primary">1</h1>
+    </div>
+    <div class="col-md-11">
+      <h4 class="bold">Tell us who you rise for?</h4>
+      <input class="form-control" placeholder="Enter Name" style="margin-left: 15px;"/>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row">
+      	<div class="col-md-1">
+          <h1 class="no-margin text-primary">2</h1>
+        </div>
+        <div class="col-md-11">
+          <h4 class="bold">Upload a photo</h4>
+          <input type="file" name="pic" accept="image/*" class="form-control" style="margin-left: 15px;"/>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="row">
-    	<div class="col-md-3">
-        <h1 class="no-margin text-primary">2</h1>
-      </div>
-      <div class="col-md-9">
-        <h4 class="">
-      		Upload <br/>a photo<br/>
-      	</h4>
-      </div>
+  <hr/>
+  <div class="row">
+    <div class="col-md-1">
+      <h1 class="no-margin text-primary">3</h1>
     </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="row">
-      <div class="col-md-3">
-        <h1 class="no-margin text-primary">3</h1>
-      </div>
-      <div class="col-md-9">
-    		<h4 class="">
-    			Share & Challenge<br/>
-    		</h4>
+    <div class="col-md-11">
+  		<h4 class="uppercase">Share and challenge your friends!</h4>
+      <div id="share-preview" class="inner-content no-padding header-hero relative" style="margin: 20px; border-radius: 4px; box-shadow: 1px 5px 10px #888;">
+        <div class="overlay overlay-dark" style="border-radius: 4px;"></div>
+        <div class="background" style="background: url(http://old.communityjournal.net//wp-content/uploads/2013/03/black_male_doctor-e1362501984336-2.jpg); background-size: cover; border-radius: 4px; border: 3px solid #888;">
+          <div class="relative" style="background-image: url(<%=image_url('rise-layout.png')%>); background-size: contain; background-repeat: no-repeat; height: 483px; border-radius: 4px;">
+            <div style="position: absolute;">
+              <div class="caption" style="width: 100%; position: relative; top: 225px; left: 20%;">
+                <h2 class="text-white bold" style="line-height: 50px;">
+                  <small style="font-weight: 100 !important;">Cordis</small><br/>
+                  Stanfield
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-	
+	<!-- background-image: url(#{image_url('rise-layout.png')}); background-size: cover; -->

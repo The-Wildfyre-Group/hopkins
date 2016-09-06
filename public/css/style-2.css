@@ -2860,21 +2860,21 @@ table.leaderboard h3 {
 
 
 #content-part .steps h1 {
-    text-align: right !important;
+    text-align: left !important;
 }
 
 
 #content-part .steps h4 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 24px;
     margin-top: 15px;
-    font-weight: 100;
     text-align: left;
     margin-left: 5px;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #bbb;
     padding-left: 10px;
     letter-spacing: 0;
-    color: #888;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
 }
