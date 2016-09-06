@@ -10,7 +10,7 @@
 				<div class="caption">
 					<h4><%= post.snippet %></h4>
 					<p class="lead"><%= post.description %></p>
-					<p><a class="btn btn-transparent visible-sm-* visible-xs-*">View Story</a></p>
+					<p><%= link_to "View Story", post, class: "btn btn-transparent visible-sm-* visible-xs-*"  %></p>
 				</div>
 			</div>
 			<div class="col-lg-offset-1  col-lg-4 hidden-xs hidden-sm" style="margin-top: 15%;">
