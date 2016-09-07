@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_save :set_region
   serialize :groups, Array
+  has_one :claimed_giftcard
 
 
   def name
@@ -66,6 +67,10 @@ class User < ActiveRecord::Base
       hash[group] = hash[group] + 1
     end
     hash.sort_by { |k,v| v }.reverse
+  end
+  
+  def assigned_giftcard?
+    claimed_giftcard.present?
   end
 
 end
