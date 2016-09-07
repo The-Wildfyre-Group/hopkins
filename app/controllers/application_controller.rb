@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     redirect_to login_path if current_user.nil?
   end
+  
+  def completed_all_surveys?
+    redirect_to "/results" if current_user.completed_all_surveys?
+  end
 
   def education
     ["Less than High School", "High School/Some College", "Bachelor’s and Higher"]
