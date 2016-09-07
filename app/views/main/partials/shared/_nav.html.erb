@@ -51,27 +51,27 @@
 	  <h5 class="text-muted">FOLLOW US</h5>
 	  <ul class="gf_oswald upper inline" role="tablist">
       <li>
-        <%= link_to main_share_twitter_link do %>
+        <%= link_to main_share_twitter_link, :target => "_blank" do %>
           <img src="img/icons/twitter.png" style="height: 50px; margin-right: 10px;">
         <% end %>
       </li>
 
       <li>
-        <%= link_to main_share_fb_link do %>
+        <%= link_to main_share_fb_link, :target => "_blank" do %>
           <img src="img/icons/facebook.png" style="height: 50px; margin-right: 10px;">
         <% end %>
       </li>
 	    
 	    <li>
-	    	<a href="https://www.youtube.com/channel/UCzeUzAe9h-wZoo37rEtk2oA">
+            <%= link_to "https://www.youtube.com/channel/UCzeUzAe9h-wZoo37rEtk2oA", :target => "_blank" do %>
 	    		<img src="img/icons/youtube.png" style="height: 50px; margin-right: 10px;">
-	    	</a>
+	    	<% end %>
 	    </li>
 
 	    <li>
-	    	<a href="https://www.instagram.com/bmhealthsurvey/">
+            <%= link_to "https://www.instagram.com/bmhealthsurvey/", :target => "_blank" do %>
 	    		<img src="img/icons/instagram.png" style="height: 50px;">
-	    	</a>
+	    	<% end %>
 	    </li>
 	  </ul>
 	  <!-- Tab panes -->
