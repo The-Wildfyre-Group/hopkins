@@ -24,22 +24,22 @@
 /* 1. Loading / Opening ................ */
 /* ------------------------------------- */
 
-$(window).load(function() {
-
-    setTimeout(function() {
-
-        $(".loading-part").addClass("fadeOut");
-        $("#home-part").removeClass("scale-max").addClass("scale-uni");
-        $("#navigation").removeClass("").addClass("fadeInLeft");
-
-    }, 2000);
-
-    setTimeout(function() {
-        $(".loading-part").addClass("display-none");
-        $("#home-part").removeClass("scale-uni").addClass("");
-    }, 3200);
-
-});
+//$(window).load(function() {
+//
+//    setTimeout(function() {
+//
+//        $(".loading-part").addClass("fadeOut");
+//        $("#home-part").removeClass("scale-max").addClass("scale-uni");
+//        $("#navigation").removeClass("").addClass("fadeInLeft");
+//
+//    }, 2000);
+//
+//    setTimeout(function() {
+//        $(".loading-part").addClass("display-none");
+//        $("#home-part").removeClass("scale-uni").addClass("");
+//    }, 3200);
+//
+//});
 
 $(document).ready(function(){
 

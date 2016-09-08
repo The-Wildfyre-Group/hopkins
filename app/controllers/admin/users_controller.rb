@@ -3,7 +3,7 @@ class Admin::UsersController < ApplicationController
   # layout false
   
   def index
-  @users = User.order(:id)
+    @users = User.order(:id)
   end
   
   def new
@@ -23,7 +23,8 @@ class Admin::UsersController < ApplicationController
   end
   
   def destroy
-    
+    @user = User.find(params[:id])
+    @user.destroy
   end
   
 end
