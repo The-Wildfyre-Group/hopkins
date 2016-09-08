@@ -54,5 +54,7 @@ class ApplicationController < ActionController::Base
   def days
 
   end
+
+
   helper_method :education, :current_user, :years, :months_for_select, :days_for_select, :partners, :range, :regions
 end
