@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_save :set_region
   serialize :groups, Array
+  has_one :claimed_giftcard
 
 
   def name
@@ -29,11 +30,13 @@ class User < ActiveRecord::Base
   end
 
   def surveys_completed
-    array = []
-    Survey::SURVEY_MODULES.each do |survey|
-      array << completed_survey?(survey)
-    end
+    array = [survey_1?, survey_2?, survey_3?, survey_4?, survey_5?]
     array.count(true)
+  end
+  
+  
+  def completed_all_surveys?
+    ![survey_1?, survey_2?, survey_3?, survey_4?, survey_5?].include? false
   end
 
   def signup_age
@@ -66,6 +69,10 @@ class User < ActiveRecord::Base
       hash[group] = hash[group] + 1
     end
     hash.sort_by { |k,v| v }.reverse
+  end
+  
+  def assigned_giftcard?
+    claimed_giftcard.present?
   end
 
 end

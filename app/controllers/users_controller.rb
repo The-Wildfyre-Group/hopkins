@@ -21,12 +21,9 @@ class UsersController < ApplicationController
   def settings
     load_user
   end
-  
-  def consent
-    load_user
-  end
 
   def update
+    load_user
     save_user or render 'settings'
   end
 
@@ -59,7 +56,7 @@ class UsersController < ApplicationController
   end
 
   def load_user
-    current_user
+    @user = params[:id].present? ? User.find(params[:id]) : current_user
   end
 
   def login_user
@@ -74,7 +71,7 @@ class UsersController < ApplicationController
   end
 
   def save_user
-    if current_user.update_attributes(user_params)
+    if @user.update_attributes(user_params)
       redirect_to surveys_path
     end
   end
@@ -87,7 +84,6 @@ class UsersController < ApplicationController
   def user_scope
     User.scoped
   end
-
 
   def delete_user
     User.find(params[:id]).destroy

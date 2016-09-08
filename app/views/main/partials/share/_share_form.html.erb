@@ -1,6 +1,6 @@
-<div id="share-preview" >
+<div id="share-preview" style>
   <div class="center">
-    <%= form_for Share.new, remote: true, html: {id: 'contact-form', name: "contact-form", multipart: true, style: "background-image: url(#{image_url('rise-layout.png')}); background-size: cover; border-radius: 4px; background-color: rgba(0,0,0, .05); box-shadow: 1px 1px 1px #333; border-top: 1px solid #444; border: 1px solid #444; "} do |f| %>
+    <%= form_for Share.new, remote: true, html: {id: 'contact-form', name: "contact-form", multipart: true, style: "background-image: url(#{image_url('rise-layout.png')}); background-size: cover; border-radius: 4px; background-color: #000; box-shadow: 1px 1px 1px #333; border-top: 1px solid #444; border: 1px solid #444; "} do |f| %>
       <div class="center">
         <%= f.file_field :photo, class: "form-control" %>
       </div>
@@ -16,7 +16,7 @@
       <br/>
     
   </div>
-  <%= f.submit :class => "btn btn-transparent btn-lg bg-primary"%>
+  <%= f.submit :class => "btn bg-primary"%>
 </div>
 
   <% end %>

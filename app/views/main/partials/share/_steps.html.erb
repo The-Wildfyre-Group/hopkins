@@ -1,47 +1,70 @@
-<h4 class="text-white text-center">Upload a photo and recognize the reasons you are choosing to rise to a healthier tomorrow.</h4>
-<!-- <p class="lead text-white">Create your #RiseToTheChallenge image by following these three simple steps</p> -->
-<div class="row">
-	<div class="col-sm-4">
-    <div class="row">
-      <div class="col-md-2">
-        <h1 class="no-margin">1</h1>
-      </div>
-      <div class="col-md-10">
-        <span class="text-danger bold h4" style="color: #00ccaa;">
-      		Complete the form<br/>
-      		<small class="text-white bold">Tell us who your rise for!</small>
-        </span>
+<br/><hr/>
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h2 class="no-margin bold"><small>are you ready to</small>
+      <br/>rise to the challenge?</h2>
+  </div>
+</div>
+<hr class="thick">
+<br/>
+<div class="steps">
+  <div class="row">
+    <div class="col-md-1 col-xs-1">
+      <h1 class="no-margin text-primary">1</h1>
+    </div>
+    <div class="col-md-11 col-xs-11">
+      <h4 class="bold">Tell us who you rise for?</h4>      
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input class="form-control" placeholder="Enter Name"/>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="row">
-    	<div class="col-md-2">
-        <h1 class="no-margin">2</h1>
-      </div>
-      <div class="col-md-10">
-        <span class="bold h4" style="color: #00ccaa;">
-      		Upload Photo<br/>
-      	</span>
-      	<small class="text-white bold">Upload an image.</small>
+  <hr/>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="row">
+      	<div class="col-md-1 col-xs-1">
+          <h1 class="no-margin text-primary">2</h1>
+        </div>
+        <div class="col-md-11 col-xs-11">
+          <h4 class="bold">Upload a photo</h4>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="file" name="pic" accept="image/*" class="form-control">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="row">
-      <div class="col-md-2">
-        <h1 class="no-margin">3</h1>
+  <hr/>
+  <div class="row">
+    <div class="col-md-1 col-xs-1">
+      <h1 class="no-margin text-primary">3</h1>
+    </div>
+    <div class="col-md-11 col-xs-11">
+  		<h4 class="uppercase">Share and challenge your friends!</h4>
+    </div>
+  </div>
+  <div class="center">
+    <div id="share-preview" class="inner-content no-padding header-hero relative" style="margin: 20px; border-radius: 4px; box-shadow: 1px 5px 10px #888;">
+    <div class="overlay overlay-dark" style="border-radius: 4px;"></div>
+    <div class="background" style="background: url(http://old.communityjournal.net//wp-content/uploads/2013/03/black_male_doctor-e1362501984336-2.jpg); background-size: cover; border-radius: 4px; border: 3px solid #888;">
+      <div class="relative" style="background-image: url(<%=image_url('rise-layout.png')%>); background-size: contain; background-repeat: no-repeat; width: 100%; height: 360px; border-radius: 4px;">
+        <div style="position: absolute;">
+          <div class="caption" style="width: 100%; position: relative; top: 130px;">
+            <h2 class="text-white text-center bold" style="line-height: 50px;">
+              <small style="font-weight: 100 !important;">Cordis</small><br/>
+              Stanfield
+            </h2>
+          </div>
+        </div>
       </div>
-      <div class="col-md-10">
-    		<span class="bold h4" style="color: #00ccaa;">
-    			Share & Challenge<br/>
-    		</span>
-    		<small class="text-white bold">Get your friends to participate!</small>
-      </div>
+    </div>
     </div>
   </div>
 </div>
-<hr/>
 
-
-	
+	<!-- background-image: url(#{image_url('rise-layout.png')}); background-size: cover; -->

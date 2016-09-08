@@ -2243,3 +2243,26 @@ footer {
 a.white-link:hover {color: #fff;}
 
 .fs-16 {font-size: 16px;}
+
+/*  7-sept-2016  */
+h2.census-title{font-size:32px;margin:40px 20px 0;color:#283842;}
+table.census-tbl {
+  margin: 0px auto 20px;
+  width: 90% !important;
+}
+table.census-tbl tr {
+  background-color: rgba(40, 56, 66, 0.13);
+}
+table.census-tbl tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 1);
+}
+table.census-tbl tbody tr:first-child th {
+  background-color: #283842;
+  color: #fff;
+}
+table.census-tbl tr th, table.census-tbl tr td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+

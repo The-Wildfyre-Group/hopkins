@@ -22,10 +22,13 @@ Rails.application.routes.draw do
   resources :sessions, except: %w[index edit show update]
   resources :admin, except: %w[new create show edit update destroy] do
     collection do
-      get :users
       get :overview
       get :census
     end
+  end
+  
+  namespace :admin do
+   resources :users
   end
 
   resources :challenges do
@@ -40,6 +43,8 @@ Rails.application.routes.draw do
   get "results" => "users#results", as: :results
   get "login" => "sessions#new", as: :login
   get "participate" => "users#new", as: :participate
+  get "consent" => "consent#consent", as: :consent
+  get "consent/status" => "consent#status", as: :consent_status
 
   # main
   get "stories" => "main#stories", as: :stories

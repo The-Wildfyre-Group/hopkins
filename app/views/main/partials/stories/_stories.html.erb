@@ -1,7 +1,7 @@
 <%= render "main/partials/stories/hero" %>
 <%= render "main/partials/stories/intro_section" %>
 <div id="stories">
-  <% Post.all.each do |post| %>
+  <% Post.last(5).each do |post| %>
     <%= render "main/partials/stories/story", post: post %>
   <% end %>
 </div>

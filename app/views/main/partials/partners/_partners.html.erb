@@ -4,7 +4,7 @@
 <div class="inner-content border-top relative">
 	<div class="center">
 		<h5 class="section-label">
-			rise up today
+			Our Partners
 		</h5>
 	</div>
 	<!-- introduction -->
@@ -19,50 +19,15 @@
 	</div>
 	<hr class="thick"/>
 		<!-- introduction -->
+    <% [[0,3], [4,7], [8,11],[12,15], [16,19], [20,22]].each do |set| %>
 	<div class="row">
+        <% User.group_count[set.first..set.last].each do |partner| %> 
 		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
+			<img src="<%= User.partner_photo[partner.first] %>" class="img-responsive img-rounded">
 		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
+        <% end %>
 	</div>
-
-	<div class="row">
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-		<div class="col-lg-3">
-			<img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" class="img-responsive img-rounded">
-		</div>
-	</div>
+    <% end %>
 </div>
 
 <%= render "main/partials/partners/leaderboard" %>

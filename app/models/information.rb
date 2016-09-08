@@ -23,6 +23,7 @@ class Information
   CURRENT_DRINKERS = [ [16.0], [63.3], [66.8], [34.7], [65.8], [79.3], [74.5], [73.6], [65.8], [65.9], [74.5], [72.6], [58.3], [62.0], [84.5], [52.6], [74.1], [44.9], [39.4], [62.0], [74.0], [57.0], [52.8], [77.2], [63.6], [61.8], [70.0], [96.2], [75.0], [56.1], [66.7], [62.8], [38.6], [42.3], [73.5], [52.9], ]
   FORMER_DRINKERS = [ [0.0], [8.6], [0.0], [5.1], [4.9], [14.8], [6.8], [9.5], [1.1], [18.5], [12.3], [9.0], [15.2], [15.5], [9.6], [27.3], [12.1], [47.4], [15.6], [2.6], [0.0], [73.6], [32.7], [24.4], [8.1], [15.9], [20.6], [37.6], [37.2], [16.2], [11.5], [23.4], [14.0], [57.6], [16.9], [38.9], ]
   NON_DRINKERS = [ [0.0], [28.0], [33.1], [60.1], [29.2], [19.2], [18.6], [16.8], [33.0], [15.5], [13.1], [18.3], [26.4], [22.4], [5.8], [19.9], [13.7], [7.6], [45.0], [35.2], [25.9], [35.5], [43.8], [20.3], [28.2], [22.1], [9.3], [0.0], [21.2], [27.5], [21.7], [13.6], [47.3], [0.0], [9.4], [8.1], ]
+  
   CURRENT_SMOKERS = [ [21.1], [10.1], [4.0], [32.5], [27.0], [6.4], [25.2], [36.7], [9.3], [35.6], [26.5], [12.9], [18.8], [27.1], [0.0], [18.6], [15.0], [0.3], [26.8], [16.2], [4.8], [7.3], [5.0], [0.0], [41.6], [27.5], [24.6], [61.7], [25.8], [15.7], [23.4], [19.5], [4.6], [12.4], [0.0], [0.0], ]
   FORMER_SMOKERS = [ [0.0], [4.6], [18.5], [0.0], [4.7], [3.9], [22.3], [12.3], [15.4], [26.1], [21.0], [10.3], [59.5], [36.6], [30.2], [49.6], [51.1], [46.6], [0.0], [4.2], [0.0], [23.9], [0.0], [0.0], [23.2], [14.0], [14.5], [22.3], [14.7], [7.8], [53.8], [41.5], [33.2], [43.2], [53.2], [52.5], ]
   NONE_SMOKERS = [ [78.8], [85.1], [77.3], [67.4], [68.1], [89.5], [52.4], [50.8], [75.1], [38.1], [52.4], [76.6], [21.5], [36.1], [69.7], [31.6], [33.7], [53.0], [73.1], [79.5], [95.1], [68.7], [94.4], [1.0], [35.0], [58.4], [82.9], [15.9], [59.9], [76.4], [22.7], [38.8], [62.1], [44.2], [46.7], [47.4], ]
@@ -74,13 +75,16 @@ class Information
   BLACK_SEIZURES = 1.8
   
   ALL_OBESITY = 30.4
-  BLACK_OBESITY = 31.5  
+  BLACK_OBESITY = 31.5 
   
+  ALL_CURRENT_SMOKERS = 20.5
+  BLACK_CURRENT_SMOKERS = 21.7
+
   def self.find_data_point(data, region, education, range)
     data[FindCell.call(region, education, range).first]
   end
   
-  def self.conditions
+  def self.status_conditions
     ["Hypertension", 
       "Coronary Heart Disease", 
       "Angina",
@@ -100,8 +104,12 @@ class Information
 
   end
   
+  def self.behavior_conditions
+    [ "Current Smokers"] 
+  end
   
-  def self.data
+  
+  def self.status_data
     {"Hypertension" => { answer: Variable::HYPERTENSION, census_data: Information::HYPERTENSION, all_men:  Information::ALL_HYPERTENSION, black_men: Information::BLACK_HYPERTENSION },
       "Coronary Heart Disease" => { answer: Variable::CORONARY_HEART_DISEASE, census_data: Information::CORONARY_HEART_DISEASE.flatten, all_men:  Information::ALL_CORONARY_HEART_DISEASE, black_men: Information::BLACK_CORONARY_HEART_DISEASE },
       "Angina" => { answer: Variable::ANGINA, census_data: Information::ANGINA, all_men:  Information::ALL_ANGINA, black_men: Information::BLACK_ANGINA },
@@ -118,6 +126,12 @@ class Information
       "Ulcers" => { answer: Variable::ULCERS, census_data: Information::ULCERS, all_men:  Information::ALL_ULCERS, black_men: Information::BLACK_ULCERS },
       "Seizures" => { answer: Variable::SEIZURES, census_data: Information::SEIZURES, all_men:  Information::ALL_SEIZURES, black_men: Information::BLACK_SEIZURES },
       "Obesity" => { answer: Variable::OBESITY, census_data: Information::OBESITY, all_men:  Information::ALL_OBESITY, black_men: Information::BLACK_OBESITY },
+    }
+  end 
+  
+  def self.behavior_data
+    {
+      "Current Smokers" => { answer: Variable::CURRENT_SMOKERS, census_data: Information::CURRENT_SMOKERS, all_men:  Information::ALL_CURRENT_SMOKERS, black_men: Information::BLACK_CURRENT_SMOKERS },
     }
   end  
  

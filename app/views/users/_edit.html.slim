@@ -1,0 +1,143 @@
+.main-wrapper
+  .sub_header.bg_1.hero style=("background-image: url(#{image_url("stock/7.jpg")});")
+    .zindex_wrapper
+      #intro_txt
+        .row.container
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center
+            h1
+              strong Brotherhood
+              |  for health.
+            p Thank your for joining our community.
+            br/
+            .center style=("display: block;")
+              .row
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = link_to main_share_fb_link, :target => "_blank" do
+                    = image_tag("icons/facebook.png", alt: "", class: "img-responsive")
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = link_to main_share_twitter_link, :target => "_blank" do
+                    = image_tag("icons/twitter.png", alt: "", class: "img-responsive")
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = link_to "https://www.instagram.com/bmhealthsurvey/", :target => "_blank" do
+                    = image_tag("icons/instagram.png", alt: "", class: "img-responsive")
+                span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+                  = link_to "https://www.youtube.com/channel/UCzeUzAe9h-wZoo37rEtk2oA", :target => "_blank" do
+                    = image_tag("icons/youtube.png", alt: "", class: "img-responsive")
+    /! End sub_header
+.container_gray_bg
+  .container.margin_60
+    .row
+      .col-md-9
+        .box_style_1
+          .indent_title_in
+            i.pe-7s-id
+            h1.no-margin
+              strong
+                = "#{@user.first_name} #{@user.last_name}"
+            p Tell us about yourself.
+          hr.styled_2.no-margin
+            .indent_title_in
+              i.pe-7s-user
+              h3 Name and Contact information
+              p Please verify your personal information.
+            = form_for @user, data: { toggle: "validator", disable: false } do |f|
+              .wrapper_indent
+                .row
+                  .col-md-6
+                    .form-group
+                      label First name
+                      = f.text_field :first_name, class: "form-control styled", required: true
+                      .help-block.with-errors
+                  .col-md-6
+                    .form-group
+                      label Last name
+                      = f.text_field :last_name, class: "form-control styled", required: true
+                      .help-block.with-errors
+                .row
+                  .col-md-6
+                    .form-group
+                      label Email
+                      = f.text_field :email, class: "form-control styled", required: true
+                      .help-block.with-errors
+                  .col-md-6
+                    .form-group
+                      label Phone number
+                      = f.text_field :email, class: "form-control styled", required: true
+                      .help-block.with-errors
+              hr.styled_2
+                .indent_title_in
+                  i.pe-7s-network
+                  h3 Demographic Information
+                  p Tell us about yourself.
+                .wrapper_indent
+                  .row
+                    .col-md-6
+                      .form-group
+                        label Education
+                        .styled-select
+                          = f.select :education, education, { selected: @user.education }, class: "form-control"
+                hr.styled_2
+                  .indent_title_in
+                    i.pe-7s-map-marker
+                    h3 Date of Birth
+                    p How old are you?
+                  .wrapper_indent
+                    p.text-left.no_margin_bottom
+                      label.fs-16 What is your birthday?
+                    .row
+                      .col-lg-3.col-md-6.col-sm-12
+                        .styled-select
+                          = select_tag "[user][birthdate(2i)]", options_for_select(months_for_select), class: "form-control"
+                      .col-lg-2.col-md-2.col-sm-12
+                        .form-group
+                          .styled-select
+                            = select_tag "[user][birthdate(3i)]", options_for_select(days_for_select), class: "form-control"
+                      .col-lg-2.col-md-4.col-sm-12
+                        .form-group
+                          .styled-select
+                            = select_tag "[user][birthdate(1i)]", options_for_select(years), class: "form-control"
+                  hr.styled_2
+                    .indent_title_in
+                      i.pe-7s-map-marker
+                      h3 State of Residence
+                      p Where are you?
+                    .wrapper_indent
+                      .row
+                        .col-md-6
+                          label State
+                          .styled-select
+                            = f.select :state, Location.states, { selected: @user.state }, class: "form-control"
+                        
+                    hr.styled_2
+                    p.text-center
+                      = f.submit class: "button_outline large"
+      .col-md-3
+        h4
+          strong Contact Us
+        p Zril causae ancillae sit ea. Dicam veritus mediocritatem sea ex, nec id agam eius. Te pri facete latine salutandi, scripta mediocrem et sed, cum.
+        .box_side
+          h5 By Phone
+          i.icon-phone
+          p
+            | + 1 555 5555
+            br
+              small Monday to Friday 9.00am - 6.00pm
+        .box_side
+          h5 Consent Policy
+          i.icon_pencil-edit
+          p
+            a href="#0"
+              strong Download the application form
+            | ,
+            br
+            | HIPAA Complianct
+            br
+            br
+        hr.styled
+        .box_side
+          h4 Share your Story
+          i.icon_pencil-edit
+          p Per eu esse deleniti scripserit, sed ut nihil inimicus sadipscing. Eu iusto ignota officiis sit, nullam ullamcorper eam ut.
+          a.button.small href="#0" Share Now
+    /! End row
+  /! End container
