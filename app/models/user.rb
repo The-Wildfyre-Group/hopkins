@@ -9,10 +9,17 @@ class User < ActiveRecord::Base
   before_save :set_region
   serialize :groups, Array
   has_one :claimed_giftcard
+  
+  after_save :update_eligibility
 
 
   def name
     (first_name.present? && last_name.present?) ? [first_name, last_name].join(" ") : email
+  end
+  
+  def update_eligibility
+    eligibility = [age >= 18, race == "Black or African American", sex == "Male"].include?(false) ? false : true
+    self.update_column(:eligible, eligibility)
   end
 
   def set_region

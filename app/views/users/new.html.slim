@@ -41,6 +41,18 @@
                     .styled-select-contact-home
                       = f.select :education, education, class:"form-control", required: true
                     .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    .styled-select-contact-home
+                      = f.select :sex, ["Male", "Female", "Other"], prompt: "Select Your Sex", class:"form-control", required: true
+                    .help-block.with-errors
+              .row
+                .col-lg-12.col-md-12.col-sm-12
+                  .form-group
+                    .styled-select-contact-home
+                      = f.select :race, races, prompt: "Select Your Race", class:"form-control", required: true
+                    .help-block.with-errors
               .form-group
                 p.text-left.no_margin_bottom
                   label.text-small What is your birthday?
@@ -68,4 +80,4 @@
               .row
                 .col-md-12
                   .form-group.text-center
-                    = f.submit "Participate", type: "submit", class: "btn btn-primary button btn-block btn-lg", id: "submit-contact-home"
+                    = f.submit "I Want to Participate in the Survey", type: "submit", class: "btn btn-primary button btn-block btn-lg", id: "submit-contact-home"
