@@ -108,6 +108,10 @@ class Information
     [ "Current Smokers"] 
   end
   
+  def self.all_conditions
+    self.status_conditions + self.behavior_conditions
+  end
+  
   
   def self.status_data
     {"Hypertension" => { answer: Variable::HYPERTENSION, census_data: Information::HYPERTENSION, all_men:  Information::ALL_HYPERTENSION, black_men: Information::BLACK_HYPERTENSION },
@@ -133,7 +137,11 @@ class Information
     {
       "Current Smokers" => { answer: Variable::CURRENT_SMOKERS, census_data: Information::CURRENT_SMOKERS, all_men:  Information::ALL_CURRENT_SMOKERS, black_men: Information::BLACK_CURRENT_SMOKERS },
     }
-  end  
+  end 
+  
+  def self.all_data
+    self.status_data.merge(self.behavior_data)
+  end
  
   
 end

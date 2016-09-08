@@ -37,6 +37,7 @@ Rails.application.routes.draw do
     end
   end
   resources :shares, only: [:create, :show]
+  resources :stats, only: [:index]
   get "share" => "shares#new"
 
   get "settings" => "users#settings", as: :settings
