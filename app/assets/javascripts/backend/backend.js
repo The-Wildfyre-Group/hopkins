@@ -13,5 +13,6 @@
 //= require ./js/common_scripts_min
 //= require ./js/functions
 //= require ./js/jquery.validate
+//= require data-confirm-modal
 
 

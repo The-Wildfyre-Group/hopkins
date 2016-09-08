@@ -1607,7 +1607,8 @@ input#website {display:none;}
 	opacity:0.5;
 }
 .modal-backdrop {
-	z-index:999999;
+	/*z-index:999999;*/
+	z-index:1040;
 }
 .modal {
 	padding: 0 25px !important;
