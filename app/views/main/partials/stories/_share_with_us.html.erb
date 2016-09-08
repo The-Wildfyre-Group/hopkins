@@ -71,6 +71,49 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <label>Video File</label>
+                      <%= form.file_field :video_attachment, class: "form form-control" %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <%= form.text_field :video_link, placeholder: 'Video link', class: "form form-control" %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <label>Photo File</label>
+                      <%= form.file_field :photo_attachment, class: "form form-control", required: true %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <%= form.text_field :photo_link, placeholder: 'Photo link', class: "form form-control" %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
                 <%= form.submit "Share Your Story", class: "btn btn-primary" %>
               <% end %>
             </form>
