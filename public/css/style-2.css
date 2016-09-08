@@ -2720,8 +2720,7 @@ img.story-arrow {opacity: .25; height: 160px; width: 160px;}
 
 
 .history {
-   background: url(../img/stock/h-6.jpg); 
-   background-size: cover; 
+   background-size: cover;
   /* height: 800px;*/
 }
 
