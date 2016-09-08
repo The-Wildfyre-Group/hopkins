@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   def completed_all_surveys?
     redirect_to "/results" if current_user.completed_all_surveys?
   end
+  
+  def is_eligible?
+    #redirect_to "/consent/status" unless current_user.eligible?
+  end
 
   def education
     ["Less than High School", "High School/Some College", "Bachelor’s and Higher"]
@@ -26,6 +30,10 @@ class ApplicationController < ActionController::Base
   def regions
     ["Northeast", "South", "Midwest", "West"]
   end
+  
+  def races
+    ["White", "Black or African American", "American Indian or Alaska Native", "Asian", "Native Hawaiian or Other Pacific Islander"]
+  end
 
   def partners
     ["The White House My Brother’s Keeper Initiative", "100 Black Men", "National Urban League" , "NAACP" , "Rainbow PUSH Coalition" , "Concerned Black Men", "Ebony Magazine" , "The Root" , "BET" , "Radio One" , "TV One" , "National Medical Association", "Alpha Phi Alpha Fraternity Inc." , "Kappa Alphas Psi Fraternity Inc." , "Omega Psi Phi Fraternity Inc." , "Phi Beta Sigma Fraternity Inc." , "Iota Phi Theta Fraternity Inc." , "National Council of Negro Women" , "Alpha Kappa Alpha", "Delta Sigma Theta", "Zeta Phi Beta", "Sigma Gamma Rho"]
@@ -33,7 +41,7 @@ class ApplicationController < ActionController::Base
 
   def years
     first = Date.today.year - 110
-    last = Date.today.year - 18
+    last = Date.today.year - 1
     (first..last).to_a.reverse
   end
 
@@ -55,6 +63,5 @@ class ApplicationController < ActionController::Base
 
   end
 
-
-  helper_method :education, :current_user, :years, :months_for_select, :days_for_select, :partners, :range, :regions
+  helper_method :education, :current_user, :years, :months_for_select, :days_for_select, :partners, :range, :regions, :races
 end

@@ -23,6 +23,7 @@
 //= require backend/backend
 //= require bootstrap-notify
 //= require notify
+//= require data-confirm-modal
 
 
 $(document).ready(function() {

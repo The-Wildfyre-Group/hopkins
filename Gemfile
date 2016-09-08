@@ -30,6 +30,7 @@ gem 'mina'
 gem 'remotipart', '~> 1.2'
 gem 'active_type'
 gem 'bootstrap-growl-rails'
+gem 'data-confirm-modal'
 
 group :development do
   gem 'spring'  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -38,4 +39,5 @@ group :development do
   gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-rails'
 end

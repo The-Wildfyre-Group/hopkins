@@ -78,7 +78,7 @@ class UsersController < ApplicationController
 
   def user_params
     user_params = params[:user]
-    user_params ? user_params.permit(:first_name, :last_name, :email, :city, :state, :education, :terms, :password, :password_confirmation, :birthdate, :groups => [] ) : {}
+    user_params ? user_params.permit(:first_name, :last_name, :email, :city, :state, :education, :terms, :password, :password_confirmation, :birthdate, :race, :sex, :groups => [] ) : {}
   end
 
   def user_scope
@@ -88,6 +88,6 @@ class UsersController < ApplicationController
   def delete_user
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
-    redirect_to users_admin_index_path
+    redirect_to admin_users_path
   end
 end
