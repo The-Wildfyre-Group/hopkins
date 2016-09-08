@@ -1,6 +1,10 @@
 <%= render "main/partials/stories/hero" %>
 <%= render "main/partials/stories/intro_section" %>
-<%= render "main/partials/stories/story" %>
+<div id="stories">
+  <% Post.all.each do |post| %>
+    <%= render "main/partials/stories/story", post: post %>
+  <% end %>
+</div>
 <%= render "main/partials/stories/share_with_us" %>
 
 
