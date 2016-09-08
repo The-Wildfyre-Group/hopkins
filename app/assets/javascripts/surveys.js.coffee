@@ -10,8 +10,10 @@ $ ->
             question.attr('href', "javascript: void(0)")
           else
             if surveyData.display
+              question.find('.completed').html('Next')
               question.attr('href', surveyData.url)
             else
+              question.find('.completed').html('Locked')
               question.attr('href', "javascript: void(0)")
 
         $('.survey-remaining').html(response.data.left_surveys)
