@@ -2301,6 +2301,7 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 #surveys a.box_feat, #surveys .box_feat{position:relative;}
 #surveys .box_feat .fa-check,
 #surveys .box_feat .fa-check:before { color: #29a329 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
+#surveys .box_feat .fa-check { font-size: 0;}
 #surveys .box_feat .fa-lock,
 #surveys .box_feat .fa-lock:before { color: #b1b1b1 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
 #surveys .box_feat .fa-unlock-alt,
@@ -2308,11 +2309,18 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 
 
 
-
 @media(min-width:1199px){
-	.census-surveys-panel .col-lg-3 {
-	  width: 20%;
-	}
+	.census-surveys-panel .col-lg-3 { width: 20%;}
+}
+@media(max-width:1199px){
+	.sub_header div.zindex_wrapper {display:table;padding: 8% 0;margin:auto;}
+}
+@media(max-width:837px){
+	.sub_header div { padding: 0 8%;}
+	.sub_header div.zindex_wrapper {display:table;padding: 8% 0;margin:auto;}
+	.sub_header div.zindex_wrapper #intro_txt,
+	.sub_header div.zindex_wrapper #intro_txt div {padding: 0;}
+
 }
 @media(max-width:767px){
 	.table-responsive{width:95%; margin:auto;}
