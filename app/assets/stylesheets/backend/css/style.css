@@ -2250,6 +2250,20 @@ a.white-link:hover {color: #fff;}
 body.gray-bg {
   background-color: #eee;
 }
+.open-menu-mobile ~ .hidden-lg.main-navigation {
+  left: -500px;
+  position: absolute;
+  top: 13px;
+  z-index: 999999;
+  -webkit-transition:0.5s all;
+  -moz-transition:0.5s all;
+  -ms-transition:0.5s all;
+  -o-transition:0.5s all;
+  transition:0.5s all;
+}
+.open-menu-mobile.translate-button ~ .hidden-lg.main-navigation {
+  left: 10px;
+}
 h2.census-title{font-size:32px;margin:40px 20px 0;color:#283842;display:block;}
 h3.total-user{margin-top:5px;}
 p.wht-bg {
