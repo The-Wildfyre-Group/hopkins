@@ -17,7 +17,7 @@ new WOW().init();
 =============================================== */
 $(window).scroll(function(){
     'use strict';
-    if ($(this).scrollTop() > 1){  
+    if ($(this).scrollTop() > 1){
         $('header').addClass("sticky");
     }
     else{
@@ -48,7 +48,7 @@ jQuery(function($) {
 });
 
 
-<!-- Search-->	
+<!-- Search-->
 $(function () {
 	'use strict';
     $('a[href="#search"]').on('click', function(event) {
@@ -69,13 +69,13 @@ $(function () {
 /* Gallery images modal*/
 $('.magnific-gallery').each(function() {
     $(this).magnificPopup({
-        delegate: 'a', 
+        delegate: 'a',
         type: 'image',
         gallery:{enabled:true},
 		removalDelay: 500, //delay removal by X to allow out-animation
   callbacks: {
     beforeOpen: function() {
-      // just a hack that adds mfp-anim class to markup 
+      // just a hack that adds mfp-anim class to markup
        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
        this.st.mainClass = this.st.el.attr('data-effect');
     }
@@ -83,10 +83,10 @@ $('.magnific-gallery').each(function() {
   closeOnContentClick: true,
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
-}); 
-}); 
+});
+});
 
-<!-- testimonial carousel -->	
+<!-- testimonial carousel -->
 $(document).ready(function() {
 	 'use strict';
   $('#quote-carousel').carousel({
@@ -99,10 +99,10 @@ $(document).ready(function() {
 	Common
 =============================================== */
 
-<!-- Tooltip -->	
+<!-- Tooltip -->
 $('.tooltip-1').tooltip({html:true});
-	
- //accordion	
+
+ //accordion
 function toggleChevron(e) {
 	'use strict';
     $(e.target)
@@ -111,3 +111,20 @@ function toggleChevron(e) {
         .toggleClass('icon_plus_alt2 icon_minus_alt2');
 }
 $('#accordion').on('hidden.bs.collapse shown.bs.collapse', toggleChevron);
+
+// /participate dropdown list
+
+$(document).ready(function() {
+	$('.dropdown-toggle').on('click', function (event) {
+      $(this).parent().toggleClass('open');
+  });
+
+  $('body').on('click', function (e) {
+    if (!$('.dropdown-menu').is(e.target)
+        && $('.dropdown-menu').has(e.target).length === 0
+        && $('.open').has(e.target).length === 0
+    ) {
+        $('.dropdown-menu').parent().removeClass('open');
+    }
+	});
+});

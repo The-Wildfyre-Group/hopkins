@@ -1,4 +1,4 @@
-.sub_header_contact_home.hero style=("background-image: url(#{image_url("stock/6.jpg")});")
+.sub_header_contact_home.hero.participate_container
   .zindex_wrapper
     #intro_txt
       .container
@@ -75,8 +75,15 @@
                 .row
                   .col-lg-12.col-md-12.col-sm-12
                     .form-group
-                      .styled-select-contact-home
-                        = f.collection_select :groups, partners, :to_s, :to_s, {include_blank: false}, {:multiple => true }
+                      / .styled-select-contact-home
+                      .col-lg-12.col-md-12.col-sm-12.dropdown-toggle
+                        | Choose your organization
+                        span.caret
+                      ul.dropdown-menu.relative_position.participate_organizations_list
+                        = f.collection_check_boxes :groups, partners, :to_s, :to_s, {include_blank: false}, {:multiple => true } do |b|
+                          li
+                            = b.label class:"label-checkbox" do
+                              = b.check_box + b.text
               .row
                 .col-md-12
                   .form-group.text-center
