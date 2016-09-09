@@ -1,15 +1,18 @@
-<h3>Minimum Criteria</h3>
+
+<div class="container">
+<h2>Minimum Criteria</h3>
 
 <% User.cell_names.each do |cell| %>
 
-<%= number_comparison(cell) %></br>
+    <p class="wht-bg"><%= number_comparison(cell) %></p>
 
 <% end %>
 
-<h3>Balanced Study</h3>
+<h2>Balanced Study</h3>
 
 <% User.cell_names.each do |cell| %>
 
-<%= percent_comparison(cell) %></br>
+    <p class="wht-bg"><%= percent_comparison(cell) %></p>
 
 <% end %>
+</div>
