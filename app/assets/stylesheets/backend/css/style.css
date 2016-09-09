@@ -58,10 +58,8 @@ p.lead{font-family: "proxima_novalight", Arial, Helvetica, sans-serif;letter-spa
 footer h4{color:#fff; font-size:14px; text-transform:uppercase; font-family: 'proxima_nova_rgbold', Arial, Helvetica, sans-serif; margin-top:0; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;}
 
 .main_title{ text-align:center; margin-bottom:45px; }
-.main_title_body{ text-align:center; margin-bottom:45px; }
 .main_title h2{ font-size:34px; letter-spacing:-1px; margin-top:0;}
 .main_title p{ font-size:22px; font-family: "proxima_novalight", Arial, Helvetica, sans-serif; color:#777; line-height:1.2;}
-.main_title_body p{ font-size:30px; font-family: "proxima_novalight", Arial, Helvetica, sans-serif; color:black; line-height:1.2;text-align: left;}
 
 /** Layes slider typography **/
 h3.slide_typo {font-family: "proxima_novalight", Arial, Helvetica, sans-serif;letter-spacing:-2px; font-size: 60px; white-space:nowrap; color:#fff !important; font-weight:normal;}
@@ -1565,67 +1563,6 @@ input#website {display:none;}
 	border-top: 10px solid #fff;
 	border-bottom: 1px solid #ddd;
 }
-.user_info{
-	color: #b7b7b7;
-  font-size: 17px;
-  margin-left: 30px;
-  margin-right: 30px;
-  line-height: 26px;
-  text-transform: capitalize;
-}
-.body-text{
-	text-align: left;
-	color: black;
-	font-family: Signika,"Helvetica Neue",sans serif;
-}
-.container_white_body {
-	background-color:#f3f5f8;
-	border-top: 10px solid #fff;
-	border-bottom: 1px solid #ddd;
-}
-.a-color{
-	color: #b7b7b7;
-	font-weight: bold;
-}
-.a-color-white{
-	color: #fff;
-	font-weight: bold;
-}
-.nav-story {
-	background-color:#404040;
-	padding: 1px 10px 1px 1px;
-	position: inherit;
-	right: 0px;
-	top: 12px;
-	font-family: Signika,"Helvetica Neue",sans serif;
-}
-.nav-story-blue {
-	background-color:#3f9ad6;
-	position: absolute;
-	right: 15px;
-	top: 65px;
-	left: 154px;
-	font-family: Signika,"Helvetica Neue",sans serif;
-	text-align: center;
-}
-.story-title{
-
-}
-.container_story_black_title {
-	background-color: black;
-	/*border-top: 10px solid #fff;*/
-	border-bottom: 1px solid #ddd;
-}.title-color {
-		color: white;
-	}
-.title-color{
-	color: white;
-}
-.container_story_balck {
-	background-color: black;
-	padding-bottom: 3%;
-	/*border-top: 10px solid #fff;*/
-}
 .container_gray_line {
 	border-top:1px solid #e9ebee;
 }
@@ -1825,8 +1762,6 @@ s.checkbox-holder {
 .add_bottom_75 {margin-bottom:75px;}
 .add_top_60 {padding-top:60px;}
 .margin_60 {padding-top:60px; padding-bottom:60px;}
-.margin_title {padding-top:30px;font-family: Signika,"Helvetica Neue",sans serif;}
-
 .margin_30 {margin-top:30px; margin-bottom:30px;}
 .nomargin_top { margin-top:0;}
 .nopadding {margin: 0 !important;padding: 0 !important;}
@@ -2416,8 +2351,8 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 .main-menu.open ul { margin-top:40px;}
 .main-menu.open div#header_menu, .main-menu.open .user-info { display: none;}
 .sub_header_contact_home.hero { background-position: center center;}
+body.no-header header { display: none;}
 .row.login-form-area a.text-off-white.white-link { margin: 0 0 5px; width: 100%;}
-
 .participate_container .styled-select-contact-home select{color:#333;}
 
 

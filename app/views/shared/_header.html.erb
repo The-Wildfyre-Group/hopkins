@@ -5,6 +5,7 @@
 		census_header = 'census-header'
 	end
 %>
+
 <header class="<%= census_header%>">
   <div class="container-fluid">
     <div class="row">
@@ -14,7 +15,14 @@
         </div>
       </div>
       <nav class="col-md-9 col-sm-9 col-xs-9">
-      <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+		<%
+			if path_info != '/login' && path_info != '/participate'
+		%>
+			<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>	
+		<%
+			end
+		%>
+	  
       <div class="main-menu">
         <div id="header_menu">
           <img src="img/logo_mobile.png" width="125" height="40" alt="Atena" data-retina="true">

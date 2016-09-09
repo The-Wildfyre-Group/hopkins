@@ -32,9 +32,13 @@
 		if path_info == '/admin/census'|| path_info == '/admin/users' || path_info == '/admin/overview'
 			body_class = 'gray-bg'
 		end
+		no_header = ''
+		if path_info == '/login' || path_info == '/participate' || path_info == '/password_resets/new'
+			no_header = 'no-header'
+		end	
     %>
 
-	<body class="<%= body_class %>">
+	<body class="<%= body_class %> <%= no_header %>">
 		<!--[if lte IE 8]>
 		    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
 		<![endif]-->
