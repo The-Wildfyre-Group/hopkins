@@ -69,7 +69,8 @@ module ApplicationHelper
   end
 
   def main_share_fb_link
-    "http://www.facebook.com/sharer/sharer.php?u=#{root_url}&summary=join hopkins"
+    "https://www.facebook.com/BlackMensHealthSurvey"
+    #"https://www.facebook.com/sharer/sharer.php?u=http%3A//werisetoday.com/"
   end
 
   def main_share_twitter_link
