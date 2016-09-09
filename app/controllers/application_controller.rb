@@ -6,15 +6,15 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by_authentication_token(cookies[:authentication_token]) if cookies[:authentication_token]
   end
-  
+
   def authenticate_user!
     redirect_to login_path if current_user.nil?
   end
-  
+
   def completed_all_surveys?
     redirect_to "/results" if current_user.completed_all_surveys?
   end
-  
+
   def is_eligible?
     #redirect_to "/consent/status" unless current_user.eligible?
   end
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   def regions
     ["Northeast", "South", "Midwest", "West"]
   end
-  
+
   def races
     ["White", "Black or African American", "American Indian or Alaska Native", "Asian", "Native Hawaiian or Other Pacific Islander"]
   end

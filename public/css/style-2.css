@@ -34,7 +34,7 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
 @import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700");
 /*
-* http://meyerweb.com/eric/tools/css/reset/ 
+* http://meyerweb.com/eric/tools/css/reset/
 * v2.0 | 20110126
 * License: none (public domain)
 */
@@ -150,7 +150,7 @@ p {
   font-size: 1.5vh;
   line-height: 2.0vh;
   color: #FFFFFF;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1211,7 +1211,7 @@ p.lang {
     right: 15px;
     bottom: 15px; }
 
-/*  
+/*
  * Skin Gallery
  */
 #swipebox-overlay {
@@ -1604,7 +1604,7 @@ p.lang {
 
 ul.legal-links li a {
    color: #888 !important;
-   font-size: 10px; 
+   font-size: 10px;
    font-weight: 400;
 }
 
@@ -1618,7 +1618,7 @@ ul.legal-links li:last-child:after {
    color: #555;
 }
 
-ul.main-tabs li a { 
+ul.main-tabs li a {
    color: #888;
    font-weight: 400;
    letter-spacing: 1px;
@@ -1626,12 +1626,12 @@ ul.main-tabs li a {
    margin-right: 10px;
 }
 
-ul.main-tabs li { 
+ul.main-tabs li {
    border-bottom: 3px solid transparent;
    padding-bottom: 3px;
 }
 
-ul.main-tabs li.active a { 
+ul.main-tabs li.active a {
    border-bottom: 3px solid #08c;
 }
 
@@ -1662,33 +1662,33 @@ ul.main-tabs li.active a {
     height: 100%;
     overflow-y: auto;
     position: static;
-     width: 325px; 
+     width: 325px;
     display: block;
     -webkit-overflow-scrolling: touch;
 }
 
 #navigation ul li a {
-     display: inline-block; 
-     position: relative; 
-     padding: 0; 
+     display: inline-block;
+     position: relative;
+     padding: 0;
      margin: 0 2px;
 
      font-family: 'Oswald';
      border-bottom: 1px solid transparent;
 
-     font-size: .95rem; 
-     letter-spacing: 1px; 
-     text-align: left; 
-     color: rgba(255, 255, 255, 0.8); 
-     border-bottom: none; 
-     font-weight: 400; 
-     overflow: hidden; 
+     font-size: .95rem;
+     letter-spacing: 1px;
+     text-align: left;
+     color: rgba(255, 255, 255, 0.8);
+     border-bottom: none;
+     font-weight: 400;
+     overflow: hidden;
     text-transform: uppercase;
-     -webkit-transition: none; 
-    -moz-transition: none; 
-    -ms-transition: none; 
-    -o-transition: none; 
-    transition: none; 
+     -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
   body {
@@ -1712,7 +1712,7 @@ ul.main-tabs li.active a {
 
   .item-title {
     width: 100% !important;
-    left: 0 !important; } 
+    left: 0 !important; }
 
 
 
@@ -1818,7 +1818,7 @@ ul.main-tabs li.active a {
             display: block;
             text-align: center;
           }
-    
+
 
   #content-part {
     width: 100vw !important; }
@@ -1887,7 +1887,7 @@ ul.main-tabs li.active a {
     top: auto;
     bottom: 0; }
 
-  /*  
+  /*
    * Skin Gallery
    */
   #swipebox-overlay {
@@ -1980,7 +1980,7 @@ ul.main-tabs li.active a {
     -moz-transform: translateY(calc(-50% + 10px));
     -ms-transform: translateY(calc(-50% + 10px));
     -o-transform: translateY(calc(-50% + 10px));
-    transform: translateY(calc(-50% + 10px)); } 
+    transform: translateY(calc(-50% + 10px)); }
 
 
    #content-part .inner-content {
@@ -2016,7 +2016,7 @@ ul.main-tabs li.active a {
     iframe {height: 140px !important;}
 
     h1 {font-size: 50px !important; line-height: 60px; text-align: center;}
- 
+
     #stories .cd-headline.letters {line-height: 40px;}
 
 
@@ -2088,7 +2088,7 @@ ul.main-tabs li.active a {
     min-height: 40px; }
 
   #answer {
-    min-height: 40px; } 
+    min-height: 40px; }
   }
 
 
@@ -2110,7 +2110,7 @@ ul.main-tabs li.active a {
     font-size: 22px;
     font-weight: 300;
     line-height: 1.40;
-    letter-spacing: 0 !important; 
+    letter-spacing: 0 !important;
     margin-top: 20px;
 }
 
@@ -2383,34 +2383,34 @@ h6 {line-height: 20px;}
     height: 100%;
     overflow-y: auto;
     position: static;
-     width: 325px; 
+     width: 325px;
     display: block;
     -webkit-overflow-scrolling: touch;
 }
 
 
 #navigation ul li a {
-     display: inline-block; 
-     position: relative; 
-     padding: 0; 
+     display: inline-block;
+     position: relative;
+     padding: 0;
      margin: 0 5px;
 
      font-family: 'Montserrat';
      border-bottom: 1px solid transparent;
 
-     font-size: .95rem; 
-     letter-spacing: 1px; 
-     text-align: left; 
-     color: rgba(255, 255, 255, 0.8); 
-     border-bottom: none; 
-     font-weight: 400; 
-     overflow: hidden; 
+     font-size: .95rem;
+     letter-spacing: 1px;
+     text-align: left;
+     color: rgba(255, 255, 255, 0.8);
+     border-bottom: none;
+     font-weight: 400;
+     overflow: hidden;
     text-transform: uppercase;
-     -webkit-transition: none; 
-    -moz-transition: none; 
-    -ms-transition: none; 
-    -o-transition: none; 
-    transition: none; 
+     -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
 
@@ -2433,7 +2433,7 @@ h6 {line-height: 20px;}
 }
 
 #navigation ul {
-     width: auto; 
+     width: auto;
 }
 
 
@@ -2536,8 +2536,8 @@ h3 { line-height: 34px;}
 .btn-primary, #contact-form button#valid-form {
     background-color: #27aae1;
     border: none;
-    border: 2px solid #27aae1; 
-    font-size: 18px; 
+    border: 2px solid #27aae1;
+    font-size: 18px;
     word-spacing: 2px;
 }
 
@@ -2593,7 +2593,7 @@ table.leaderboard img {
   }
 
   .mobile-vertical-padding {
-    
+
   }
 
   .m-b-20 {
@@ -2628,11 +2628,11 @@ table.leaderboard img {
 
 
   .inner-content.bg-hero h5.section-label {
-    font-size: 16px; 
-    color: #fff; 
-    padding: 10px 20px; 
-    background: #08c; 
-    display: inline-block; 
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    background: #08c;
+    display: inline-block;
     letter-spacing: 1px;
   }
 
@@ -2656,18 +2656,18 @@ table.leaderboard img {
 
 
 h5.section-label {
-  font-size: 16px; 
-  color: #fff; 
-  padding: 10px 20px; 
-  background: #08c; 
-  display: inline-block; 
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 20px;
+  background: #08c;
+  display: inline-block;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 100;
 }
 
 
-#content-part .header-hero h4, 
+#content-part .header-hero h4,
 .story h4  {
   font-weight: 400;
   line-height: 30px;
@@ -2730,9 +2730,9 @@ img.story-arrow {opacity: .25; height: 160px; width: 160px;}
     font-weight: 100;
     letter-spacing: 1px;
 }
-  
+
  ol {
-  list-style: decimal-leading-zero; margin-left: 30px; padding-left: 10px; padding-right: 40px; 
+  list-style: decimal-leading-zero; margin-left: 30px; padding-left: 10px; padding-right: 40px;
 }
 
 ol.h3 {
@@ -2754,11 +2754,11 @@ ol.h3 li {
 }
 
 .inner-content.bg-hero h5.section-label {
-    font-size: 16px; 
-    color: #fff; 
-    padding: 10px 20px; 
-    background: #08c; 
-    display: inline-block; 
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    background: #08c;
+    display: inline-block;
     letter-spacing: 1px;
   }
 
@@ -2775,7 +2775,7 @@ form.share-your-story {
 
 table.leaderboard {
   border-radius: 6px;
-  background: #fff; 
+  background: #fff;
 }
 
 table.leaderboard thead th {
@@ -2817,7 +2817,7 @@ table.leaderboard h3 {
 
 .table>thead>tr>th {
     vertical-align: bottom;
-     border-bottom: none; 
+     border-bottom: none;
 }
 
 #content-part .header-hero .steps h5 {
@@ -2841,7 +2841,7 @@ table.leaderboard h3 {
 }
 
 #content-part .header-hero h5 {
-  font-size: 16px; 
+  font-size: 16px;
   color: #6bc5ea;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2856,21 +2856,35 @@ table.leaderboard h3 {
 .uppercase {text-transform: uppercase;}
 .ls_4 {letter-spacing: 4px;}
 
-
-
-#content-part .steps h1 {
-    text-align: left !important;
+.no_side_padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
+.padding_left_right_50px {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#content-part .share_section {
+  padding: 100px 50px 20px 50px;
+}
+
+#content-part .steps h1 {
+    text-align: right !important;
+    padding-right: 5px;
+    font-size: 65px;
+}
 
 #content-part .steps h4 {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     line-height: 24px;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: left;
     margin-left: 5px;
-    border-left: 1px solid #bbb;
+    margin-bottom: 10px;
+    /*border-left: 1px solid #9c9c9c;*/
     padding-left: 10px;
     letter-spacing: 0;
     color: #000;
@@ -2882,36 +2896,70 @@ table.leaderboard h3 {
     display: block;
     width: 100%;
     font-weight: 600;
-    height: 50px;
+    height: 45px;
     padding: 6px 15px;
     font-size: 20px;
     line-height: 1.42857143;
     color: #fff;
-    background-color: #08c;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background-color: #cecece;
+    border: 1px solid #a7a7a7;
+    border-radius: 1px;
     -webkit-box-shadow: none;
-    box-shadow: 1px 5px 5px #888;
+    box-shadow: none;
+}
+
+.steps .photo_input {
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.steps .photo_input:focus {
+  outline: none;
+}
+
+.steps hr {
+  border-color: #a1a1a1;
+  margin-top: 15px;
+  margin-bottom: 15px
+}
+
+.step_container {
+  padding-left: 10px;
+}
+
+.steps .steps_number {
+  min-width: 70px;
+  width: 70px;
+  padding-right: 0;
+  border-right: 2px solid #9c9c9c;
+}
+
+.steps_text {
+  padding-left: 0px;
+}
+
+.share_images {
+  padding-left: 15px;
 }
 
 ::-webkit-input-placeholder {
-   color: #fff !important;  
+   color: #fff !important;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #fff !important;  
+   color: #fff !important;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff !important;  
+   color: #fff !important;
 }
 
-  :-ms-input-placeholder {  
-   color: #fff !important;  
+  :-ms-input-placeholder {
+   color: #fff !important;
 }
 
 
-#share-preview, 
+#share-preview,
 #share-preview > div {
   width: 385px;
 }

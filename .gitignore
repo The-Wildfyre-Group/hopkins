@@ -17,3 +17,7 @@
 /config/database.yml
 .idea/*
 public/uploads
+/vendor/bundle
+
+# Ignore other unneeded files.
+.DS_Store
