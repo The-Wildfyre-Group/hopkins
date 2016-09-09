@@ -2981,3 +2981,26 @@ table.leaderboard h3 {
 #content-part .inner-content.padding-50 {
   padding: 0 50px 50px 50px !important;
 }
+
+
+
+.home-intro-text {
+    font-size: 17px;
+}
+
+.video-div {
+    position: relative;
+    z-index: 0;
+}
+
+.scroll-div {
+    width: 100%;
+    height: 310px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+}
+
+.iframe {
+    z-index: 0
+}
