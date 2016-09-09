@@ -2308,6 +2308,9 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 #surveys .box_feat .fa-unlock-alt:before { color: #777 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
 
 
+.main-menu { opacity: 1;}
+.main-menu.open { left: 0%;}
+
 
 @media(min-width:1199px){
 	.census-surveys-panel .col-lg-3 { width: 20%;}
@@ -2327,4 +2330,12 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 }
 @media(max-width:568px){
 	.census-surveys-panel .col-lg-3{width:100%;}
+	.indent_title_in,
+	.wrapper_indent { padding-left: 50px;}
+	.indent_title_in i { font-size: 35px;}
+}
+@media(max-width:414px){
+	.indent_title_in, .wrapper_indent { padding-left: 0; padding-top: 40px;}
+	.indent_title_in h3 { font-size: 22px;}
+
 }
