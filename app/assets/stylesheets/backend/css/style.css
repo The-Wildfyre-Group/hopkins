@@ -2309,6 +2309,7 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 
 .main-menu { opacity: 1;}
 .main-menu.open { left: 0%;}
+.main-menu.open ul { margin-top:40px;}
 .main-menu.open div#header_menu, .main-menu.open .user-info { display: none;}
 
 
