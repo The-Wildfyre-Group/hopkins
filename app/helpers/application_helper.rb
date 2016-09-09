@@ -1,10 +1,10 @@
 module ApplicationHelper
   def twitter_share_link(message)
-    link_to( image_tag('/img/icons/twitter.png', style: "height: 50px"),  "https://twitter.com/intent/tweet?status= #{message}", target: 'blank')
+    link_to( image_tag('icons/twitter_share.png', style: "height: 30px"),  "https://twitter.com/intent/tweet?status= #{message}", target: 'blank')
   end
 
   def facebook_share_link(url, message)
-    link_to( image_tag('/img/icons/facebook.png', style: "height: 50px"),  "http://www.facebook.com/sharer/sharer.php?u=#{url}&summary=#{message}", target: 'blank' )
+    link_to( image_tag('icons/facebook_share.png', style: "height: 30px"),  "http://www.facebook.com/sharer/sharer.php?u=#{url}&summary=#{message}", target: 'blank' )
   end
 
   def display(cell)
