@@ -2355,6 +2355,13 @@ body.no-header header { display: none;}
 .row.login-form-area a.text-off-white.white-link { margin: 0 0 5px; width: 100%;}
 .participate_container .styled-select-contact-home select{color:#333;}
 
+.story-panel{text-transform:capitalize;padding:0;margin:0;list-style:none;background-color:#FFF;padding:20px;border:1px solid #CCC;}
+.story-panel div[class*=col]{background-color:#EEE;min-height:400px;width:48%;margin:0 1%;float:left;}
+
+.story-panel li{padding:10px;margin:0;list-style:none;}
+.story-panel label{width:100%;max-width:200px;display:inline-block;font-size:15px;}
+.stroy-txt{ font-size: 20px;}
+
 
 @media(min-width:1199px){
 	.census-surveys-panel .col-lg-3 { width: 20%;}
@@ -2377,6 +2384,9 @@ body.no-header header { display: none;}
 	.indent_title_in,
 	.wrapper_indent { padding-left: 50px;}
 	.indent_title_in i { font-size: 35px;}
+	.story-panel{padding:10px 20px;}
+	.story-panel div[class*=col]{background-color:#EEE;min-height:400px;width:98%;margin:10px 1%;float:left;}
+
 }
 @media(max-width:414px){
 	.indent_title_in, .wrapper_indent { padding-left: 0; padding-top: 40px;}
