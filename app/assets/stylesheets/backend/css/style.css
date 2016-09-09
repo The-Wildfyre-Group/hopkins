@@ -2393,3 +2393,49 @@ body.no-header header { display: none;}
 	.indent_title_in h3 { font-size: 22px;}
 
 }
+
+
+.summary_normal{
+    /*text-align: left;*/
+    font-size: 19px;
+    color: black;
+    font-weight: bold;
+}
+
+p {margin: 0 0 20px 0;}
+
+.number_result{
+    font-weight: bold;
+    color:#00AEEF;
+    font-size: 15pt;
+}
+
+.result_box_feat{
+    text-align:center;
+    background:#fff;
+    font-weight: bold;
+    padding:24px 30px 18px 26px;
+    display:block;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    /*-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+    -moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
+    box-shadow: 0px 3px 0px 0px #f0f2f4;
+    */
+    box-shadow: 1px 1px 1px #aaa;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    color:black;
+    margin-bottom:30px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow:hidden;
+}
+.result_body_feat h3{
+    font-size:48px;
+    font-family:"proxima_nova_rgbold", Arial, sans-serif;
+    color:black;
+}
