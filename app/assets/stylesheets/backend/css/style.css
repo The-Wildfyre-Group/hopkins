@@ -318,6 +318,45 @@ header#contacts{
    color:#fff;
    text-align:center;
 }
+
+.participate_container {
+	height: auto;
+	background-image: url("/img/stock/6.jpg");
+	background-position: center top;
+}
+
+.relative_position {
+	position: relative !important;
+}
+
+.participate_organizations_list {
+	background: transparent;
+	box-shadow: none;
+	border: 2px solid #fff;
+	width: 100%;
+	border-radius: 0px;
+	padding: 15px 20px 20px 20px;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.participate_organizations_list li {
+	padding-top: 5px;
+}
+
+.participate_organizations_list li label {
+	cursor: pointer;
+}
+
+.participate_organizations_list li label:hover	{
+	color: #b1b1b1;
+	transition: all 0.4s ease 0s;
+}
+
+.participate_organizations_list li input {
+	margin-right: 10px;
+}
+
 .sub_header_contact_home_wrapper{
 	padding: 20px 250px 0 250px;
 }
