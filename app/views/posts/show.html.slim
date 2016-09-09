@@ -1,0 +1,26 @@
+.container_story_balck
+  .container-fluid
+    .row
+      .col-md-3.col-sm-3.col-xs-3
+        #logo
+
+      nav.col-md-9.col-sm-9.col-xs-9
+        a.cmn-toggle-switch.cmn-toggle-switch__htx.open_close[href="javascript:void(0);"]
+          span
+            | Menu mobile
+        .main-menu
+          .nav-story-blue
+            ul
+              li= link_to "Take the survey", surveys_path, class: 'a-color-white'
+.container_story_black_title
+  #surveys.container.margin_title
+    .main_title
+      h1.title-color= @post.title
+          
+/! End sub_header
+.container_white_body
+  #surveys.container.margin_60
+    .main_title_body
+      p= @post.description
+      = render 'vimeo_player'
+      /*= image_tag(@post.photo_attachment)
