@@ -38,10 +38,9 @@ class User < ActiveRecord::Base
   end
 
   def surveys_completed
-    completed_surveys.size
+    completed_surveys.uniq.size
   end
-  
-  
+
   def completed_all_surveys?
     surveys_completed == 5
   end
@@ -80,5 +79,13 @@ class User < ActiveRecord::Base
   
   def assigned_giftcard?
     claimed_giftcard.present?
+  end
+
+  def check_surveys_completion
+    return if completed_all_surveys?
+    (["Status", "Services", "Behavior", "Psycho Social", "Closing"] - completed_surveys).each do |survey|
+      completed_survey?(survey)
+    end
+    ClaimGiftcard.call(self) if completed_all_surveys?
   end
 end

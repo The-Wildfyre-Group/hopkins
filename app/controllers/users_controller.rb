@@ -45,6 +45,7 @@ class UsersController < ApplicationController
   
   def results
     @user = current_user
+    @user.check_surveys_completion
     @status = HTTParty.get('https://api.typeform.com/v0/form/X7Gqv9?key=893f6cea38785bbc15d71f06bcd07bf5e15653dd')
     @behavior = HTTParty.get('https://api.typeform.com/v0/form/n2QJzM?key=893f6cea38785bbc15d71f06bcd07bf5e15653dd')
   end
