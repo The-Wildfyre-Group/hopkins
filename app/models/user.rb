@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   def completed_survey?(string)
     return true if completed_surveys.include?(string)
     completed_response = completed_survey(string)
-    completed_surveys << string and save if completed_response.present?
+    self.completed_surveys += [string] and save if completed_response.present?
   end
 
   def surveys_completed
