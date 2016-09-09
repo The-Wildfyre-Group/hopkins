@@ -86,6 +86,11 @@ class User < ActiveRecord::Base
     (["Status", "Services", "Behavior", "Psycho Social", "Closing"] - completed_surveys).each do |survey|
       completed_survey?(survey)
     end
-    ClaimGiftcard.call(self) if completed_all_surveys?
+    claim_giftcard! if completed_all_surveys?
+  end
+
+  def claim_giftcard!
+    ClaimGiftcard.call(self)
+    UserMailer.completed_surveys(self).deliver
   end
 end

@@ -5,4 +5,9 @@ class UserMailer < ActionMailer::Base
     @user = current_user
     mail to: email, subject: "Invite"
   end
+
+  def completed_surveys(user)
+    @user = user
+    mail(to: @user.email, subject: 'Amazon giftcard for surveys')
+  end
 end
