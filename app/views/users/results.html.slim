@@ -19,14 +19,15 @@
     / .main_title
     /   h2 5 Survey Sections
     /   p Each section must be completed in one sitting.
-    .row
-      .col-md-12.col-sm-12
-        .result_box_feat
-          .number_result
-            = "Congratulations. You’ve received an Amazon Giftcard:"
-          .summary_normal
-            br
-            = "Redeem Code: 568964"
+    - if current_user.claimed_giftcard.present?
+      .row
+        .col-md-12.col-sm-12
+          .result_box_feat
+            .number_result
+              | Congratulations. You’ve received an Amazon Giftcard:
+            .summary_normal
+              br
+              | Redeem Code: #{current_user.claimed_giftcard.code}
     .main_title
       h2 Find out how your health compares with your peers.
       p Understanding your health from a national perspective.
@@ -42,18 +43,17 @@
                   .result_box_feat
                     .number_result
                       = "#{Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)}%"
-                    h3 Like You:
+                    h3 Like You
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
                       = "#{Information.status_data[condition][:black_men]}%"
-                    h3 All Black:
-                    
+                    h3 All Black
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
                       = "#{Information.status_data[condition][:all_men]}%"
-                    h3 All Men:
+                    h3 All Men
                 .summary_normal
                   p Summary
                   = "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
