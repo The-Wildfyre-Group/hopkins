@@ -2246,10 +2246,12 @@ a.white-link:hover {color: #fff;}
 .fs-16 {font-size: 16px;}
 
 /*  custom css  */
+.center{text-align:center !important;}
 body.gray-bg {
   background-color: #eee;
 }
-h2.census-title{font-size:32px;margin:40px 20px 0;color:#283842;}
+h2.census-title{font-size:32px;margin:40px 20px 0;color:#283842;display:block;}
+h3.total-user{margin-top:5px;}
 table.census-tbl {
   margin: 0 auto 20px;
   max-width: 1100px;
@@ -2284,6 +2286,9 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 #surveys .box_feat .fa-lock:before { color: #b1b1b1 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
 #surveys .box_feat .fa-unlock-alt,
 #surveys .box_feat .fa-unlock-alt:before { color: #777 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
+
+
+
 
 @media(min-width:1199px){
 	.census-surveys-panel .col-lg-3 {
