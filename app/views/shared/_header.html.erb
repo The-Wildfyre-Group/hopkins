@@ -1,7 +1,7 @@
 <%
 	census_header = ''
 	path_info = request.env['PATH_INFO']
-	if path_info == '/admin/census'
+	if path_info == '/admin/census' || path_info == '/admin/users'
 		census_header = 'census-header'
 	end
 %>
