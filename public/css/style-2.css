@@ -2643,8 +2643,13 @@ table.leaderboard img {
 }
 
 #content-part .home-hero {
-    min-height: 650px;
-  }
+  min-height: 650px;
+}
+
+#content-part .home_top_image {
+  background: url("/img/stock/h-5.jpg") right center;
+  background-size: cover;
+}
 
 .inner-content.history {
   height: 800px;
