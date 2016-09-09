@@ -1,7 +1,7 @@
 <%
 	census_header = ''
 	path_info = request.env['PATH_INFO']
-	if path_info == '/admin/census'
+	if path_info == '/admin/census' || path_info == '/admin/users' || path_info == '/admin/overview'
 		census_header = 'census-header'
 	end
 %>
@@ -22,7 +22,11 @@
         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
         <ul>
           <% if current_user %>
+            <% if current_user.completed_all_surveys? %>
+            <li><%= link_to "My Results", results_path %></li>
+            <% else %>
             <li><%= link_to "My Surveys", surveys_path %></li>
+            <% end %>
             <li><%= link_to "My Information", settings_path %></li>
             <li><%= link_to "Logout", session_path(current_user.id), method: :delete %></li>
             <li class="user-info">
@@ -41,3 +45,11 @@
   </div><!-- container -->
 </header><!-- End Header -->
 
+<script>
+	$( ".cmn-toggle-switch__htx.open_close" ).click(function() {
+		$(".main-menu").toggleClass('open');
+	});
+	$( ".icon_close" ).click(function() {
+		$(".main-menu").toggleClass('open');
+	});
+</script>
