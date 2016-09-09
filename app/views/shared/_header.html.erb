@@ -4,6 +4,12 @@
 	if path_info == '/admin/census' || path_info == '/admin/users' || path_info == '/admin/overview'
 		census_header = 'census-header'
 	end
+	
+	my_string = path_info
+	if my_string.include? "posts"
+	   census_header = 'census-header'
+	end
+		
 %>
 
 <header class="<%= census_header%>">

@@ -87,20 +87,7 @@ a.link_normal:after{
 	position:relative;
 	margin-left:5px;
 }
-.summary_normal{
- 	/*text-align: left;*/
- 	font-size: 19px;
- 	font-family:"proxima_nova_rgregular";
- 	color: black;
- 	font-weight: bold;
-}
-.description_normal{
- 	/*text-align: left;*/
- 	font-size: 19px;
- 	font-family:"proxima_nova_rgregular";
- 	color: black;
- 	font-weight: bold;
-}
+
 p {margin: 0 0 20px 0;}
 
 hr {
@@ -1054,40 +1041,6 @@ a.box_feat, .box_feat{
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	overflow:hidden;
-}
-.number_result{
-	font-weight: bold;
-	color:#00AEEF;
-	font-size: 15pt;
-}
-.result_box_feat{
-	text-align:center;
-	background:#fff;
-	font-weight: bold;
-	padding:24px 30px 18px 26px;
-	display:block;
-	transition: all 500ms ease-in-out;
-	-webkit-transition: all 500ms ease-in-out;
-	-moz-transition: all 500ms ease-in-out;
-	-o-transition: all 500ms ease-in-out;
-	/*-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
-	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
-	box-shadow: 0px 3px 0px 0px #f0f2f4;
-	*/
-	box-shadow: 1px 1px 1px #aaa;
-	border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-	color:black;
-	margin-bottom:30px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	overflow:hidden;
-}
-.result_body_feat h3{
-	font-size:48px;
-	font-family:"proxima_nova_rgbold", Arial, sans-serif;
-	color:black;
 }
 a.box_feat:hover{
 	 transform: translate(0, -10px);
@@ -2402,6 +2355,13 @@ body.no-header header { display: none;}
 .row.login-form-area a.text-off-white.white-link { margin: 0 0 5px; width: 100%;}
 .participate_container .styled-select-contact-home select{color:#333;}
 
+.story-panel{text-transform:capitalize;padding:0;margin:0;list-style:none;background-color:#FFF;padding:20px;border:1px solid #CCC;}
+.story-panel div[class*=col]{background-color:#EEE;min-height:400px;width:48%;margin:0 1%;float:left;}
+
+.story-panel li{padding:10px;margin:0;list-style:none;}
+.story-panel label{width:100%;max-width:200px;display:inline-block;font-size:15px;}
+.stroy-txt{ font-size: 20px;}
+
 
 @media(min-width:1199px){
 	.census-surveys-panel .col-lg-3 { width: 20%;}
@@ -2424,6 +2384,9 @@ body.no-header header { display: none;}
 	.indent_title_in,
 	.wrapper_indent { padding-left: 50px;}
 	.indent_title_in i { font-size: 35px;}
+	.story-panel{padding:10px 20px;}
+	.story-panel div[class*=col]{background-color:#EEE;min-height:400px;width:98%;margin:10px 1%;float:left;}
+
 }
 @media(max-width:414px){
 	.indent_title_in, .wrapper_indent { padding-left: 0; padding-top: 40px;}
