@@ -32,18 +32,18 @@ class User < ActiveRecord::Base
   end
 
   def completed_survey?(string)
+    return true if completed_surveys.include?(string)
     completed_response = completed_survey(string)
-    completed_response.present?
+    completed_surveys << string and save if completed_response.present?
   end
 
   def surveys_completed
-    array = [survey_1?, survey_2?, survey_3?, survey_4?, survey_5?]
-    array.count(true)
+    completed_surveys.size
   end
   
   
   def completed_all_surveys?
-    ![survey_1?, survey_2?, survey_3?, survey_4?, survey_5?].include? false
+    surveys_completed == 5
   end
 
   def signup_age
@@ -81,5 +81,4 @@ class User < ActiveRecord::Base
   def assigned_giftcard?
     claimed_giftcard.present?
   end
-
 end
