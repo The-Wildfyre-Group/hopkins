@@ -58,8 +58,10 @@ p.lead{font-family: "proxima_novalight", Arial, Helvetica, sans-serif;letter-spa
 footer h4{color:#fff; font-size:14px; text-transform:uppercase; font-family: 'proxima_nova_rgbold', Arial, Helvetica, sans-serif; margin-top:0; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;}
 
 .main_title{ text-align:center; margin-bottom:45px; }
+.main_title_body{ text-align:center; margin-bottom:45px; }
 .main_title h2{ font-size:34px; letter-spacing:-1px; margin-top:0;}
 .main_title p{ font-size:22px; font-family: "proxima_novalight", Arial, Helvetica, sans-serif; color:#777; line-height:1.2;}
+.main_title_body p{ font-size:30px; font-family: "proxima_novalight", Arial, Helvetica, sans-serif; color:black; line-height:1.2;text-align: left;}
 
 /** Layes slider typography **/
 h3.slide_typo {font-family: "proxima_novalight", Arial, Helvetica, sans-serif;letter-spacing:-2px; font-size: 60px; white-space:nowrap; color:#fff !important; font-weight:normal;}
@@ -318,6 +320,45 @@ header#contacts{
    color:#fff;
    text-align:center;
 }
+
+.participate_container {
+	height: auto;
+	background-image: url("/img/stock/6.jpg");
+	background-position: center top;
+}
+
+.relative_position {
+	position: relative !important;
+}
+
+.participate_organizations_list {
+	background: transparent;
+	box-shadow: none;
+	border: 2px solid #fff;
+	width: 100%;
+	border-radius: 0px;
+	padding: 15px 20px 20px 20px;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.participate_organizations_list li {
+	padding-top: 5px;
+}
+
+.participate_organizations_list li label {
+	cursor: pointer;
+}
+
+.participate_organizations_list li label:hover	{
+	color: #b1b1b1;
+	transition: all 0.4s ease 0s;
+}
+
+.participate_organizations_list li input {
+	margin-right: 10px;
+}
+
 .sub_header_contact_home_wrapper{
 	padding: 20px 250px 0 250px;
 }
@@ -1524,6 +1565,67 @@ input#website {display:none;}
 	border-top: 10px solid #fff;
 	border-bottom: 1px solid #ddd;
 }
+.user_info{
+	color: #b7b7b7;
+  font-size: 17px;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 26px;
+  text-transform: capitalize;
+}
+.body-text{
+	text-align: left;
+	color: black;
+	font-family: Signika,"Helvetica Neue",sans serif;
+}
+.container_white_body {
+	background-color:#f3f5f8;
+	border-top: 10px solid #fff;
+	border-bottom: 1px solid #ddd;
+}
+.a-color{
+	color: #b7b7b7;
+	font-weight: bold;
+}
+.a-color-white{
+	color: #fff;
+	font-weight: bold;
+}
+.nav-story {
+	background-color:#404040;
+	padding: 1px 10px 1px 1px;
+	position: inherit;
+	right: 0px;
+	top: 12px;
+	font-family: Signika,"Helvetica Neue",sans serif;
+}
+.nav-story-blue {
+	background-color:#3f9ad6;
+	position: absolute;
+	right: 15px;
+	top: 65px;
+	left: 154px;
+	font-family: Signika,"Helvetica Neue",sans serif;
+	text-align: center;
+}
+.story-title{
+
+}
+.container_story_black_title {
+	background-color: black;
+	/*border-top: 10px solid #fff;*/
+	border-bottom: 1px solid #ddd;
+}.title-color {
+		color: white;
+	}
+.title-color{
+	color: white;
+}
+.container_story_balck {
+	background-color: black;
+	padding-bottom: 3%;
+	/*border-top: 10px solid #fff;*/
+}
 .container_gray_line {
 	border-top:1px solid #e9ebee;
 }
@@ -1723,6 +1825,8 @@ s.checkbox-holder {
 .add_bottom_75 {margin-bottom:75px;}
 .add_top_60 {padding-top:60px;}
 .margin_60 {padding-top:60px; padding-bottom:60px;}
+.margin_title {padding-top:30px;font-family: Signika,"Helvetica Neue",sans serif;}
+
 .margin_30 {margin-top:30px; margin-bottom:30px;}
 .nomargin_top { margin-top:0;}
 .nopadding {margin: 0 !important;padding: 0 !important;}
@@ -2246,10 +2350,31 @@ a.white-link:hover {color: #fff;}
 .fs-16 {font-size: 16px;}
 
 /*  custom css  */
+.center{text-align:center !important;}
 body.gray-bg {
   background-color: #eee;
 }
-h2.census-title{font-size:32px;margin:40px 20px 0;color:#283842;}
+.open-menu-mobile ~ .hidden-lg.main-navigation {
+  left: -500px;
+  position: absolute;
+  top: 13px;
+  z-index: 999999;
+  -webkit-transition:0.5s all;
+  -moz-transition:0.5s all;
+  -ms-transition:0.5s all;
+  -o-transition:0.5s all;
+  transition:0.5s all;
+}
+.open-menu-mobile.translate-button ~ .hidden-lg.main-navigation {
+  left: 10px;
+}
+h2.census-title{font-size:32px;margin:40px 20px 0;color:#283842;display:block;}
+h3.total-user{margin-top:5px;}
+p.wht-bg {
+  background: none repeat scroll 0 0 #fff;
+  box-shadow: 2px 3px 5px #ccc;
+  padding: 15px 10px;
+}
 table.census-tbl {
   margin: 0 auto 20px;
   max-width: 1100px;
@@ -2280,19 +2405,46 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 #surveys a.box_feat, #surveys .box_feat{position:relative;}
 #surveys .box_feat .fa-check,
 #surveys .box_feat .fa-check:before { color: #29a329 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
+#surveys .box_feat .fa-check { font-size: 0;}
 #surveys .box_feat .fa-lock,
 #surveys .box_feat .fa-lock:before { color: #b1b1b1 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
 #surveys .box_feat .fa-unlock-alt,
 #surveys .box_feat .fa-unlock-alt:before { color: #777 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
 
+.main-menu { opacity: 1;}
+.main-menu.open { left: 0%;}
+.main-menu.open ul { margin-top:40px;}
+.main-menu.open div#header_menu, .main-menu.open .user-info { display: none;}
+.sub_header_contact_home.hero { background-position: center center;}
+.row.login-form-area a.text-off-white.white-link { margin: 0 0 5px; width: 100%;}
+
+.participate_container .styled-select-contact-home select{color:#333;}
+
+
 @media(min-width:1199px){
-	.census-surveys-panel .col-lg-3 {
-	  width: 20%;
-	}
+	.census-surveys-panel .col-lg-3 { width: 20%;}
+}
+@media(max-width:1199px){
+	.sub_header div.zindex_wrapper {display:table;padding: 8% 0;margin:auto;}
+}
+@media(max-width:837px){
+	.sub_header div { padding: 0 8%;}
+	.sub_header div.zindex_wrapper {display:table;padding: 8% 0;margin:auto;}
+	.sub_header div.zindex_wrapper #intro_txt,
+	.sub_header div.zindex_wrapper #intro_txt div {padding: 0;}
+
 }
 @media(max-width:767px){
 	.table-responsive{width:95%; margin:auto;}
 }
 @media(max-width:568px){
 	.census-surveys-panel .col-lg-3{width:100%;}
+	.indent_title_in,
+	.wrapper_indent { padding-left: 50px;}
+	.indent_title_in i { font-size: 35px;}
+}
+@media(max-width:414px){
+	.indent_title_in, .wrapper_indent { padding-left: 0; padding-top: 40px;}
+	.indent_title_in h3 { font-size: 22px;}
+
 }

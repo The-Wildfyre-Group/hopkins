@@ -1,6 +1,6 @@
-
-
-<table>
+<h2 class="census-title center">Users Data</h2>
+<h3 class="total-user center">Total users: <span><%= @users.count %></span></h3>
+<table class="census-tbl">
     <tr>
         <th>Name</th>
         <th>Email</th>
@@ -9,7 +9,7 @@
         <th>Education</th>
         <th>State</th>
         <th>Eligible?</th>
-        <th>Manage</th>
+        <th colspan="2">Manage</th>
 
     </tr>
     <% @users.each do |user|%>

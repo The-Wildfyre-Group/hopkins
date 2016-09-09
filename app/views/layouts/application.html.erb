@@ -29,7 +29,7 @@
 	<%
 	    body_class = ''
 		path_info = request.env['PATH_INFO']
-		if path_info == '/admin/census'
+		if path_info == '/admin/census'|| path_info == '/admin/users' || path_info == '/admin/overview'
 			body_class = 'gray-bg'
 		end
     %>
