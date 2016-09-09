@@ -21,9 +21,16 @@
     /   p Each section must be completed in one sitting.
     .row
       .col-md-12.col-sm-12
-        .result_box_feat.status
-          = image_tag 'logos/3.jpg'
-= "Find out how your health compares with your peers."
+        .result_box_feat
+          .number_result
+            = "Congratulations. You’ve received an Amazon Giftcard:"
+          .summary_normal
+            br
+            = "Redeem Code: 568964"
+    .main_title
+      h2 Find out how your health compares with your peers.
+      p Understanding your health from a national perspective.
+
     .row
       - @status["responses"].each do |response|
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
@@ -71,4 +78,7 @@
                   .result_box_feat
                     .number_result
                       = "#{Information.behavior_data[condition][:all_men]}"
-                    h3 All Men:    
+                    h3 All Men:
+                .summary_normal
+                  p Summary
+                  = "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."

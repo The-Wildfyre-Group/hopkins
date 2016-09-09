@@ -90,6 +90,14 @@ a.link_normal:after{
 .summary_normal{
  	/*text-align: left;*/
  	font-size: 19px;
+ 	font-family:"proxima_nova_rgregular";
+ 	color: black;
+ 	font-weight: bold;
+}
+.description_normal{
+ 	/*text-align: left;*/
+ 	font-size: 19px;
+ 	font-family:"proxima_nova_rgregular";
  	color: black;
  	font-weight: bold;
 }
