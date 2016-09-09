@@ -1,1 +1,4 @@
-$('#share-preview').html('<%=j render "share_box", share: @share %>')
+$('#share-preview').html('<%=j image_tag(@share.photo.url, style: 'width: 100%; height: 360px') %>');
+$('.share_images').html('');
+$('.share_images').append('<%=j twitter_share_link(@share.message) %>');
+$('.share_images').append('<%=j facebook_share_link(share_url(@share), @share.message) %>');
