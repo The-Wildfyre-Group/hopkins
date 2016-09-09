@@ -2307,9 +2307,9 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 #surveys .box_feat .fa-unlock-alt,
 #surveys .box_feat .fa-unlock-alt:before { color: #777 !important; font-family: 'FontAwesome'; font-size: 25px; font-weight: 300; position: absolute; right: 5px; top: 3px;}
 
-
 .main-menu { opacity: 1;}
 .main-menu.open { left: 0%;}
+.main-menu.open div#header_menu, .main-menu.open .user-info { display: none;}
 
 
 @media(min-width:1199px){
