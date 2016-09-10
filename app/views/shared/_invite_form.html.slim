@@ -1,8 +1,7 @@
-#newsletter_container.container_gray_bg
-  .container.margin_60
-    .row
-      .col-lg-12.text-center
-        h3 Invite Friends and Family to participate.
-        = form_tag invites_path, id: "newsletter", class: "form-inline", novalidate: "novalidate" do |f|
-          = email_field_tag :recipients, "", placeholder: "Email or Phone", id: "email_newsletter", class: "form-control", 'data-role' => 'tagsinput'
-          = submit_tag "Invite", class: "button", id: "submit-newsletter"
+#newsletter_container
+  .row
+    .col-lg-12.text-center
+      h3 Invite Friends and Family to participate.
+      = form_tag invites_path, id: "newsletter", class: "form-inline", novalidate: "novalidate" do |f|
+        = email_field_tag :recipients, "", placeholder: "Email or Phone", id: "email_newsletter", class: "form-control", 'data-role' => 'tagsinput'
+        = submit_tag "Invite", class: "button", id: "submit-newsletter"

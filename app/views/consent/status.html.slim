@@ -1,1 +1,10 @@
-= render "shared/invite_form"
+.container_gray_bg
+  .container.padding-center
+    .main_title
+      h2 It looks like you’re not the right fit for the survey.
+      p style=("font-weight:bold;")
+        | Help others 
+        span style=("color:#A61C00;text-decoration:underline;display:inline-block;margin-right: 5px;") Rise Up Today 
+        | and take control of their health.
+      .status-form.well
+        = render "shared/invite_form"
