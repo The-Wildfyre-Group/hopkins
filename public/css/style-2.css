@@ -2735,9 +2735,12 @@ img.story-arrow {opacity: .25; height: 160px; width: 160px;}
 
 .history {
    background-size: cover;
-  /* height: 800px;*/
+    /* height: 800px;*/
 }
 
+.create-history{
+ background: url(../img/stock/h-6.jpg);
+}
 
  .bg-hero h1 {
     color: #fff;
