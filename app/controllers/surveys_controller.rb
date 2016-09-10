@@ -2,6 +2,7 @@ class SurveysController < ApplicationController
   before_action :authenticate_user!
   before_action :is_eligible?
   before_action :completed_all_surveys?
+
   layout "survey"
 
   def index
