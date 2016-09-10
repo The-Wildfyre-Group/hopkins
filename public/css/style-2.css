@@ -1912,9 +1912,9 @@ ul.main-tabs li.active a {
     background: #0a1a24;
     opacity: 1;
     min-height: 50px; }
-    
-  body #navigation { left: -52%; width: 150px;}  
-    
+
+  body #navigation { left: -52%; width: 150px;}
+
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -2950,6 +2950,12 @@ table.leaderboard h3 {
 
 .steps_text {
   padding-left: 0px;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .steps_text {
+    width: 75%;
+  }
 }
 
 .share_images {
