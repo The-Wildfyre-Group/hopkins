@@ -36,6 +36,7 @@
         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
         <ul>
           <% if current_user %>
+            <li><%= link_to "Admin Panel", "/admin" if current_user.admin? %></li>
             <% if current_user.completed_all_surveys? %>
             <li><%= link_to "My Results", results_path %></li>
             <% else %>

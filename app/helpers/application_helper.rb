@@ -74,6 +74,7 @@ module ApplicationHelper
   end
 
   def main_share_twitter_link
-    "https://twitter.com/intent/tweet?status=join @hopkins at #{root_url}"
+    "https://twitter.com/BMHealthSurvey"
+    #"https://twitter.com/intent/tweet?status=join @hopkins at #{root_url}"
   end
 end

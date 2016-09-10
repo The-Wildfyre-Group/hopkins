@@ -96,6 +96,13 @@ hr {
   border: 0;
   border-top: 1px solid #ededed;
 }
+.padding-center{
+	padding-top: 170px;
+	padding-bottom: 22%;
+}
+.status-form{
+	padding-top: 5%;
+}
 hr.more_margin {
   margin-top: 40px;
   margin-bottom: 60px;
