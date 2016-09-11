@@ -1,0 +1,44 @@
+= form_for [:admin, partner], html: {id: 'contact-form', 'data-toggle' => 'validator', 'data-disable' => false }  do |f|
+  .row
+    .col-xs-12.col-sm-6.col-lg-6
+      .form-group
+        = f.text_field :first_name, class: 'form form-control', placeholder: "First Name", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Fist Name'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-6
+      .form-group
+        = f.text_field :last_name, class: 'form form-control', placeholder: "Last Name", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Last Name'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-6
+      .form-group
+        = f.text_field :company_name, class: 'form form-control', placeholder: "Company Name", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Company Name'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-6
+      .form-group
+        = f.text_field :phone, class: 'form form-control', placeholder: "Phone", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Phone'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-12
+      .form-group
+        = f.text_field :email, class: 'form form-control', placeholder: "Email", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Email'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-6
+      .form-group
+        = f.text_field :city, class: 'form form-control', placeholder: "City", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'City'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-6
+      .form-group
+        = f.text_field :state, class: 'form form-control', placeholder: "State", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'State'", required: true
+        .help-block.with-errors
+    .col-xs-12.col-sm-6.col-lg-12
+      .form-group
+        = f.file_field :logo, class: 'form form-control'
+        .help-block.with-errors
+    strong OR
+    .col-xs-12.col-sm-6.col-lg-12
+      .form-group
+        = f.text_field :remote_logo_url, class: 'form form-control'
+        .help-block.with-errors
+
+  button#valid-form.btn.btn-color[type="submit"]
+    | Let's Build Together
+  #block-answer
+    #answer

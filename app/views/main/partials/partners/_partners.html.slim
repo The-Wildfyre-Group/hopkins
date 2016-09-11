@@ -1,0 +1,25 @@
+= render "main/partials/partners/hero"
+.inner-content.border-top.relative
+  .center
+    h5.section-label
+      |  Our Partners
+  br
+  hr
+  .row.text-center
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      h2.no-margin.bold
+        small
+          | thank you
+        br
+        | supporting partners
+  hr.thick
+  - @partners.each_slice(3) do |set|
+    .row
+      - set.each do |partner|
+        .col-lg-3
+          = image_tag partner.logo_url, class: "img-responsive img-rounded"
+= render "main/partials/partners/leaderboard"
+= render "main/partials/partners/get_involved"
+
+
+

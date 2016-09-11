@@ -44,3 +44,5 @@ group :development do
   gem 'meta_request'
   gem 'binding_of_caller'
 end
+
+gem 'decent_exposure', '3.0.0'

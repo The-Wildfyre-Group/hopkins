@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
   
   resources :posts
+  resources :partners
 
   resources :users, except: %w[index edit] do
     get :completed_surveys, on: :collection
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
   
   namespace :admin do
    resources :users
+   resources :partners
   end
 
   resources :challenges do
@@ -50,7 +52,7 @@ Rails.application.routes.draw do
   # main
   get "stories" => "main#stories", as: :stories
   get "about" => "main#about", as: :about
-  get "partners" => "main#partners", as: :partners
+  # get "partners" => "main#partners", as: :partners
   get "share-with-us" => "main#share_your_story", as: :share_your_story
   get "contact" => "main#contact", as: :contact
 

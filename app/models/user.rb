@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   before_save :set_region
-  serialize :groups, Array
   has_one :claimed_giftcard
+  has_and_belongs_to_many :partners
   
   after_save :update_eligibility
 
@@ -61,21 +61,21 @@ class User < ActiveRecord::Base
     return [65] if age > 64
   end
 
-  def self.unique_groups
-    pluck(:groups).flatten.uniq.reject(&:empty?)
-  end
-
-  def self.all_groups
-    pluck(:groups).flatten.reject(&:empty?)
-  end
-
-  def self.group_count
-    hash = Hash.new(0)
-    self.all_groups.each do |group|
-      hash[group] = hash[group] + 1
-    end
-    hash.sort_by { |k,v| v }.reverse
-  end
+  # def self.unique_groups
+  #   pluck(:groups).flatten.uniq.reject(&:empty?)
+  # end
+  #
+  # def self.all_groups
+  #   pluck(:groups).flatten.reject(&:empty?)
+  # end
+  #
+  # def self.group_count
+  #   hash = Hash.new(0)
+  #   self.all_groups.each do |group|
+  #     hash[group] = hash[group] + 1
+  #   end
+  #   hash.sort_by { |k,v| v }.reverse
+  # end
   
   def assigned_giftcard?
     claimed_giftcard.present?
