@@ -14,10 +14,12 @@ module Messanger
   end
 
   def log_sending(number)
+    puts "Sending sms to #{number}"
     logger.info("Sending sms to #{number}")
   end
 
   def log_error(number, e)
+    puts "Error when attempting to send sms to #{number}: #{e.message}"
     logger.info("Error when attempting to send sms to #{number}: #{e.message}")
   end
 
