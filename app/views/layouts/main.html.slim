@@ -24,6 +24,7 @@ html.no-js lang="en-us"
     = csrf_meta_tags
 
   body
+    = render 'main/partials/share/croper_modal'
     = yield
     script src="/js/jquery.easings.min.js"
     script src="/js/bootstrap.min.js"

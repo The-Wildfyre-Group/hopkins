@@ -13,6 +13,6 @@ class SharesController < ApplicationController
   private
 
   def share_params
-    params.require(:share).permit(:message, :photo)
+    params.require(:share).permit(:message, :photo, :photo_crop_x, :photo_crop_y, :photo_crop_w, :photo_crop_h)
   end
 end
