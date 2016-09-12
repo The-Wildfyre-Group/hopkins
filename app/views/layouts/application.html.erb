@@ -27,9 +27,9 @@
 	  	<%= csrf_meta_tags %>
 	</head>
 	<%
-	    body_class = ''
+    body_class = ''
 		path_info = request.env['PATH_INFO']
-		if path_info == '/admin/census'|| path_info == '/admin/users' || path_info == '/admin/overview'
+		if path_info == '/admin/census'|| path_info == '/admin/users' || path_info == '/admin/overview' || path_info.include?('/stats')
 			body_class = 'gray-bg'
 		end
 
@@ -41,7 +41,7 @@
 		no_header = ''
 		if path_info == '/login' || path_info == '/participate' || path_info == '/password_resets/new'
 			no_header = 'no-header'
-		end	
+		end
     %>
 
 	<body class="<%= body_class %> <%= no_header %>">
@@ -59,7 +59,7 @@
 
 		<%#= render "shared/footer" %>
 
-		
+
 
 	</body>
 </html>
