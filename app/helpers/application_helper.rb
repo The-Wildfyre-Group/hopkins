@@ -77,4 +77,17 @@ module ApplicationHelper
     "https://twitter.com/BMHealthSurvey"
     #"https://twitter.com/intent/tweet?status=join @hopkins at #{root_url}"
   end
+  
+  def more_or_less(primary, secondary)
+    if primary > secondary
+      "more"
+    elsif secondary > primary
+      "less"
+    else
+      "equally"
+    end
+    
+  end
+  
+  
 end

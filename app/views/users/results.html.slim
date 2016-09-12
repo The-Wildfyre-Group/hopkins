@@ -36,50 +36,59 @@
       - @status["responses"].each do |response|
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
           - Information.status_conditions.each do |condition|
+            - profile_stat_raw = Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)
+            - profile_stat = profile_stat_raw.kind_of?(Array) ? profile_stat_raw.last : profile_stat_raw
+            - black_stat = Information.status_data[condition][:black_men]
+            - all_men = Information.status_data[condition][:all_men]
             .col-md-12.col-sm-12
               .result_box_feat
                 h2= condition
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
-                      = "#{Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)}%"
+                      = "#{profile_stat}%"
                     h3 Like You
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
-                      = "#{Information.status_data[condition][:black_men]}%"
+                      = "#{black_stat}%"
                     h3 All Black
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
-                      = "#{Information.status_data[condition][:all_men]}%"
+                      = "#{all_men}%"
                     h3 All Men
                 .summary_normal
                   p Summary
-                  = "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                  = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
                   = link_to "See national data for #{condition}", stats_path(data: condition)
                     
       - @behavior["responses"].each do |response|
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
           - Information.behavior_conditions.each do |condition|
+            - profile_stat_raw = Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)
+            - profile_stat = profile_stat_raw.kind_of?(Array) ? profile_stat_raw.last : profile_stat_raw
+            - black_stat = Information.status_data[condition][:black_men]
+            - all_men = Information.status_data[condition][:all_men]
             .col-md-12.col-sm-12
               .result_box_feat
                 h2= condition
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
-                      = "#{Information.find_data_point(Information.behavior_data[condition][:census_data], @user.region, @user.education, @user.age_range)}"
-                    h3 Like You:
-                .col-md-4.col-sm-2
-                  .result_box_feat    
-                    .number_result
-                      ="#{Information.behavior_data[condition][:black_men]}"
-                    h3 All Black:
+                      = "#{profile_stat}%"
+                    h3 Like You
                 .col-md-4.col-sm-2
                   .result_box_feat
                     .number_result
-                      = "#{Information.behavior_data[condition][:all_men]}"
-                    h3 All Men:
+                      = "#{black_stat}%"
+                    h3 All Black
+                .col-md-4.col-sm-2
+                  .result_box_feat
+                    .number_result
+                      = "#{all_men}%"
+                    h3 All Men
                 .summary_normal
                   p Summary
-                  = "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                  = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
+                  = link_to "See national data for #{condition}", stats_path(data: condition)
