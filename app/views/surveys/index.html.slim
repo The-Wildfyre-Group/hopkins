@@ -67,12 +67,16 @@
           p
             | Follow us on your favorite social platforms.
         .row
-          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
-            = image_tag("icons/facebook.png", alt: "", class: "img-responsive")
-          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
-            = image_tag("icons/twitter.png", alt: "", class: "img-responsive")
-          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
-            = image_tag("icons/instagram.png", alt: "", class: "img-responsive")
-          span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
-            = image_tag("icons/youtube.png", alt: "", class: "img-responsive")
+          = link_to main_share_fb_link, :target => "_blank" do 
+            span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+              = image_tag("icons/facebook.png", alt: "", class: "img-responsive")
+          = link_to main_share_twitter_link, :target => "_blank" do 
+            span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+              = image_tag("icons/twitter.png", alt: "", class: "img-responsive")
+          = link_to "https://www.instagram.com/bmhealthsurvey/", :target => "_blank" do    
+            span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+              = image_tag("icons/instagram.png", alt: "", class: "img-responsive")
+          = link_to "https://www.youtube.com/channel/UCzeUzAe9h-wZoo37rEtk2oA", :target => "_blank" do    
+            span.col-lg-3.col-md-3.col-sm-3.col-xs-3.text-center
+              = image_tag("icons/youtube.png", alt: "", class: "img-responsive")
 /! End newsletter_container
