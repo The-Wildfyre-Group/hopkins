@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_eligible?
-    #redirect_to "/consent/status" unless current_user.eligible?
+    redirect_to "/consent/status" unless current_user.eligible?
   end
 
   def education
