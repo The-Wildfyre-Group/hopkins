@@ -8,9 +8,17 @@
           p= "Education: #{@user.education}"
           p= "Age: #{@user.age}"
           br/
+          / .center style=("margin-left: auto; display: table;")
+          /   .circle-bg
+          /     h1
+          /       strong.survey-remaining
+          /     h4 Surveys Remaining
 /! End sub_header
 .container_gray_bg
   #surveys.container.margin_60
+    / .main_title
+    /   h2 5 Survey Sections
+    /   p Each section must be completed in one sitting.
     - if current_user.claimed_giftcard.present?
       .row
         .col-md-12.col-sm-12
@@ -29,32 +37,34 @@
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
           - Information.status_conditions.each_with_index do |condition, i|
             - if response["answers"][Information.status_data[condition][:answer]] == "Yes"
-              - profile_stat_raw = Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)
-              - profile_stat = profile_stat_raw.kind_of?(Array) ? profile_stat_raw.last : profile_stat_raw
-              - black_stat = Information.status_data[condition][:black_men]
-              - all_men = Information.status_data[condition][:all_men]
-              .col-md-12.col-sm-12
-                .result_box_feat
-                  h2= condition
-                  .col-md-4.col-sm-2
-                    .result_box_feat
-                      .number_result
-                        = "#{profile_stat}%"
-                      h3 Like You
-                  .col-md-4.col-sm-2
-                    .result_box_feat
-                      .number_result
-                        = "#{black_stat}%"
-                      h3 All Black
-                  .col-md-4.col-sm-2
-                    .result_box_feat
-                      .number_result
-                        = "#{all_men}%"
-                      h3 All Men
-                  .summary_normal
-                    p Summary
-                    = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
-                    = link_to "See national data for #{condition}", stats_path(data: condition)
+                - profile_stat_raw = Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)
+                - profile_stat = profile_stat_raw.kind_of?(Array) ? profile_stat_raw.last : profile_stat_raw
+                - black_stat = Information.status_data[condition][:black_men]
+                - all_men = Information.status_data[condition][:all_men]
+                .col-md-12.col-sm-12
+                  .result_box_feat
+                    h2= condition
+                    .col-md-4.col-sm-2
+                      .result_box_feat
+                        .number_result
+                          = "#{profile_stat}%"
+                        h3 Like You
+                    .col-md-4.col-sm-2
+                      .result_box_feat
+                        .number_result
+                          = "#{black_stat}%"
+                        h3 All Black
+                    .col-md-4.col-sm-2
+                      .result_box_feat
+                        .number_result
+                          = "#{all_men}%"
+                        h3 All Men
+                    .summary_normal
+                      p Summary
+                      span.font_weight_400.block
+                        = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
+                      span.block
+                        = link_to "See national data for #{condition}", stats_path(data: condition), class: "pull-right btn btn-success summary_button"
             - else
               - if i == 0
                 .col-md-12.col-sm-12
@@ -63,38 +73,41 @@
                     .summary_normal
                       p Summary
                       = "You have reported that you have no known chronic ailments."
-                      = link_to "See national prevalence rates for chronic ailments", stats_path(data: "Hypertension")
-                      
+                      span.block
+                        = link_to "See national prevalence rates for chronic ailments", stats_path(data: "Hypertension"), class: "pull-right btn btn-success summary_button"
+                    
       - @behavior["responses"].each do |response|
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
           - Information.status_conditions.each_with_index do |condition, i|
             - if response["answers"][Information.status_data[condition][:answer]] == "Yes"
-              - profile_stat_raw = Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)
-              - profile_stat = profile_stat_raw.kind_of?(Array) ? profile_stat_raw.last : profile_stat_raw
-              - black_stat = Information.status_data[condition][:black_men]
-              - all_men = Information.status_data[condition][:all_men]
-              .col-md-12.col-sm-12
-                .result_box_feat
-                  h2= condition
-                  .col-md-4.col-sm-2
-                    .result_box_feat
-                      .number_result
-                        = "#{profile_stat}%"
-                      h3 Like You
-                  .col-md-4.col-sm-2
-                    .result_box_feat
-                      .number_result
-                        = "#{black_stat}%"
-                      h3 All Black
-                  .col-md-4.col-sm-2
-                    .result_box_feat
-                      .number_result
-                        = "#{all_men}%"
-                      h3 All Men
-                  .summary_normal
-                    p Summary
-                    = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
-                    = link_to "See national data for #{condition}", stats_path(data: condition)
+                - profile_stat_raw = Information.find_data_point(Information.status_data[condition][:census_data], @user.region, @user.education, @user.age_range)
+                - profile_stat = profile_stat_raw.kind_of?(Array) ? profile_stat_raw.last : profile_stat_raw
+                - black_stat = Information.status_data[condition][:black_men]
+                - all_men = Information.status_data[condition][:all_men]
+                .col-md-12.col-sm-12
+                  .result_box_feat
+                    h2= condition
+                    .col-md-4.col-sm-2
+                      .result_box_feat
+                        .number_result
+                          = "#{profile_stat}%"
+                        h3 Like You
+                    .col-md-4.col-sm-2
+                      .result_box_feat
+                        .number_result
+                          = "#{black_stat}%"
+                        h3 All Black
+                    .col-md-4.col-sm-2
+                      .result_box_feat
+                        .number_result
+                          = "#{all_men}%"
+                        h3 All Men
+                    .summary_normal
+                      p Summary
+                      span.font_weight_400.block
+                        = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
+                      span.block
+                        = link_to "See national data for #{condition}", stats_path(data: condition), class: "pull-right btn btn-success summary_button"
             - else
               - if i == 0
                 .col-md-12.col-sm-12
@@ -102,5 +115,6 @@
                     h2= "No Known Chronic Ailments"
                     .summary_normal
                       p Summary
-                      = "You have reported that you have no known behaviorial vices."
-                      = link_to "See national prevalence rates for chronic ailments", stats_path(data: "Hypertension")
+                      = "You have reported that you have no known chronic ailments."
+                      span.block
+                        = link_to "See national prevalence rates for chronic ailments", stats_path(data: "Hypertension"), class: "pull-right btn btn-success summary_button"

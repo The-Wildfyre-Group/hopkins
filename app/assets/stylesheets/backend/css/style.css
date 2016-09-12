@@ -2413,6 +2413,20 @@ body.no-header header { display: none;}
     font-weight: bold;
 }
 
+.font_weight_400 {
+	font-weight: 400;
+}
+
+.block {
+	display: block;
+}
+
+.summary_button {
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
 p {margin: 0 0 20px 0;}
 
 .number_result{
