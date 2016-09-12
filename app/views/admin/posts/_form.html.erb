@@ -11,7 +11,7 @@
 
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-lg-12">
-            <%= form_for post, html: {id: "contact-form", 'data-toggle' => :validator, 'data-disable' => false }, remote: true do |form| %>
+            <%= form_for post, url: admin_post_path, method: :put, html: {id: "contact-form", 'data-toggle' => :validator, 'data-disable' => false } do |form| %>
 
               <div class="row">
                 <!-- Full name -->
@@ -97,7 +97,7 @@
                   <div class="col-xs-12 col-sm-12 col-lg-12">
                     <div class="form-group">
                       <label>Photo File</label>
-                      <%= form.file_field :photo_attachment, class: "form form-control", required: true %>
+                      <%#= form.file_field :photo_attachment, class: "form form-control", required: true %>
                       <div class='help-block with-errors'></div>
                     </div>
                   </div>
@@ -112,7 +112,12 @@
                     </div>
                   </div>
                 </div>
-
+                
+                <div class="">
+                  <%= form.check_box :approved %>
+                  <b>Approve this post?</b>
+                </div>
+                <br/>
                 <%= form.submit "Edit Story", class: "btn btn-primary" %>
               <% end %>
             </form>
