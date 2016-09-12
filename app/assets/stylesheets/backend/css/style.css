@@ -2360,7 +2360,7 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 .sub_header_contact_home.hero { background-position: center center;}
 body.no-header header { display: none;}
 .row.login-form-area a.text-off-white.white-link { margin: 0 0 5px; width: 100%;}
-.participate_container .styled-select-contact-home select{color:#333;}
+.participate_container .styled-select-contact-home select option {color:#333;}
 
 .story-panel{text-transform:capitalize;padding:0;margin:0;list-style:none;background-color:#FFF;padding:20px;border:1px solid #CCC;}
 .story-panel div[class*=col]{background-color:#EEE;min-height:400px;width:48%;margin:0 1%;float:left;}
