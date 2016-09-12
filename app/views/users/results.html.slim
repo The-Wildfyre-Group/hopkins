@@ -60,8 +60,10 @@
                     h3 All Men
                 .summary_normal
                   p Summary
-                  = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
-                  = link_to "See national data for #{condition}", stats_path(data: condition)
+                  span.font_weight_400.block
+                    = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
+                  span.block
+                    = link_to "See national data for #{condition}", stats_path(data: condition), class: "pull-right btn btn-success summary_button"
                     
       - @behavior["responses"].each do |response|
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
@@ -90,5 +92,7 @@
                     h3 All Men
                 .summary_normal
                   p Summary
-                  = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
-                  = link_to "See national data for #{condition}", stats_path(data: condition)
+                  span.font_weight_400.block
+                    = "People with your profile are #{more_or_less(profile_stat, black_stat)} likely to report #{condition} than All Black Men and #{more_or_less(profile_stat, all_men)} likely to report #{condition} than All Men."
+                  span.block
+                    = link_to "See national data for #{condition}", stats_path(data: condition), class: "pull-right btn btn-success summary_button"

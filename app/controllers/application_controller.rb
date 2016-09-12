@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by_authentication_token(cookies[:authentication_token]) if cookies[:authentication_token]
   end
-  
+
   def authenticate_admin!
     redirect_to "/404.html" unless current_user.admin?
   end
