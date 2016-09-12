@@ -2,7 +2,7 @@
 
 class SharePhotoUploader < BaseUploader
 
-  process resize_to_fit: [600, 400]
+  process resize_to_fit: [600, 600]
   process :store_dimensions
   process :add_text
 
@@ -17,7 +17,7 @@ class SharePhotoUploader < BaseUploader
         c.fill 'white'
       end
 
-      second_image.resize("600x400")
+      second_image.resize("600x600")
 
       result = image.composite(second_image) do |c|
         c.compose "Over"
