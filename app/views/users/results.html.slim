@@ -57,6 +57,7 @@
                 .summary_normal
                   p Summary
                   = "lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                  = link_to "See national data for #{condition}", stats_path(data: condition)
                     
       - @behavior["responses"].each do |response|
         - if response["completed"] == "1" && response["hidden"]["id"] == @user.id.to_s
