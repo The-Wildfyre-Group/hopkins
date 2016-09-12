@@ -332,6 +332,10 @@ header#contacts{
 	background-position: center top;
 }
 
+.participate_container .form-control.form-white.participate_password {
+	padding: 10px 20px;
+}
+
 .relative_position {
 	position: relative !important;
 }
