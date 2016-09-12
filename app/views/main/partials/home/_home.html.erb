@@ -74,6 +74,7 @@
 
 <%= render "main/partials/share/share_your_story" %>
 
+<% if Post.where(approved: true).present? %>
 <div class="inner-content border-top relative">
 	<div class="center">
 		<h5 class="section-label">
@@ -97,8 +98,11 @@
 </div>
 
 <div class="inner-content no-padding bgcolor-light-grey">
-	<%= render "main/partials/home/stories" %>
+    <% Post.where(approved: true).last(5).each do |post| %>
+      <%= render "main/partials/stories/story", post: post %>
+    <% end %>
 </div>
+<% end %>
 
 </div>
 
