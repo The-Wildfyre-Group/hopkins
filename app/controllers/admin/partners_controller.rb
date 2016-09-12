@@ -1,4 +1,6 @@
 class Admin::PartnersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :authenticate_admin!
   expose :partners, ->{ Partner.all }
   expose :partner
 
