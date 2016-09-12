@@ -1,5 +1,5 @@
 <div class="container">
-	<h2 class="stroy-title center"><%= @post.title %></h2>
+	<!-- <h2 class="stroy-title center"><%= @post.title %></h2>
 	<p class="stroy-txt center"><i>“<%= @post.snippet %>”</i></p>
 	<div class="row story-panel">
 		<div class="col-lg-6"><%= image_tag @post.photo_attachment %></div>
@@ -7,7 +7,7 @@
 	</div>
 	<h2 class="stroy-title center">My Story</h2>
 	<p class="stroy-txt center"><i>“<%= @post.description %>”</i></p>
-	<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next) %></p>
+	<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next) %></p> -->
 <!--	<li><label>Title</label></li>
 		<li><label>Name</label><%= @post.name %></li>
 		<li><label>Email</label><%= @post.email %></li>
@@ -22,7 +22,29 @@
 
 		<li><label>Photo Link</label><%= @post.photo_link %></li>
 		<li><label>Photo Attachment</label><%= @post.photo_attachment %></li>-->
-		
+
+		<div class="col-sm-12 story_image">
+			<%= image_tag @post.photo_attachment, class: "img-responsive center-image" %>
+		</div>
+
+		<div class="col-sm-12">
+			<h2 class="stroy-title center"><%= @post.title %></h2>
+		</div>
+
+		<div class="col-sm-12 story_snippet">
+			<div class="col-sm-6 col-sm-offset-6">
+				<p class="text-right"><i>“<%= @post.snippet %>”</i></p>
+			</div>
+		</div>
+
+		<div class="col-sm-12" style="padding-top: 20px;">
+			<p class="stroy-txt left"><%= @post.description %></p>
+		</div>
+
+		<div class="col-sm-12 story_next_button">
+			<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next), class: "btn btn-primary" %></p>
+		</div>
+
 </div>
 
 
@@ -53,6 +75,6 @@
         h4 Rediscovering My Inner-Athlete
         p Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
     /! End row
-    
-https://github.com/The-Wildfyre-Group/hopkins/blob/9bd2d7bc1c6dca0c8ad8c6abb60f7a4c4522c2e5/app/views/surveys/index.html.slim    
+
+https://github.com/The-Wildfyre-Group/hopkins/blob/9bd2d7bc1c6dca0c8ad8c6abb60f7a4c4522c2e5/app/views/surveys/index.html.slim
 <% end %>
