@@ -6,22 +6,6 @@ $(document).ready ->
     $('#imgWidth').val c.w
     $('#imgHeight').val c.h
     $('#btnOk').show()
-#    x1 = $('#imgX1').val()
-#    y1 = $('#imgY1').val()
-#    width = $('#imgWidth').val()
-#    height = $('#imgHeight').val()
-#    canvas = $('#canvas')[0]
-#    context = canvas.getContext('2d')
-#    img = new Image()
-#    img.onload = ->
-##      canvas.height = height
-##      canvas.width = width
-##      context.drawImage img, x1, y1, width, height, 0, 0, width, height
-#      context.drawImage img, x1, y1, width, height, 0, 0, 100, 100
-#      dataUrl = canvas.toDataURL()
-#      $('#imgCropped').val dataUrl
-#
-#    img.src = $('#Image1').attr('src')
 
 
   $(document).on 'change', '#share-photo-file', ->
@@ -45,26 +29,6 @@ $(document).ready ->
 
     reader.readAsDataURL $(this)[0].files[0]
 
-#  $('#btnCrop').click ->
-#    $('#btnOk').show()
-#    $('#btnCrop').hide()
-#    x1 = $('#imgX1').val()
-#    y1 = $('#imgY1').val()
-#    width = $('#imgWidth').val()
-#    height = $('#imgHeight').val()
-#    canvas = $('#canvas')[0]
-#    context = canvas.getContext('2d')
-#    img = new Image()
-#    img.onload = ->
-##      canvas.height = height
-##      canvas.width = width
-##      context.drawImage img, x1, y1, width, height, 0, 0, width, height
-#      context.drawImage img, x1, y1, width, height, 0, 0, 100, 100
-#      dataUrl = canvas.toDataURL()
-#      $('#imgCropped').val dataUrl
-#
-#    img.src = $('#Image1').attr('src')
-
 
   $('#btnOk').click ->
     x1 = $('#imgX1').val()
@@ -74,21 +38,19 @@ $(document).ready ->
     canvas = $('#canvas')[0]
     context = canvas.getContext('2d')
     img = new Image()
+    img.src = $('#Image1').attr('src')
     img.onload = ->
-  #      canvas.height = height
-  #      canvas.width = width
-  #      context.drawImage img, x1, y1, width, height, 0, 0, width, height
-      context.drawImage img, x1, y1, width, height, 0, 0, 100, 100
+      canvas.height = height
+      canvas.width = width
+      context.drawImage img, x1, y1, width, height, 0, 0, width, height
       dataUrl = canvas.toDataURL()
       $('#imgCropped').val dataUrl
 
-    img.src = $('#Image1').attr('src')
-#    if $('#share-photo-file').val() isnt '' and $('#share_name').val() isnt ''
-    if $('#imgCropped').val() isnt '' and $('#share_name').val() isnt ''
-      $('#share-form-submitter').click()
-    else
-      debugger
-      $('#cropModal').modal('hide')
+      if $('#imgCropped').val() isnt '' and $('#share_name').val() isnt ''
+        $('#cropModal').modal('hide')
+        $('#share-form-submitter').click()
+      else
+        $('#cropModal').modal('hide')
 
   if $('.share-form').length
     $('.share-form input').change ->
