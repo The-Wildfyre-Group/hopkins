@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :partners
   
   after_save :update_eligibility
+  
+  validates :email, uniqueness: true
 
 
   def name
