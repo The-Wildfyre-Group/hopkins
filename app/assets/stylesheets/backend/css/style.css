@@ -2378,6 +2378,10 @@ body.no-header header { display: none;}
 .story-panel label{width:100%;max-width:200px;display:inline-block;font-size:15px;}
 .stroy-txt{ font-size: 20px; padding: 50px; background: #fff;}
 
+.story-title {
+	padding-top: 20px;
+}
+
 .center-image {
 	margin: 0 auto;
 }

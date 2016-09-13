@@ -1,3 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+	<%= render "main/partials/shared/head" %>
+
+	<body>
+		<%= render "main/partials/shared/nav" %>
+		<section id="home-part" class="vegas-container right-home">
+			<div class="overlay"></div>
+		</section> <!-- CLOSE #home-part -->
+
+		<section id="content-part" class="right-content">
+
+			<div class="inner-content" style="padding-top: 0; border-top: 5px solid #08c; margin-top: -1px;">
+				<div style="position: relative;">
+					<div class="row">
+						<h5 class="section-label">
+							story
+						</h5>
+
+						<div class="col-xs-12 col-sm-12 no_side_padding">
+
+							<div class=" story_image">
+								<%= image_tag @post.photo_attachment, class: "img-responsive center-image" %>
+							</div>
+
+							<div class="">
+								<h3 class="story-title center"><%= @post.title %></h3>
+							</div>
+
+							<div class="story_snippet col-sm-6 col-sm-offset-6">
+								<p class="text-right lead"><i>“<%= @post.snippet %>”</i></p>
+							</div>
+
+							<div class="">
+								<p class="story_txt left lead"><%= @post.description %></p>
+							</div>
+
+							<div class=" story_next_button">
+								<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next), class: "btn btn-primary" %></p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</section> <!-- CLOSE #content-part -->
+
+	</body>
+
+</html>
+
+<% if false %>
+
 <div class="container">
 	<!-- <h2 class="stroy-title center"><%= @post.title %></h2>
 	<p class="stroy-txt center"><i>“<%= @post.snippet %>”</i></p>
@@ -47,9 +102,6 @@
 
 </div>
 
-
-
-<% if false %>
 /! End newsletter_container
 .container.margin_60
   .main_title

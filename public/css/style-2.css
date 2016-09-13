@@ -1585,8 +1585,6 @@ ul.main-navigation li a.btn { font-size: 11px; height: auto; letter-spacing: 0; 
     -webkit-overflow-scrolling: touch;
 }
 
-
-
 #navigation {
     position: fixed;
     z-index: 99;
@@ -2879,9 +2877,28 @@ table.leaderboard h3 {
   padding-right: 0px !important;
 }
 
+.center-image {
+	margin: 0 auto;
+}
+
 .padding_left_right_50px {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.story-title {
+  text-transform: uppercase;
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+
+.story_snippet {
+	font-size: 18px;
+}
+
+.story_txt {
+  padding-top: 20px;
+  font-size: 22px;
 }
 
 #content-part .share_section {
