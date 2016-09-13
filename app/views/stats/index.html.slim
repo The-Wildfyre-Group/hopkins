@@ -113,19 +113,6 @@
     - @all_conditions.each do |condition|
       .col-lg-3.col-md-3.col-sm-4.col-xs-6
         = link_to stats_path(data: condition), class: "box_feat status" do
-          i.pe-7s-diamond
+          / i.pe-7s-diamond
           h3= condition
-/<!--  surveys boxes begins here  -->
-/<div class="container">
-/	<div class="row census-surveys-panel">
-/
-/        <% @all_conditions.each do |condition| %>
-/		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-/            <%= link_to stats_path(data: condition), class: "box_feat status" do %>
-/				<i class="pe-7s-diamond"></i>
-/				<h3><%= condition %></h3>
-/            <% end %>
-/		</div>
-/        <% end %>
-/	</div>
-/</div>
+
