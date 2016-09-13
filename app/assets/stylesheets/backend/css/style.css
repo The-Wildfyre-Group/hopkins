@@ -2341,12 +2341,21 @@ table.census-tbl tbody tr:first-child th {
   background-color: #283842;
   color: #fff;
 }
+
+.padding_top_20px {
+	padding-top: 20px;
+}
+
+.padding_bottom_20px {
+	padding-bottom: 20px;
+}
+
 table.census-tbl tr th, table.census-tbl tr td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
 }
-table.census-tbl .blu-bg {background-color:#00aeef;color:#FFF;}
+table.census-tbl .blu-bg {background-color:#00aeef !important;color:#FFF;}
 .census-surveys-panel {margin:40px 0 0;}
 .census-surveys-panel a.box_feat h3 { min-height: 56px;}
 .census-surveys-panel a.box_feat, .box_feat { padding: 20px 20px 10px;}

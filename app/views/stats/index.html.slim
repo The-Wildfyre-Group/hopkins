@@ -39,80 +39,88 @@
 /	</table>
 /</div>
 
-.table-responsive
-  table.census-tbl[border="1" style="background-color:white;border:1px solid #CCC;border-collapse:collapse; margin-top:40px;"]
-    caption
-      em
-    tr
-      th[colspan="8"]
-        | Proportion and Number of Black Males by Age, Education and Region of the United States*
-    tr
-      th.blu-bg[colspan="4"]
-        |  East
-      th.blu-bg[colspan="4"]
-        | South
-    tr
-      th
-      - [0, 1, 2, 0, 1, 2].each do |i|
+.container
+  .col-sm-12.text-center.padding_top_20px.padding_bottom_20px
+    .h3
+      | Proportion and Number of Black Males by Age, Education and Region of the United States*
+
+.col-sm-12
+  .table-responsive
+    table.census-tbl[border="1" style="background-color:white;border:1px solid #CCC;border-collapse:collapse; margin-bottom: 0px;"]
+      / caption
+      /   em
+      / tr
+      /   th[colspan="8"]
+      /     | Proportion and Number of Black Males by Age, Education and Region of the United States*
+      tr
+        th.blu-bg[colspan="4"]
+          |  East
+        th.blu-bg[colspan="4"]
+          | South
+      tr
         th
-          = education[i]
-    tr
-      th
-        = range[0].first.first
-        - (0..2).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-        - (3..5).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-    tr
-      th
-        = range[1].first.first
-        - (6..8).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-        - (9..11).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-    tr
-      th
-        = range[2].first.first
-        - (12..14).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-        - (15..17).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-    tr.blu-bg[rowspan="1"]
-      th[colspan="1"]
-      th[colspan="3"]
-        = regions[2]
-      /th[rowspan="1"]
-      th[colspan="3"]
-        = regions[3]
-    tr
-      th
-        = range[0].first.first
-        - (18..20).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-        - (21..23).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-    tr
-      th
-        = range[1].first.first
-        - (24..26).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-        - (27..29).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-    tr
-      th
-        = range[2].first.first
-        - (30..32).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
-        - (33..35).each do |i|
-          td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+        - [0, 1, 2, 0, 1, 2].each do |i|
+          th
+            = education[i]
+      tr
+        th
+          = range[0].first.first
+          - (0..2).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+          - (3..5).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+      tr
+        th
+          = range[1].first.first
+          - (6..8).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+          - (9..11).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+      tr
+        th
+          = range[2].first.first
+          - (12..14).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+          - (15..17).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+      tr.blu-bg[rowspan="1"]
+        th[colspan="1"]
+        th[colspan="3"]
+          = regions[2]
+        /th[rowspan="1"]
+        th[colspan="3"]
+          = regions[3]
+      tr
+        th
+          = range[0].first.first
+          - (18..20).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+          - (21..23).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+      tr
+        th
+          = range[1].first.first
+          - (24..26).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+          - (27..29).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+      tr
+        th
+          = range[2].first.first
+          - (30..32).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
+          - (33..35).each do |i|
+            td= @data[i].kind_of?(Array) ? @data[i].first : @data[i]
 
 
 /! surveys boxes begins here
 .container
   .row.census-surveys-panel
+    .col-sm-12.text-center.padding_top_20px.padding_bottom_20px
+      .h3
+        | This is sample header for section two
     - @all_conditions.each do |condition|
       .col-lg-3.col-md-3.col-sm-4.col-xs-6
         = link_to stats_path(data: condition), class: "box_feat status" do
           / i.pe-7s-diamond
           h3= condition
-
