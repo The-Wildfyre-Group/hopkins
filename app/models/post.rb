@@ -12,10 +12,11 @@ class Post < ActiveRecord::Base
   
   
   def next
-    if self.class.where("id > ?", id).present?
-      self.class.where("id > ?", id).first
+    approved_posts = self.class.where(approved: true)
+    if approved_posts.where("id > ?", id).present?
+      approved_posts.where("id > ?", id).first
     else
-      self.class.first
+      approved_posts.first
     end
   end
   
