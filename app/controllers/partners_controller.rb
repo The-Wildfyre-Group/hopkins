@@ -1,4 +1,6 @@
 class PartnersController < ApplicationController
+  layout "main", only: [:index]
+
   def index
     @partners = Partner.all
   end

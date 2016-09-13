@@ -2979,6 +2979,18 @@ table.leaderboard h3 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hide_on_mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide_on_desktop {
+    display: none !important;
+  }
+}
+
 .share_images {
   padding-left: 15px;
 }
