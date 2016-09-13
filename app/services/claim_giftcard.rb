@@ -2,7 +2,7 @@ class ClaimGiftcard
   
   def self.call(user)
     code = ClaimGiftcard.first_available_giftcard
-    ClaimedGiftcard.create(user_id: user.id, code: code) unless user.assigned_giftcard?
+    user.create_claimed_giftcard(code: code) unless user.assigned_giftcard?
   end
   
   private
