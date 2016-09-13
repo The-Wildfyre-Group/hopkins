@@ -24,6 +24,7 @@
 //= require bootstrap-notify
 //= require notify
 //= require data-confirm-modal
+//= require jquery.Jcrop
 
 
 $(document).ready(function() {

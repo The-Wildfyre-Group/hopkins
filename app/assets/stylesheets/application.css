@@ -16,6 +16,7 @@
  *= require backend/backend
  *= require validator
  *= require invites
+ *= require jquery.Jcrop
  */
 
 

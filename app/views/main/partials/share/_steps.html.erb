@@ -1,3 +1,4 @@
+
 <br/>
 <div class="row">
   <div class="col-md-12 padding_left_right_50px">
@@ -18,6 +19,11 @@
 <div class="steps">
    <div class="row">
      <%= form_for Share.new, remote: true, html: { multipart: true, class: 'share-form' } do |f| %>
+         <input type="hidden" name="imgX1" id="imgX1" />
+         <input type="hidden" name="imgY1" id="imgY1" />
+         <input type="hidden" name="imgWidth" id="imgWidth" />
+         <input type="hidden" name="imgHeight" id="imgHeight" />
+         <input type="hidden" name="share[photo]" id="imgCropped" />
 
      <div class="col-md-6 col-xs-12 no_side_padding">
       <div class="row">
@@ -53,7 +59,7 @@
               <h4 class="bold">Upload a photo</h4>
               <div class="form-group">
                 <div class="col-sm-12">
-                  <%= f.file_field :photo, class: "form-control photo_input", id: 'share-photo-file' %>
+                  <%= f.file_field :orig_photo, class: "form-control photo_input", id: 'share-photo-file' %>
                 </div>
               </div>
             </div>

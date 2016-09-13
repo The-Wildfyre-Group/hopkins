@@ -31,6 +31,9 @@ gem 'remotipart', '~> 1.2'
 gem 'active_type'
 gem 'bootstrap-growl-rails'
 gem 'data-confirm-modal'
+gem 'jcrop-rails-v2'
+gem 'carrierwave-base64'
+
 
 group :development do
   gem 'spring'  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
