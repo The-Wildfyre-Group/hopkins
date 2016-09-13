@@ -23,7 +23,7 @@
          <input type="hidden" name="imgY1" id="imgY1" />
          <input type="hidden" name="imgWidth" id="imgWidth" />
          <input type="hidden" name="imgHeight" id="imgHeight" />
-         <input type="hidden" name="imgCropped" id="imgCropped" />
+         <input type="hidden" name="share[photo]" id="imgCropped" />
 
      <div class="col-md-6 col-xs-12 no_side_padding">
       <div class="row">
@@ -59,7 +59,7 @@
               <h4 class="bold">Upload a photo</h4>
               <div class="form-group">
                 <div class="col-sm-12">
-                  <%= f.file_field :photo, class: "form-control photo_input", id: 'share-photo-file' %>
+                  <%= f.file_field :orig_photo, class: "form-control photo_input", id: 'share-photo-file' %>
                 </div>
               </div>
             </div>

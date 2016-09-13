@@ -32,6 +32,7 @@ gem 'active_type'
 gem 'bootstrap-growl-rails'
 gem 'data-confirm-modal'
 gem 'jcrop-rails-v2'
+gem 'carrierwave-base64'
 
 
 group :development do
