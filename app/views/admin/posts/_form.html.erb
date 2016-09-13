@@ -1,0 +1,128 @@
+<div class="bg-hero border-top no-padding relative" id="contact-content">
+  <div class="overlay overlay-dark"></div>
+  <div style="background: url(img/campaign-photos/web-optimized/shutterstock_284522861-web.jpg); background-size: cover;">
+    <div class="inner-content row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <h2>Edit story.</h2>
+        <p class="lead text-white">
+
+        </p>
+        <div class="separator"></div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <%= form_for post, url: admin_post_path, method: :put, html: {id: "contact-form", 'data-toggle' => :validator, 'data-disable' => false } do |form| %>
+
+              <div class="row">
+                <!-- Full name -->
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <%= form.text_field :name, class: "form form-control", placeholder: "Your Name", required: true %>
+                    <div class='help-block with-errors'></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- E-mail -->
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <%= form.email_field :email, class: "form form-control", placeholder: "Your Email", required: true %>
+                        <div class='help-block with-errors'></div>
+                    </div>
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                        <input type="text" id="subject" class="form form-control" placeholder="Title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write the subject'" name="subject" data-name="Subject">
+                    </div>
+                </div>
+              </div> -->
+                  
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <%= form.text_area :title, class: "form textarea form-control", placeholder: 'Title', required: true %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+                  
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <%= form.text_area :snippet, class: "form textarea form-control", placeholder: 'Snippet', required: true %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>  
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                        <%= form.text_area :description, class: "form textarea form-control", placeholder: 'Description', required: true, 'data-minlength' => 10 %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <label>Video File</label>
+                      <%= form.file_field :video_attachment, class: "form form-control" %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <%= form.text_field :video_link, placeholder: 'Video link', class: "form form-control" %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <label>Photo File</label>
+                      <%#= form.file_field :photo_attachment, class: "form form-control", required: true %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Message -->
+                  <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <div class="form-group">
+                      <%= form.text_field :photo_link, placeholder: 'Photo link', class: "form form-control" %>
+                      <div class='help-block with-errors'></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="">
+                  <%= form.check_box :approved %>
+                  <b>Approve this post?</b>
+                </div>
+                <br/>
+                <%= form.submit "Edit Story", class: "btn btn-primary" %>
+              <% end %>
+            </form>
+          </div>
+        </div>  	
+      </div>
+    </div>
+  </div>

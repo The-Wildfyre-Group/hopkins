@@ -333,6 +333,10 @@ header#contacts{
 	background-position: center top;
 }
 
+.participate_container .form-control.form-white.participate_password {
+	padding: 10px 20px;
+}
+
 .relative_position {
 	position: relative !important;
 }
@@ -1571,6 +1575,11 @@ input#website {display:none;}
 	border-top: 10px solid #fff;
 	border-bottom: 1px solid #ddd;
 }
+
+.status_bg {
+	border-top: none;
+}
+
 .container_gray_line {
 	border-top:1px solid #e9ebee;
 }
@@ -2333,12 +2342,21 @@ table.census-tbl tbody tr:first-child th {
   background-color: #283842;
   color: #fff;
 }
+
+.padding_top_20px {
+	padding-top: 20px;
+}
+
+.padding_bottom_20px {
+	padding-bottom: 20px;
+}
+
 table.census-tbl tr th, table.census-tbl tr td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
 }
-table.census-tbl .blu-bg {background-color:#00aeef;color:#FFF;}
+table.census-tbl .blu-bg {background-color:#00aeef !important;color:#FFF;}
 .census-surveys-panel {margin:40px 0 0;}
 .census-surveys-panel a.box_feat h3 { min-height: 56px;}
 .census-surveys-panel a.box_feat, .box_feat { padding: 20px 20px 10px;}
@@ -2361,15 +2379,35 @@ header.census-header .main-menu ul li a { text-shadow: 0 0 0;}
 .sub_header_contact_home.hero { background-position: center center;}
 body.no-header header { display: none;}
 .row.login-form-area a.text-off-white.white-link { margin: 0 0 5px; width: 100%;}
-.participate_container .styled-select-contact-home select{color:#333;}
+.participate_container .styled-select-contact-home select option {color:#333;}
 
 .story-panel{text-transform:capitalize;padding:0;margin:0;list-style:none;background-color:#FFF;padding:20px;border:1px solid #CCC;}
 .story-panel div[class*=col]{background-color:#EEE;min-height:400px;width:48%;margin:0 1%;float:left;}
 
 .story-panel li{padding:10px;margin:0;list-style:none;}
 .story-panel label{width:100%;max-width:200px;display:inline-block;font-size:15px;}
-.stroy-txt{ font-size: 20px;}
+.stroy-txt{ font-size: 20px; padding: 50px; background: #fff;}
 
+.story-title {
+	padding-top: 20px;
+}
+
+.center-image {
+	margin: 0 auto;
+}
+
+.story_image {
+	padding-top: 40px;
+}
+
+.story_snippet {
+	padding-top: 20px;
+	font-size: 18px;
+}
+
+.story_next_button {
+	padding-top: 20px;
+}
 
 @media(min-width:1199px){
 	.census-surveys-panel .col-lg-3 { width: 20%;}
@@ -2408,6 +2446,20 @@ body.no-header header { display: none;}
     font-size: 19px;
     color: black;
     font-weight: bold;
+}
+
+.font_weight_400 {
+	font-weight: 400;
+}
+
+.block {
+	display: block;
+}
+
+.summary_button {
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 16px;
 }
 
 p {margin: 0 0 20px 0;}

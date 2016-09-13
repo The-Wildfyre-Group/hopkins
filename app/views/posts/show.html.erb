@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+	<%= render "main/partials/shared/head" %>
+
+	<body>
+		<%= render "main/partials/shared/nav" %>
+		<section id="home-part" class="vegas-container right-home">
+			<div class="overlay"></div>
+		</section> <!-- CLOSE #home-part -->
+
+		<section id="content-part" class="right-content">
+
+			<div class="inner-content" style="padding-top: 0; border-top: 5px solid #08c; margin-top: -1px;">
+				<div style="position: relative;">
+					<div class="row">
+						<h5 class="section-label">
+							story
+						</h5>
+
+						<div class="col-xs-12 col-sm-12">
+
+							<div class=" story_image">
+								<%= image_tag @post.photo_attachment, class: "img-responsive center-image" %>
+							</div>
+
+							<div class="">
+								<h3 class="story-title center"><%= @post.title %></h3>
+							</div>
+
+							<div class="story_snippet col-sm-6 col-sm-offset-6">
+								<p class="text-right lead"><i>“<%= @post.snippet %>”</i></p>
+							</div>
+
+							<div class="">
+								<p class="story_txt left lead"><%= @post.description %></p>
+							</div>
+
+							<div class=" story_next_button">
+								<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next), class: "btn btn-primary" %></p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</section> <!-- CLOSE #content-part -->
+
+	</body>
+
+</html>
+
+<% if false %>
+
+<div class="container">
+	<!-- <h2 class="stroy-title center"><%= @post.title %></h2>
+	<p class="stroy-txt center"><i>“<%= @post.snippet %>”</i></p>
+	<div class="row story-panel">
+		<div class="col-lg-6"><%= image_tag @post.photo_attachment %></div>
+		<div class="col-lg-6"></div>
+	</div>
+	<h2 class="stroy-title center">My Story</h2>
+	<p class="stroy-txt center"><i>“<%= @post.description %>”</i></p>
+	<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next) %></p> -->
+<!--	<li><label>Title</label></li>
+		<li><label>Name</label><%= @post.name %></li>
+		<li><label>Email</label><%= @post.email %></li>
+		<li><label>Snippet</label></li>
+		<li><label>Keyword</label><%= @post.keyword %></li>
+
+		<li><label>Description</label><%= @post.description %></li>
+		<li><label>Slug</label><%= @post.slug %></li>
+
+		<li><label>Video Link</label><%= @post.video_link %></li>
+		<li><label>Photo Attachment</label><%= image_tag @post.photo_attachment %></li>
+
+		<li><label>Photo Link</label><%= @post.photo_link %></li>
+		<li><label>Photo Attachment</label><%= @post.photo_attachment %></li>-->
+
+		<div class="col-sm-12 story_image">
+			<%= image_tag @post.photo_attachment, class: "img-responsive center-image" %>
+		</div>
+
+		<div class="col-sm-12">
+			<h2 class="stroy-title center"><%= @post.title %></h2>
+		</div>
+
+		<div class="col-sm-12 story_snippet">
+			<div class="col-sm-6 col-sm-offset-6">
+				<p class="text-right"><i>“<%= @post.snippet %>”</i></p>
+			</div>
+		</div>
+
+		<div class="col-sm-12" style="padding-top: 20px;">
+			<p class="stroy-txt left"><%= @post.description %></p>
+		</div>
+
+		<div class="col-sm-12 story_next_button">
+			<p class="pull-right"><%= link_to "View Next Story", post_path(@post.next), class: "btn btn-primary" %></p>
+		</div>
+
+</div>
+
+/! End newsletter_container
+.container.margin_60
+  .main_title
+    h2 Read Stories
+    p
+      | Hear brothers share their experiences in health.
+  .grid
+    .row
+      .col-md-4.col-sm-4
+        p
+          = image_tag("stock/9.jpg", class: "img-responsive", alt: "")
+        h4 Creating a New Legacy
+        p
+          | Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
+      .col-md-4.col-sm-4
+        p
+          = image_tag("stories/1.jpg", class: "img-responsive", alt: "")
+        h4 Take Better Care of Myself
+        p Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
+      .col-md-4.col-sm-4
+        p
+          = image_tag("stock/16.jpg", class: "img-responsive", alt: "")
+        h4 Rediscovering My Inner-Athlete
+        p Lorem ipsum dolor sit amet, ne vis suas harum nonumy, at enim vocent delicatissimi eos, vocent inermis veritus mel no. Vix in offendit forensibus cotidieque.
+    /! End row
+
+https://github.com/The-Wildfyre-Group/hopkins/blob/9bd2d7bc1c6dca0c8ad8c6abb60f7a4c4522c2e5/app/views/surveys/index.html.slim
+<% end %>
