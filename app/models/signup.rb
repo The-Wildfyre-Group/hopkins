@@ -16,7 +16,7 @@ module Signup
   module ClassMethods;end # end Class Methods
 
   def send_welcome_email
-    #Mailer.welcome(user).deliver
+    UserMailer.welcome(self).deliver
   end
 end
 

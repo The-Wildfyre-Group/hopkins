@@ -11,4 +11,12 @@ class Post < ActiveRecord::Base
   end
   
   
+  def next
+    if self.class.where("id > ?", id).present?
+      self.class.where("id > ?", id).first
+    else
+      self.class.first
+    end
+  end
+  
 end

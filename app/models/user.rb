@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :partners
   
   after_save :update_eligibility
+  
+  validates :email, uniqueness: true
 
 
   def name
@@ -82,7 +84,7 @@ class User < ActiveRecord::Base
   end
 
   def check_surveys_completion
-    return if completed_all_surveys?
+    return if assigned_giftcard?
     (["Status", "Services", "Behavior", "Psycho Social", "Closing"] - completed_surveys).each do |survey|
       completed_survey?(survey)
     end

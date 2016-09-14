@@ -3,7 +3,7 @@
 <%= render "main/partials/stories/share_with_us" %>
 
 <div id="stories">
-  <% Post.last(5).each do |post| %>
+  <% Post.where(approved: true).last(5).each do |post| %>
     <%= render "main/partials/stories/story", post: post %>
   <% end %>
 </div>
