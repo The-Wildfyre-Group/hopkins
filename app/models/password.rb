@@ -8,7 +8,7 @@ module Password
   end
 
   def send_password_reset
-    generate_token(:reset_password_token)
+    GenerateToken.call(self, :reset_password_token)
     self.reset_password_sent_at = Time.zone.now
     save
     AuthMailer.reset_password(self).deliver

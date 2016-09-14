@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       get :closing, as: :closing
     end
   end
-  
+
   resources :posts
   resources :partners
 
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
       get :census
     end
   end
-  
+
   namespace :admin do
    resources :users
    resources :partners
@@ -49,6 +49,8 @@ Rails.application.routes.draw do
   get "participate" => "users#new", as: :participate
   get "consent" => "consent#consent", as: :consent
   get "consent/status" => "consent#status", as: :consent_status
+  get "about/dr_laveist" => "main#dr_laveist", as: :dr_laveist
+  get "about/dr_thorpe" => "main#dr_thorpe", as: :dr_thorpe
 
   # main
   get "stories" => "main#stories", as: :stories

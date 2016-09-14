@@ -1,0 +1,60 @@
+
+                        <div class="inner-content bg-hero border-top no-padding relative">
+                          <div class="overlay overlay-dark"></div>
+                          <div style="background: url(img/campaign-photos/web-optimized/shutterstock_280362422-web.jpg); background-size: cover; padding-bottom: 100px;">
+                            <div class="row">
+                              <div class="col-xs-10 col-xs-offset-1">
+                                <div class="center">
+                                  <h5 class="section-label">
+                                    our supporters
+                                  </h5> <!-- id="about-content"  -->
+                                </div>
+                                <br/>
+                                <h2 class="text-center text-white">
+                                  Partner Leaderboard
+                                </h2>
+                                <p class="lead text-white">Our partners are working hard to drive participation in the Black Men’s Health Survey. Take a look at our top performing partners.</p>
+                                <br/>
+
+                                <table class="table xtra-padding leaderboard b-rad-6"> 
+                                  <thead class="text-muted"> 
+                                    <tr> 
+                                      <th class="no-border">
+                                        <div class="row">
+                                          <div class="col-xs-7">
+                                            <h4 class="text-white no-margin">PARTNER</h4>
+                                          </div>
+                                          <div class="col-xs-5 text-right">
+                                            <h5 class="text-white no-margin">
+                                              No. of Participants <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                            </h5>
+                                          </div>
+                                        </div>
+                                      </th> 
+                                    </tr> 
+                                  </thead> 
+                                  <tbody>
+                                    <% Partner.ordered_by_participants.each do |partner| %> 
+                                    <tr>  
+                                      <td>
+                                        <div class="row">
+                                          <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+                                            <img src="<%= partner.logo %>" class="img-responsive">
+                                            <br/>
+                                          </div>
+                                          <div class="col-lg-9 col-md-7 col-sm-7 col-xs-11 mobile-text-center">
+                                            <h3><%= partner.company_name %></h3>
+                                          </div>
+                                          <div class="col-xs-1">
+                                            <h2 class="text-primary lighter"><%= partner.user_count %></h2>
+                                          </div>
+                                        </div>
+                                      </td> 
+                                    </tr>
+                                  <% end %>
+                                  </tbody> 
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>

@@ -64,7 +64,7 @@
           </div>
 
           <!-- START HERO -->
-          <table width="480" height="420" cellpadding="0" cellspacing="0" border="0" align="center" background="/assets/laveist.png" style="background-image: url(/assets/laveist.png);" class="wrapper" bgcolor="#222222">
+          <table width="480" height="400" cellpadding="0" cellspacing="0" border="0" align="center" background="/assets/laveist.png" style="background-image: url(/assets/laveist.png);" class="wrapper" bgcolor="#222222">
             <tr>
               <td align="center" valign="top">
                 <!--[if gte mso 9]>
@@ -82,57 +82,21 @@
                               <![endif]-->
                               <table width="480" cellpadding="0" cellspacing="0" border="0" align="center" class="wrapper">
                                 <tr>
-                                  <td height="30" style="font-size:30px; line-height:30px;">&nbsp;</td>
-                                </tr>
-                                <tr>
                                   <td align="center" style="padding:0px;">
                                     <table width="420" cellpadding="0" cellspacing="0" border="0" class="container" align="center">
                                       <tr>
                                         <td class="mobile" align="center">
                                           <a href="http://litmus.com" target="_blank">
-                                            <%= image_tag("logos/white/Black-Men's-Health-Survey-White-Text.png", alt: "Logo", class: "img-rounded", height: "250", style: "height: 250px;") %>
+                                            <%= image_tag("logos/white/Black-Men's-Health-Survey-White-Text.png", alt: "Logo", class: "img-rounded", height: "250", style: "height: 150px;") %>
                                           </a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td height="20" style="font-size: 20px; line-height: 20px;">&nbsp;</td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center">
-                                          <table width="300" cellpadding="0" cellspacing="0" border="0">
-                                            <tr>
-                                              <!-- <td width="75" align="center" class="body-text">
-                                                <a href="http://litmus.com" target="_blank" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#ffffff; text-decoration:none;" class="body-text"><singleline>Features</singleline></a>
-                                              </td>
-                                              <td width="75" align="center" class="body-text">
-                                                <a href="http://litmus.com" target="_blank" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#ffffff; text-decoration:none;" class="body-text"><singleline>Pricing</singleline></a>
-                                              </td>
-                                              <td width="75" align="center" class="body-text">
-                                                <a href="http://litmus.com" target="_blank" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#ffffff; text-decoration:none;" class="body-text"><singleline>Support</singleline></a>
-                                              </td>
-                                              <td width="75" align="center" class="body-text">
-                                                <a href="http://litmus.com" target="_blank" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#26a4d3; text-decoration:none;" class="body-text"><singleline>Login</singleline></a>
-                                              </td> -->
-                                            </tr>
-                                          </table>
                                         </td>
                                       </tr>
                                     </table>
                                   </td>
                                 </tr>
-                                <tr>
-                                  <td height="20" style="font-size:20px; line-height:20px;">&nbsp;</td>
-                                </tr>
                               </table>
-                              <table class="mobileOff">
-                                <tr>
-                                  <td height="10" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                                </tr>
-                              </table>
+
                               <table width="480" cellpadding="0" cellspacing="0" border="0" align="center" class="wrapper">
-                                <tr>
-                                  <td height="20" style="font-size: 20px; line-height: 20px;">&nbsp;</td>
-                                </tr>
                                 <tr>
                                   <td align="center" style="padding:0px;">
                                     <table width="420" cellpadding="0" cellspacing="0" border="0" class="container" align="center">
@@ -212,7 +176,7 @@
                 <table width="420" cellpadding="0" cellspacing="0" border="0" class="container">
                   <tr>
                     <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:20px; line-height:26px; color:#222222; font-weight:bold; text-transform:uppercase;" class="body-text">
-                      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size:20px; line-height:26px; color:#222222; font-weight:bold; text-transform:uppercase; padding:0; margin:0;" class="body-text"><singleline>{{firstname}}, You're now subscribed!</singleline></h2>
+                      <h2 style="font-family: 'Montserrat', Arial, sans-serif; font-size:20px; line-height:26px; color:#222222; font-weight:bold; text-transform:uppercase; padding:0; margin:0;" class="body-text"><singleline><%= @user.first_name%>, </singleline></h2>
                     </td>
                   </tr>
                   <tr>
@@ -220,7 +184,7 @@
                   </tr>
                   <tr>
                     <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold;" class="body-text">
-                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:24px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text"><multiline>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla titor molestie. Nunc est nunc, fringilla sit amet tempus ac, sollicitudin non as at odio scelerisque mauris tempus efficitur. Phasellus ac turpis justo.</multiline></p>
+                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:24px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text"><multiline>Thank you for signing up. You're about to take part in the largest and most comprehensive study of Black Men's Health in America.</multiline></p>
                     </td>
                   </tr>
                   <tr>
@@ -228,7 +192,7 @@
                   </tr>
                   <tr>
                     <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#666666;" class="body-text">
-                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:24px; color:#666666; padding:0; margin:0;" class="body-text"><multiline>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilmus vitae molestie libero, commodo suscipit quam. Donec et ipsum velit. tis nulla. In non dui nec enim imperdiet mattis.</multiline></p>
+                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:24px; color:#666666; padding:0; margin:0;" class="body-text"><multiline>The Black Men's Health Study is lead by Black men who are among the leading medical researchers in America, representing some of the world’s top universities.</multiline></p>
                     </td>
                   </tr>
                   <tr>
@@ -236,7 +200,7 @@
                   </tr>
                   <tr>
                     <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#666666;" class="body-text">
-                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:24px; color:#666666; padding:0; margin:0;" class="body-text"><singleline>Yours sincerely,</singleline></p>
+                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:24px; color:#666666; padding:0; margin:0;" class="body-text"><singleline>United,</singleline></p>
                     </td>
                   </tr>
                   <tr>
@@ -246,20 +210,20 @@
                     <td align="left">
                       <table width="190">
                         <tr>
-                          <td width="70">
+                          <!-- <td width="70">
                             <img src="images/profile-picture.png" width="62" height="62" style="margin:0; padding:0; border:none; display:block;" border="0" alt="" label='the profile picture' editable>
-                          </td>
+                          </td> -->
                           <td width="120">
                             <table width="" cellpadding="0" cellspacing="0" border="0">
                               <tr>
                                 <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold;" class="body-text">
-                                  <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text"><singleline>Anna Bella</singleline></p>
+                                  <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#222222; font-weight:bold; padding:0; margin:0;" class="body-text"><singleline>The Black Men's Health Study Team</singleline></p>
                                 </td>
                               </tr>
                               <tr>
-                                <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#666666;" class="body-text">
+                                <!-- <td align="left" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#666666;" class="body-text">
                                   <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#666666; padding:0; margin:0;" class="body-text"><singleline>CEO | Vision</singleline></p>
-                                </td>
+                                </td> -->
                               </tr>
                             </table>
                           </td>
@@ -289,12 +253,12 @@
                       <table cellpadding="0" cellspacing="0" border="0">
                         <tr>
                           <td align="center" style="font-family: 'Montserrat', Arial, sans-serif; font-size:16px; line-height:22px; font-weight:bold; color:#ffffff; text-transform:uppercase;" class="center body-text">
-                            <h3 style="font-family: 'Montserrat', Arial, sans-serif; font-size:16px; line-height:22px; font-weight:bold; color:#ffffff; text-transform:uppercase; padding:0; margin:0;" class="body-text"><singleline>We would love to hear your feedback</singleline></h3>
+                            <h3 style="font-family: 'Montserrat', Arial, sans-serif; font-size:16px; line-height:22px; font-weight:bold; color:#ffffff; text-transform:uppercase; padding:0; margin:0;" class="body-text"><singleline>We would love to hear your inspiration</singleline></h3>
                           </td>
                         </tr>
                         <tr>
                           <td align="center" style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#aad4ea; text-transform:uppercase;" class="center bodytext">
-                            <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#aad4ea; text-transform:uppercase; padding:0; margin:0;" class="body-text"><singleline>Have your say about vision</singleline></p>
+                            <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:14px; line-height:20px; color:#aad4ea; text-transform:uppercase; padding:0; margin:0;" class="body-text"><singleline>Have your say</singleline></p>
                           </td>
                         </tr>
                         <tr>
@@ -307,7 +271,7 @@
                                 <td>
                                   <table border="0" cellspacing="0" cellpadding="0">
                                     <tr>
-                                      <td align="center" style="-webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;" bgcolor="#ffffff" class="body-text"><a href="https://litmus.com" target="_blank" style="font-size: 14px; font-family: 'Montserrat', Arial, sans-serif; color: #26a4d3; text-decoration: none; text-decoration: none; border-radius: 50px; padding: 12px 28px; border: 1px solid #ffffff; display: inline-block; text-transform:uppercase; font-weight:bold;" class="body-text"><singleline>Give Feedback</singleline></a></td>
+                                      <td align="center" style="-webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;" bgcolor="#ffffff" class="body-text"><a href="http://www.werisetoday.com/share-with-us" target="_blank" style="font-size: 14px; font-family: 'Montserrat', Arial, sans-serif; color: #26a4d3; text-decoration: none; text-decoration: none; border-radius: 50px; padding: 12px 28px; border: 1px solid #ffffff; display: inline-block; text-transform:uppercase; font-weight:bold;" class="body-text"><singleline>Share Your Story</singleline></a></td>
                                     </tr>
                                   </table>
                                 </td>
@@ -374,7 +338,7 @@
                 <table width="420" cellpadding="0" cellspacing="0" border="0" class="container">
                   <tr>
                     <td align="center" class="mobile" style="font-family: 'Montserrat', Arial, sans-serif; font-size:12px; line-height:18px; color:#666666;" class="body-text">
-                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:12px; line-height:18px; color:#666666; padding:0; margin:0;" class="body-text"><singleline>The Black Mens' Healthy Survey</singleline></p>
+                      <p style="font-family: 'Montserrat', Arial, sans-serif; font-size:12px; line-height:18px; color:#666666; padding:0; margin:0;" class="body-text"><singleline>The Black Men's Healthy Survey</singleline></p>
                     </td>
                   </tr>
                   <tr>

@@ -142,6 +142,14 @@ class Information
   def self.all_data
     self.status_data.merge(self.behavior_data)
   end
+  
+  def self.title(condition)
+    if condition.present?
+      "Proportion Prevalence of #{condition} for Black Men using the National Health Interview Survey (NHIS)"
+    else
+      "Proportion and Number of Black Males by Age, Education and Region of the United States"
+    end
+  end
  
   
 end

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+	<%= render "main/partials/shared/head" %>
+
+	<body>
+		<%= render "main/partials/shared/nav" %>
+    <section id="home-part" class="vegas-container right-home">
+			<div class="overlay"></div>
+		</section> <!-- CLOSE #home-part -->
+
+		<section id="content-part" class="right-content">
+
+      <div class="inner-content" style="padding-top: 0; border-top: 5px solid #08c; margin-top: -1px;">
+				<div style="position: relative;">
+					<div class="row">
+
+						<div class="col-xs-12 col-sm-12">
+
+              <div class="">
+								<h3 class="story-title center">Dr. Thomas Laveist</h3>
+							</div>
+
+							<div class="padding_top_20px story_image">
+								<%= image_tag("dr_laveist.jpg", class: "center-image img-responsive img-rounded box-shadow-ccc") %>
+							</div>
+
+							<div class="">
+								<p class="story_txt left lead">
+                  Thomas A. LaVeist, Ph.D. is chairman of the Department of Health Policy and Management at the George Washington University, Milken Institute School of Public Health. He joined GWU after 25 years on the faculty of the Johns Hopkins Bloomberg School of Public Health where he was the William C. and Nancy F. Richardson Professor in Health Policy and Director of the Hopkins Center for Health Disparities Solutions. He has published more than 125 scientific articles. In addition to his scholarly writing, Dr. LaVeist has written articles for Newsweek, Black Enterprise, and the Baltimore Sun.
+                </p>
+
+                <p class="story_txt left lead">
+                  Dr. LaVeist’s dissertation on racial disparities was awarded the Outstanding Dissertation Award by the American Sociological Association. He is the recipient of the “Innovation Award” from the National Institutes of Health, and the “Knowledge Award” from the DHHS, Office of Minority Health. In 2013 he was elected to National Academy of Medicine (formally Institute of Medicine).
+                </p>
+							</div>
+
+              <div class="col-sm-12 no_side_padding story_next_button">
+                <div class="col-sm-6 no_side_padding">
+                  <p class="pull-left back_arrow">
+                    <%= link_to about_path, class: "skip_link" do %>
+                      <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                      Return to About Page
+                    <% end %>
+                  </p>
+                </div>
+
+                <div class="col-sm-6 no_side_padding">
+                  <div class="col-sm-12 no_side_padding">
+                    <%= link_to "Learn About Dr. Thorpe", dr_thorpe_path, class: "btn btn-primary pull-right" %>
+                  </div>
+                </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section> <!-- CLOSE #content-part -->
+
+	</body>
+
+</html>
