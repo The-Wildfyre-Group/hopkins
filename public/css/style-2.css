@@ -2995,6 +2995,64 @@ table.leaderboard h3 {
   padding-left: 15px;
 }
 
+.bio_name_on_image {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.bio_name_on_image .bio_name_overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bio_name_on_image .bio_name {
+  color: #fff;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.bio_more_button a {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.bio_name_heading h4 {
+  margin-bottom: 15px;
+}
+
+.padding_top_20px {
+	padding-top: 20px;
+}
+
+.padding_bottom_20px {
+	padding-bottom: 20px;
+}
+
+.no_side_padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.back_arrow {
+  padding-top: 45px;
+}
+
+.skip_link {
+  color: #9fa9ba;
+  font-size: 14px;
+}
+
+.skip_link:hover, .skip_link:focus {
+  color: #27aae1;
+}
+
+.vcenter {
+  display: table-cell;
+  vertical-align: middle;
+  float: none !important;
+}
+
 ::-webkit-input-placeholder {
    color: #fff !important;
 }
