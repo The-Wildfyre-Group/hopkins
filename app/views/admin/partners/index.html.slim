@@ -1,9 +1,12 @@
-h2.census-title.center
-  | Partners Data
+.container
+  h2.census-title.center
+    | Partners Data
   h3.total-user.center
     | Total partners:
     span
       = partners.count
+  .col-sm-12.padding_bottom_20px.padding_top_20px
+    = link_to "Add Partner", new_admin_partner_path, class: "btn btn-primary add_partner_button"
   table.census-tbl
     tr
       th

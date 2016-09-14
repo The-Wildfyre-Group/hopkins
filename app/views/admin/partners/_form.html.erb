@@ -1,0 +1,66 @@
+<%= form_for [:admin, partner], html: {id: 'contact-form', 'data-toggle' => 'validator', 'data-disable' => false }  do |f| %>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :first_name, class: 'form form-control', placeholder: "First Name", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Fist Name'" %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :last_name, class: 'form form-control', placeholder: "Last Name", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Last Name'" %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :company_name, class: 'form form-control', placeholder: "Company Name", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Company Name'", required: true %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :phone, class: 'form form-control', placeholder: "Phone", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Phone'" %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :email, class: 'form form-control', placeholder: "Email", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'Email'" %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :city, class: 'form form-control', placeholder: "City", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'City'" %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :state, class: 'form form-control', placeholder: "State", onfocus: "this.placeholder = ''", onblur: "this.placeholder = 'State'" %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.file_field :logo, class: 'form form-control' %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    <strong>OR</strong>
+    <div class="col-xs-12 col-sm-6 col-lg-6">
+        <div class="form-group">
+            <%= f.text_field :remote_logo_url, class: 'form form-control' %>
+            <div class="help-block with-errors"></div>
+        </div>
+    </div>
+    
+    <br/><br/>
+    <button id: "valid-form" class="btn.btn-color" type="submit">
+        Add Partner
+    </button>
+    
+</div>
+<% end %>
+
