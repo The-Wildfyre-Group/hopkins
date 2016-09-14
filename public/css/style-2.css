@@ -2885,8 +2885,8 @@ table.leaderboard h3 {
 }
 
 .padding_left_right_50px {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 }
 
 .story-title {
@@ -3064,6 +3064,12 @@ table.leaderboard h3 {
   min-height: auto;
 }
 
+.bio_about_image {
+  max-height: 300px;
+}
+
+padding_left_
+
 ::-webkit-input-placeholder {
    color: #fff !important;
 }
@@ -3089,7 +3095,6 @@ table.leaderboard h3 {
 #content-part .inner-content.padding-50 {
   padding: 0 50px 50px 50px !important;
 }
-
 
 
 .home-intro-text {
