@@ -46,7 +46,7 @@
                   <!-- Message -->
                   <div class="col-xs-12">
                     <div class="form-group">
-                      <%= form.text_field :title, class: "form textarea form-control", placeholder: 'Title', required: true %>
+                      <%= form.text_field :title, class: "form textarea form-control", placeholder: 'Provide a title for your story', required: true %>
                       <div class='help-block with-errors'></div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@
                   <!-- Message -->
                   <div class="col-xs-12">
                     <div class="form-group">
-                      <%= form.text_area :snippet, class: "form textarea form-control", placeholder: 'Snippet', required: true %>
+                      <%= form.text_area :snippet, class: "form textarea form-control", placeholder: 'Provide a 1-2 sentence summary of your story', required: true %>
                       <div class='help-block with-errors'></div>
                     </div>
                   </div>
@@ -66,7 +66,7 @@
                   <!-- Message -->
                   <div class="col-xs-12 col-sm-12 col-lg-12">
                     <div class="form-group">
-                        <%= form.text_area :description, class: "form textarea form-control", placeholder: 'Description', required: true, 'data-minlength' => 10 %>
+                        <%= form.text_area :description, class: "form textarea form-control", placeholder: 'Tell us about your journey to health', required: true, 'data-minlength' => 10 %>
                       <div class='help-block with-errors'></div>
                     </div>
                   </div>
