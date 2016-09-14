@@ -1,7 +1,7 @@
 <%
 	census_header = ''
 	path_info = request.env['PATH_INFO']
-	if path_info.include?('/admin/') || path_info.include?('/stats') || path_info.include?('/consent/status')
+	if path_info.include?('/admin/') || path_info.include?('/stats') || path_info.include?('/consent/status') || path_info.include?('/admin')
 		census_header = 'census-header'
 	end
 
