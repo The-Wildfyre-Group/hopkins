@@ -1,11 +1,12 @@
 <%= render "main/partials/stories/hero" %>
 <%= render "main/partials/stories/intro_section" %>
-<%= render "main/partials/stories/share_with_us" %>
 
 <div id="stories">
   <% Post.where(approved: true).last(5).each do |post| %>
     <%= render "main/partials/stories/story", post: post %>
   <% end %>
 </div>
+<%= render "main/partials/stories/share_with_us" %>
+
 
 
