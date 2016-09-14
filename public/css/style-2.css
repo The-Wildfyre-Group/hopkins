@@ -2635,12 +2635,13 @@ table.leaderboard img {
 
 
   .inner-content.bg-hero h5.section-label {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     padding: 10px 20px;
     background: #08c;
     display: inline-block;
     letter-spacing: 1px;
+    word-spacing: 2px;
   }
 
   #content-part .home-hero {
@@ -2668,7 +2669,7 @@ table.leaderboard img {
 
 
 h5.section-label {
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
   padding: 10px 20px;
   background: #08c;
@@ -2676,6 +2677,7 @@ h5.section-label {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 100;
+  word-spacing: 2px;
 }
 
 
@@ -2770,12 +2772,13 @@ ol.h3 li {
 }
 
 .inner-content.bg-hero h5.section-label {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     padding: 10px 20px;
     background: #08c;
     display: inline-block;
     letter-spacing: 1px;
+    word-spacing: 2px;
   }
 
 form.share-your-story {
@@ -2857,7 +2860,7 @@ table.leaderboard h3 {
 }
 
 #content-part .header-hero h5 {
-  font-size: 16px;
+  font-size: 18px;
   color: #6bc5ea;
   text-transform: uppercase;
   letter-spacing: 1px;
