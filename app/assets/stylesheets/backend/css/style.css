@@ -2347,6 +2347,10 @@ table.census-tbl tbody tr:first-child th {
 	padding-top: 20px;
 }
 
+.padding_top_50px {
+	padding-top: 50px;
+}
+
 .padding_bottom_20px {
 	padding-bottom: 20px;
 }
@@ -2498,4 +2502,37 @@ p {margin: 0 0 20px 0;}
     font-size:48px;
     font-family:"proxima_nova_rgbold", Arial, sans-serif;
     color:black;
+}
+
+.btn {
+  font-family: Montserrat, "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 1px;
+  line-height: 46px;
+  padding: 0 40px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-primary {
+  background-color: #27aae1;
+  border: none;
+  border: 2px solid #27aae1;
+  font-size: 18px;
+  word-spacing: 2px;
 }

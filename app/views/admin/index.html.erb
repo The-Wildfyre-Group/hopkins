@@ -1,2 +1,24 @@
-<%= link_to "Manage Users", admin_users_path %></br>
-<%= link_to "Overview", overview_admin_index_path %>
+
+<section>
+  <div class="container">
+    <div class="col-sm-12 padding_top_50px">
+      <div class="col-sm-4 text-center">
+        <div class="btn-group">
+          <%= link_to "Manage Users", admin_users_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="btn-group">
+          <%= link_to "Manage Partners", admin_partners_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center">
+        <div class="btn-group">
+          <%= link_to "Manage Stories", admin_posts_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
