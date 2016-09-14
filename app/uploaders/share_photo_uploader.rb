@@ -13,7 +13,9 @@ class SharePhotoUploader < BaseUploader
       second_image.combine_options do |c|
         c.gravity 'Center'
         c.pointsize '150'
-        c.draw "text 0,0 '#{model.message}'"
+        c.draw "text 0,0 '#{model.message.upcase.split(' ')[0]}'"
+        c.pointsize '175'
+        c.draw "text 0,135 '#{model.message.upcase.split(' ')[1]}'"
         c.fill 'white'
       end
 
