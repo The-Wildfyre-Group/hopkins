@@ -3056,6 +3056,10 @@ table.leaderboard h3 {
   float: none !important;
 }
 
+.stories_form label {
+  color: #fff;
+}
+
 ::-webkit-input-placeholder {
    color: #fff !important;
 }
