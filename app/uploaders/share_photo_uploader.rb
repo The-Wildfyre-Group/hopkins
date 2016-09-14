@@ -2,7 +2,8 @@
 
 class SharePhotoUploader < BaseUploader
 
-  process resize_to_fit: [600, 500]
+  # process resize_to_fit: [600, 500]
+  process resize_to_fit: [487, 255]
   process :store_dimensions
   process :add_text
 
@@ -10,17 +11,38 @@ class SharePhotoUploader < BaseUploader
     second_image = MiniMagick::Image.open(Rails.root.join('app','assets','images','rise-layout.png'))
     manipulate! do |image|
 
+      # second_image.combine_options do |c|
+      #   c.gravity 'Center'
+      #   c.pointsize '120'
+      #   c.draw "text 0,115 '#{model.message.upcase.split(' ')[0]}'"
+      #   c.pointsize '165'
+      #   c.weight '700'
+      #   c.draw "text 0,265 '#{model.message.upcase.split(' ')[1]}'"
+      #   c.fill 'white'
+      # end
+
       second_image.combine_options do |c|
         c.gravity 'Center'
-        c.pointsize '120'
-        c.draw "text 0,115 '#{model.message.upcase.split(' ')[0]}'"
-        c.pointsize '165'
-        c.weight '700'
-        c.draw "text 0,265 '#{model.message.upcase.split(' ')[1]}'"
+        if model.message.split(' ').size <= 3
+          c.pointsize '120'
+          c.draw "text 0,115 '#{model.message.upcase.split(' ')[0]}'"
+          c.pointsize '165'
+          c.weight '700'
+          c.draw "text 0,265 '#{model.message.upcase.split(' ')[1]} #{model.message.upcase.split(' ')[2]}'"
+        else
+          c.pointsize '120'
+          c.draw "text 0,115 '#{model.message.upcase.split(' ')[0]} #{model.message.upcase.split(' ')[1]}'"
+          c.pointsize '165'
+          c.weight '700'
+          c.draw "text 0,265 '#{model.message.upcase.split(' ')[2]} #{model.message.upcase.split(' ')[3]} #{model.message.upcase.split(' ')[4]}'"
+        end
         c.fill 'white'
       end
 
-      second_image.resize("600x500")
+      # width:487px;height:255px;
+
+      # second_image.resize("600x500")
+      second_image.resize("487x255")
 
       result = image.composite(second_image) do |c|
         c.compose "Over"
