@@ -3060,6 +3060,10 @@ table.leaderboard h3 {
   color: #fff;
 }
 
+.stories_page.header-hero {
+  min-height: auto;
+}
+
 ::-webkit-input-placeholder {
    color: #fff !important;
 }
