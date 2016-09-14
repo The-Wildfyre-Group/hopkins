@@ -19,10 +19,28 @@ class MainController < ApplicationController
   def share_your_story
   end
 
-  def dr_laveist
+  def bio_laveist
   end
 
-  def dr_thorpe
+  def bio_thorpe
+  end
+
+  def bio_mouton
+  end
+
+  def bio_neighbors
+  end
+
+  def bio_howard
+  end
+
+  def bio_gaskin
+  end
+
+  def bio_bruce
+  end
+
+  def bio_griffith
   end
 
   def test

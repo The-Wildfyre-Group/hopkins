@@ -49,8 +49,15 @@ Rails.application.routes.draw do
   get "participate" => "users#new", as: :participate
   get "consent" => "consent#consent", as: :consent
   get "consent/status" => "consent#status", as: :consent_status
-  get "about/dr_laveist" => "main#dr_laveist", as: :dr_laveist
-  get "about/dr_thorpe" => "main#dr_thorpe", as: :dr_thorpe
+
+  get "about/laveist" => "main#bio_laveist", as: :bio_laveist
+  get "about/thorpe" => "main#bio_thorpe", as: :bio_thorpe
+  get "about/mouton" => "main#bio_mouton", as: :bio_mouton
+  get "about/neighbors" => "main#bio_neighbors", as: :bio_neighbors
+  get "about/howard" => "main#bio_howard", as: :bio_howard
+  get "about/gaskin" => "main#bio_gaskin", as: :bio_gaskin
+  get "about/bruce" => "main#bio_bruce", as: :bio_bruce
+  get "about/griffith" => "main#bio_griffith", as: :bio_griffith
 
   # main
   get "stories" => "main#stories", as: :stories

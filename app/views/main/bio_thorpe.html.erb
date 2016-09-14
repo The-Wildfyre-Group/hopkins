@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+	<%= render "main/partials/shared/head" %>
+
+	<body>
+		<%= render "main/partials/shared/nav" %>
+    <section id="home-part" class="vegas-container right-home">
+			<div class="overlay"></div>
+		</section> <!-- CLOSE #home-part -->
+
+		<section id="content-part" class="right-content">
+
+      <div class="inner-content" style="padding-top: 0; border-top: 5px solid #08c; margin-top: -1px;">
+				<div style="position: relative;">
+					<div class="row">
+
+						<div class="col-xs-12 col-sm-12">
+
+              <div class="">
+								<h3 class="story-title center">Roland J. Thorpe, Jr., PhD, MS</h3>
+							</div>
+
+							<div class="padding_top_20px story_image">
+								<%= image_tag("bio/thorpe.png", class: "center-image img-responsive img-rounded box-shadow-ccc") %>
+							</div>
+
+							<div class="">
+								<p class="story_txt left lead">
+                  Roland J. Thorpe, Jr., PhD, MS, is an Associate Professor in the Department of Health, Behavior, and Society, Founding Director of the Program for Research on Men’s Health in the Hopkins Center for Health Disparities Solutions, and Deputy Director of the Hopkins Center for Health Disparities Solutions at Johns Hopkins Bloomberg School of Public Health. He holds a joint appointment in the Johns Hopkins School of Medicine, Department of Medicine, Division of Geriatric Medicine and Gerontology, and the Department of Neuroscience, and in the Undergraduate Program in Public Health Studies Program in the Johns Hopkins Krieger School of Arts & Sciences.  He is a Faculty Associate in the Johns Hopkins Center to Reduce Cancer Disparities (JHCRCD) at the Johns Hopkins Bloomberg School of Public Health. He is also a Faculty Associate in the Johns Hopkins Center of Aging and Health at the Johns Hopkins School of Medicine, and a Faculty Associate in the Johns Hopkins University School of Nursing Center for Innovative Care in Aging.  Dr. Thorpe is also a Visiting Research Fellow at Duke University’s Center on Biobehavioral Research on Health Disparities.  Dr. Thorpe is a social epidemiologist and gerontologist whose research agenda focuses on understanding how key social determinants of health such as race, socioeconomic status, and segregation affect health and functional outcomes among men across the life course. He serves as principal investigator of the Race Disparities in Mobility Disability Among Men Project, National Black Men’s Health Pilot Study, and the Black Men’s Health Accrual Project;  co-investigator of the Disparities in Prostate Cancer Treatment Modality and Quality of Life: Baseline Study.  His work appears in flagship journals including, Journals of Gerontology Medical Sciences, Social Science and Medicine, American Journal of Men’s Health, and International Journal of Men’s Health.  Dr. Thorpe’s research has been supported by the National Institute on Minority Health and Health Disparities and the National Institute on Aging.  Dr. Thorpe serves on the federally appointed Department of Health and Human Services Office of Minority Health Advisory Committee for Minority Health.   He also serves on the American Psychological Association Working Group on Health Disparities for Boys and Men, and Boys of Color Collaboration.  He is a Guest Editor of the Journal of Gerontology Psychological Sciences on the topic of Psycho-social Influences of African Americans Men’s Health, Guest Editor of Family and Community Health on the topic of Social Determinants of Men’s Health Disparities, Guest Editor of Behavioral Medicine on the Health of Boys and Men, lead Guest Editor of Ethnicity and Disease on the topic of Minority Men’s Health Explaining Disparities Using a Life Course Perspective.  Dr. Thorpe also serves as a mentor/program faculty on three training grants.  During Dr. Thorpe’s career, he has mentored 15 undergraduate (10 underrepresented minorities), 5 master (3 underrepresented minorities), 6 predoctoral (4 underrepresented minorities), 5 medical (4 underrepresented minorities) and 2 postdoctoral students (all underrepresented minorities). Of these students, he has published with 10 of them (all underrepresented minorities) and have 4 (all underrepresented minorities) papers under review with one or more of these students.  In 2011, Dr. Thorpe was a recipient of the JHBSPH’s Advising, Mentoring, and Teaching Recognition Award.
+                </p>
+							</div>
+
+              <div class="col-sm-12 no_side_padding story_next_button">
+                <div class="col-sm-6 no_side_padding">
+                  <p class="pull-left back_arrow">
+                    <%= link_to about_path, class: "skip_link" do %>
+                      <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                      Return to About Page
+                    <% end %>
+                  </p>
+                </div>
+
+                <div class="col-sm-6 no_side_padding">
+                  <div class="col-sm-12 no_side_padding">
+                    <%= link_to "Learn About Charles P. Mouton", bio_mouton_path, class: "btn btn-primary pull-right" %>
+                  </div>
+                </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section> <!-- CLOSE #content-part -->
+
+	</body>
+
+</html>
