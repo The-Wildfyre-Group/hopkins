@@ -13,7 +13,7 @@
         br
         | supporting partners
   hr.thick
-  - @partners.each_slice(3) do |set|
+  - Partner.where(approved: true).each_slice(3) do |set|
     .row
       - set.each do |partner|
         .col-lg-3

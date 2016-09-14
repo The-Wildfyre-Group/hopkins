@@ -34,7 +34,7 @@
                                     </tr> 
                                   </thead> 
                                   <tbody>
-                                    <% Partner.ordered_by_participants.each do |partner| %> 
+                                    <% Partner.where(approved: true).ordered_by_participants.each do |partner| %> 
                                     <tr>  
                                       <td>
                                         <div class="row">
