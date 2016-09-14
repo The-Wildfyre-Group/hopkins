@@ -2,7 +2,7 @@
 
 class SharePhotoUploader < BaseUploader
 
-  process resize_to_fit: [600, 600]
+  process resize_to_fit: [600, 500]
   process :store_dimensions
   process :add_text
 
@@ -12,12 +12,15 @@ class SharePhotoUploader < BaseUploader
 
       second_image.combine_options do |c|
         c.gravity 'Center'
-        c.pointsize '150'
-        c.draw "text 0,0 '#{model.message}'"
+        c.pointsize '120'
+        c.draw "text 0,115 '#{model.message.upcase.split(' ')[0]}'"
+        c.pointsize '165'
+        c.weight '700'
+        c.draw "text 0,265 '#{model.message.upcase.split(' ')[1]}'"
         c.fill 'white'
       end
 
-      second_image.resize("600x600")
+      second_image.resize("600x500")
 
       result = image.composite(second_image) do |c|
         c.compose "Over"
