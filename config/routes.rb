@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       get :status, as: :status
       get :services, as: :services
       get :behavior, as: :behavior
-      get :psychosocial, as: :psychosocial
+      get :social, as: :social
       get :closing, as: :closing
     end
   end

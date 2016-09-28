@@ -16,7 +16,7 @@ class SurveysController < ApplicationController
 
   def behavior;end
 
-  def psychosocial;end
+  def social;end
 
   def closing;end
 end
