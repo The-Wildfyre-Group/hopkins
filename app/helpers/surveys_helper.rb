@@ -5,7 +5,7 @@ module SurveysHelper
       return services_surveys_path if previous_survey == "Status"
       return behavior_surveys_path if previous_survey == "Services"
       return psychosocial_surveys_path if previous_survey == "Behavior"
-      return closing_surveys_path if previous_survey == "Psycho Social"
+      return closing_surveys_path if previous_survey == "Social"
     else
       "javascript: void(0)"
     end

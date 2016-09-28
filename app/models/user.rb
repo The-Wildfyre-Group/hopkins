@@ -85,7 +85,7 @@ class User < ActiveRecord::Base
 
   def check_surveys_completion
     return if assigned_giftcard?
-    (["Status", "Services", "Behavior", "Psycho Social", "Closing"] - completed_surveys).each do |survey|
+    (["Status", "Services", "Behavior", "Social", "Closing"] - completed_surveys).each do |survey|
       completed_survey?(survey)
     end
     claim_giftcard! if completed_all_surveys?

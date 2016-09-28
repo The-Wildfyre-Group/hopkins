@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def completed_surveys
     data = { surveys: [], left_surveys: 0 }
     display_next = true
-    {"Status" => status_surveys_path, "Services" => services_surveys_path, "Behavior" => behavior_surveys_path, "Psycho Social" => psychosocial_surveys_path, "Closing" => closing_surveys_path }.map do |survey_module, url|
+    {"Status" => status_surveys_path, "Services" => services_surveys_path, "Behavior" => behavior_surveys_path, "Social" => social_surveys_path, "Closing" => closing_surveys_path }.map do |survey_module, url|
       completed = current_user.completed_survey?(survey_module)
       data[:surveys] << { name: survey_module, completed: completed, url: url, display: !completed && display_next }
       data[:left_surveys] += 1 unless completed
